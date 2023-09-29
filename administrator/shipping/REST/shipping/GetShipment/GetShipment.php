@@ -19,8 +19,10 @@ $password = "f564ee137e96231fe92fb1";
 $mailedBy = "0008193924";
 $mobo = "0008193924";
 
+$shipmentId = $_GET['shipmentId'];
+
 // REST URL
-$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/123456789012';
+$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/' . $shipmentId;
 
 $curl = curl_init($service_url); // Create REST Request
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);

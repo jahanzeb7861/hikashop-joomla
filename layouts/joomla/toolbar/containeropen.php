@@ -259,6 +259,17 @@ defined('_JEXEC') or die;
                                                             </td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Print Type</td>
+                                                            <td>
+                                                                <select name="printer_type" id="printer_type"
+                                                                    class="form-select border-0 country-dropdown">
+                                                                    <option value="">Select</option>
+                                                                    <option value="8.5x11">8.5x11</option>
+                                                                    <option value="4x6">4x6</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
                                                             <td>City</td>
                                                             <td>
                                                                 <input type="text" disabled id="city-shipping"
@@ -536,10 +547,16 @@ defined('_JEXEC') or die;
                 })
 
             });
-         
+
+
+            document.getElementById("printer_type").addEventListener("click", function () {
+
+                console.log('PRINTER CLICKED');
+
+            });
 
             $(".country-dropdown").on("change",function(){
-                alert(2);
+                // alert(2);
               
                 let country = $(this).val();
                 $.getJSON('states.json',function(data){
@@ -563,9 +580,6 @@ defined('_JEXEC') or die;
 
         // MORE CODE
         $(document).ready(function(){
-
-           
-
             $(".prefix-types").on("change",function(){
                 let values = $(this).val().split("-");
                 $("#box-length").val(values[0])                
@@ -676,6 +690,8 @@ defined('_JEXEC') or die;
                 $("#parcel-type-parent").removeClass("border border-danger")
                 $("#shipment-button").parent().find("span.text-danger").hide();
 
+                let printerType = $("#printer_type_chzn > a > span").text();
+
                 let weight = $("#box-weight").val(),length = $("#box-length").val(),width = $("#box-width").val(),height = $("#box-height").val(),zipCode = $("#zip-code-shipping").val(),country = $(".country-dropdown").val();
                 let fname = $("#fname-shipping").val(),lname = $("#lname-shipping").val(),address1 = $("#address1-shipping").val(),address2 = $("#address2-shipping").val(),state = $("#state-shipping").val(),city = $("#city-shipping").val();
                 let parcelType = $(".parcel-type:checked").val();
@@ -718,7 +734,7 @@ defined('_JEXEC') or die;
                         type: "get",
                         url: "shipping/REST/shipping/CreateShipment/CreateShipment.php",
                         data: {
-                            weight, length, width, height, zipCode, fname, lname, address1, address2, state, city, parcelType, country
+                            weight, length, width, height, zipCode, fname, lname, address1, address2, state, city, parcelType, country, printerType
                         },
                         success: function (res) {
                             res = JSON.parse(res);
@@ -759,20 +775,142 @@ defined('_JEXEC') or die;
             // });
 
             $("#print-pdf").on("click", function () {
-                var receiptDiv = document.getElementById("receipt-div");
 
-                if (receiptDiv) {
-                    var printWindow = window.open('', '', 'width=600,height=600');
-                    printWindow.document.open();
-                    printWindow.document.write('<html><head><title>Print</title></head><body>');
-                    printWindow.document.write(receiptDiv.innerHTML);
-                    printWindow.document.write('</body></html>');
-                    // printWindow.document.close();
-                    printWindow.print();
-                    // printWindow.close();
-                } else {
-                    console.log("Element with ID 'receipt-div' not found.");
-                }
+                // let shipmentId = '123';
+                let shipmentId = $("#shipmentId").val();
+
+                $.ajax({
+                    type: "get",
+                    url: "shipping/REST/shipping/GetShipment/GetShipment.php",
+                    data: {
+                        shipmentId
+                    },
+                    success: function (res) {
+                        // res = JSON.parse(res);
+                        // console.log(res);
+                        // res = res.data;
+
+
+                       // Split the string into lines
+                        const lines = res.split('\n');
+
+                        // Initialize a variable to store the label value
+                        let labelValue = null;
+
+                        // Iterate through the lines
+                        for (const line of lines) {
+                            // Check if the line contains "label:"
+                            if (line.includes("label:")) {
+                                // Extract the value after "label:"
+                                labelValue = line.split("label:")[1].trim();
+                                break; // Exit the loop once the label value is found
+                            }
+                        }
+
+                        // Open the labelValue URL in a new tab
+                        if (labelValue) {
+                            $("#myModal").hide();
+                            window.open(labelValue, '_blank');
+                        } else {
+                            console.log("Label URL not found.");
+                        }
+                    }
+                });
+
+
+                // RequestShipmentRefund.php
+                $.ajax({
+                    type: "get",
+                    url: "shipping/REST/shipping/RequestShipmentRefund/RequestShipmentRefund.php",
+                    data: {
+                        shipmentId
+                    },
+                    success: function (res) {
+                        // res = JSON.parse(res);
+                        // console.log(res);
+                        // res = res.data;
+
+
+                       // Split the string into lines
+                        const lines = res.split('\n');
+
+                        // Initialize a variable to store the label value
+                        let labelValue = null;
+
+                        // Iterate through the lines
+                        for (const line of lines) {
+                            // Check if the line contains "label:"
+                            if (line.includes("label:")) {
+                                // Extract the value after "label:"
+                                labelValue = line.split("label:")[1].trim();
+                                break; // Exit the loop once the label value is found
+                            }
+                        }
+
+                        // Open the labelValue URL in a new tab
+                        if (labelValue) {
+                            $("#myModal").hide();
+                            window.open(labelValue, '_blank');
+                        } else {
+                            console.log("Label URL not found.");
+                        }
+                    }
+                });
+
+                // GetManifest.php
+                $.ajax({
+                    type: "get",
+                    url: "shipping/REST/shipping/GetManifest/GetManifest.php",
+                    data: {
+                        shipmentId
+                    },
+                    success: function (res) {
+                        // res = JSON.parse(res);
+                        // console.log(res);
+                        // res = res.data;
+
+
+                       // Split the string into lines
+                        const lines = res.split('\n');
+
+                        // Initialize a variable to store the label value
+                        let labelValue = null;
+
+                        // Iterate through the lines
+                        for (const line of lines) {
+                            // Check if the line contains "label:"
+                            if (line.includes("label:")) {
+                                // Extract the value after "label:"
+                                labelValue = line.split("label:")[1].trim();
+                                break; // Exit the loop once the label value is found
+                            }
+                        }
+
+                        // Open the labelValue URL in a new tab
+                        if (labelValue) {
+                            $("#myModal").hide();
+                            window.open(labelValue, '_blank');
+                        } else {
+                            console.log("Label URL not found.");
+                        }
+                    }
+                });
+
+                // var receiptDiv = document.getElementById("receipt-div");
+
+                // if (receiptDiv) {
+                //     var printWindow = window.open('', '', 'width=600,height=600');
+                //     printWindow.document.open();
+                //     printWindow.document.write('<html><head><title>Print</title></head><body>');
+                //     printWindow.document.write(receiptDiv.innerHTML);
+                //     printWindow.document.write('</body></html>');
+                //     // printWindow.document.close();
+                //     printWindow.print();
+                //     // printWindow.close();
+                // } else {
+                //     console.log("Element with ID 'receipt-div' not found.");
+                // }
+  
             });
 
             $("#zip-code-shipping").on("change",function(){

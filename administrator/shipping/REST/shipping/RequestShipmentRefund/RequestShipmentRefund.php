@@ -6,7 +6,7 @@
  * a shipment that has been transmitted. Making this call indicates 
  * that the previously printed label is spoiled or will otherwise not be used.
  * 
- * Note that these are “requests for refund”, as refunding a shipment requires 
+ * Note that these are ï¿½requests for refundï¿½, as refunding a shipment requires 
  * proper verification before being actioned (i.e. ensure label has not been used, for example). 
  *
  * This sample is configured to access the Developer Program sandbox environment. 
@@ -18,15 +18,23 @@
 // CPCWS_Shipping_PHP_Samples\REST\shipping\user.ini
 $userProperties = parse_ini_file(realpath(dirname($_SERVER['SCRIPT_FILENAME'])) . '/../user.ini');
 
-$username = $userProperties['username']; 
-$password = $userProperties['password'];
-$mailedBy = $userProperties['customerNumber'];
-$mobo = $userProperties['customerNumber'];
+// $username = $userProperties['username']; 
+// $password = $userProperties['password'];
+// $mailedBy = $userProperties['customerNumber'];
+// $mobo = $userProperties['customerNumber'];
+
+$username = "f0c0e47bb8bdaa6a"; 
+$password = "f564ee137e96231fe92fb1";
+$mailedBy = "0008193924";
+$mobo = "0008193924";
 
 // REST URL
-$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/340531309186521749/refund';
+// $service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/340531309186521749/refund';
+$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/825321695927090169/refund';
+// $service_url = 'https://soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/825321695927090169/refund';
 
 // Create request xml
+// $email = 'yanib33168@vip4e.com';
 $email = 'user@host.com';
 
 

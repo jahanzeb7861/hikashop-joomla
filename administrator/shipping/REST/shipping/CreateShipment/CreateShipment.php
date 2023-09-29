@@ -42,6 +42,7 @@ $width = $_GET['width'];
 $height = $_GET['height'];
 $weight = $_GET['weight'];
 $parcelType = $_GET['parcelType'];
+$printerType = $_GET['printerType'];
 
 $xmlRequest = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -100,7 +101,7 @@ $xmlRequest = <<<XML
 			<on-delivery>true</on-delivery>
 		</notification>
 		<print-preferences>
-			<output-format>8.5x11</output-format>
+			<output-format>{$printerType}</output-format>
 		</print-preferences>
 		<preferences>
 			<show-packing-instructions>true</show-packing-instructions>
