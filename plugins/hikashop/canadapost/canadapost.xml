@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="hikashop" method="upgrade">
+    <name>Hikashop canadapost Plugin</name>
+    <creationDate>December 2013</creationDate>
+    <version>1.2.3</version>
+    <author>Obsidev</author>
+    <authorEmail>dev@obsidev.com</authorEmail>
+    <authorUrl>http://www.obsidev.com</authorUrl>
+    <copyright>Copyright (C) 2012-2022 OBSIDEV SARL - All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>This plugin enables you to communicate with Canada Post</description>
+    <files>
+        <filename plugin="canadapost">canadapost.php</filename>
+        <filename>canadapost.wsdl</filename>
+    </files>
+    <params addpath="/components/com_hikashop/params">
+        <param name="company_number" type="text" default="" label="Company Number" description="Enter your Company Number."/>
+        <param name="company_name" type="text" default="" label="Company Name" description="Enter your Company Name."/>
+        <param name="contract_number" type="text" default="" label="Contract Number" description="Enter your Contract Number."/>
+        <param name="api_username" type="text" default="" label="API Username" description="Enter your Canada Post API Username."/>
+        <param name="api_password" type="password" default="" label="API Password" description="Enter your Canada Post API Password."/>
+        <param name="return_address" type="textarea" default="" label="Return Address" description="Enter your Return Address."/>
+
+        <!-- Additional Parameters -->
+        <param type="spacer" label="Default Shipping Settings">
+            <param name="default_shipping_settings_1" type="checkbox" default="0" label="8 X 6 X 4 INCH (10 LBS)" description="Enable 8 X 6 X 4 INCH (10 LBS)."/>
+            <param name="default_shipping_settings_2" type="checkbox" default="0" label="12 X 6 X 4 INCH (25 LBS)" description="Enable 12 X 6 X 4 INCH (25 LBS)."/>
+            <param name="default_shipping_settings_3" type="checkbox" default="0" label="24 X 8 X 4 INCH (12 LBS)" description="Enable 24 X 8 X 4 INCH (12 LBS)."/>
+            <param name="default_shipping_settings_4" type="checkbox" default="0" label="36 X 8 X 4 INCH (12 LBS)" description="Enable 36 X 8 X 4 INCH (12 LBS)."/>
+            <!-- Add more fields here as needed -->
+
+			 <!-- Add button to dynamically add more fields -->
+            <!-- <param name="add_shipping_setting" type="button" default="" label="Add Shipping Setting" description="Click to add a new shipping setting." onclick="addShippingSetting();"/> -->
+       		 <!-- <param name="add_shipping_setting" type="button" default="" label="Add Shipping Setting" description="Click to add a new shipping setting." /> -->
+		</param>
+
+        <!-- Preset Box Size and Weights -->
+        <param type="spacer" label="Preset Box Size and Weights" />
+        <param name="preset_length" type="text" default="" label="Length" description="Enter preset box length."/>
+        <param name="preset_width" type="text" default="" label="Width" description="Enter preset box width."/>
+        <param name="preset_height" type="text" default="" label="Height" description="Enter preset box height."/>
+        <param name="preset_weight" type="text" default="" label="Weight" description="Enter preset box weight."/>
+        <param name="preset_insurance" type="text" default="100" label="Insurance" description="Enter preset box insurance."/>
+        <param name="preset_shipping_speed" type="list" default="" label="Shipping Speed" description="Select preset box shipping speed.">
+            <option value="Standard">Standard</option>
+            <option value="Express">Express</option>
+            <option value="Priority">Priority</option>
+        </param>
+    </params>
+
+    <config>
+        <fields name="params" addfieldpath="/components/com_hikashop/fields">
+            <fieldset name="basic" label="Basic Settings">
+                <field name="company_number" type="text" default="" label="Company Number" description="Enter your Company Number."/>
+                <field name="company_name" type="text" default="" label="Company Name" description="Enter your Company Name."/>
+                <field name="contract_number" type="text" default="" label="Contract Number" description="Enter your Contract Number."/>
+                <field name="api_username" type="text" default="" label="API Username" description="Enter your Canada Post API Username."/>
+                <field name="api_password" type="password" default="" label="API Password" description="Enter your Canada Post API Password."/>
+                <field name="return_address" type="textarea" default="" label="Return Address" description="Enter your Return Address."/>
+            </fieldset>
+
+            <!-- Additional Parameters -->
+            <fieldset name="preset_box" label="Default Shipping Settings">
+                <field name="default_shipping_settings_1" type="checkbox" default="0" label="8 X 6 X 4 INCH (10 LBS)" description="Enable 8 X 6 X 4 INCH (10 LBS)."/>
+                <field name="default_shipping_settings_2" type="checkbox" default="0" label="12 X 6 X 4 INCH (25 LBS)" description="Enable 12 X 6 X 4 INCH (25 LBS)."/>
+                <field name="default_shipping_settings_3" type="checkbox" default="0" label="24 X 8 X 4 INCH (12 LBS)" description="Enable 24 X 8 X 4 INCH (12 LBS)."/>
+                <field name="default_shipping_settings_4" type="checkbox" default="0" label="36 X 8 X 4 INCH (12 LBS)" description="Enable 36 X 8 X 4 INCH (12 LBS)."/>
+                <!-- Add more fields here as needed -->
+
+				 <!-- Add button to dynamically add more fields -->
+                <!-- <field name="add_shipping_setting" type="button" default="" label="Add Shipping Setting" description="Click to add a new shipping setting." onclick="addShippingSetting();"/> -->
+            </fieldset>
+
+            <!-- Preset Box Size and Weights Fields -->
+            <fieldset name="preset_box_2" label="Preset Box Size and Weights">
+                <field name="preset_length" type="text" default="" label="Length" description="Enter preset box length."/>
+                <field name="preset_width" type="text" default="" label="Width" description="Enter preset box width."/>
+                <field name="preset_height" type="text" default="" label="Height" description="Enter preset box height."/>
+                <field name="preset_weight" type="text" default="" label="Weight" description="Enter preset box weight."/>
+                <field name="preset_insurance" type="text" default="100" label="Insurance" description="Enter preset box insurance."/>
+                <field name="preset_shipping_speed" type="list" default="" label="Shipping Speed" description="Select preset box shipping speed.">
+                    <option value="Standard">Standard</option>
+                    <option value="Express">Express</option>
+                    <option value="Priority">Priority</option>
+                </field>
+            </fieldset>
+
+            <!-- Default Customs Form Fields -->
+            <fieldset name="preset_box_3" label="Default Customs Form">
+                <field name="display_form_if_shipment_outside_country" type="list" default="" label="Display Form if Shipment Outside the Country" description="Choose whether to display the form if the shipment is outside the country.">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </field>
+                <field name="non_delivery_of_goods" type="list" default="" label="Non-delivery of Goods" description="Choose the non-delivery status for goods.">
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <!-- Add more options as needed -->
+                </field>
+                <field name="reason_for_export" type="list" default="" label="Reason for Export" description="Choose the reason for export.">
+                    <option value="Reason 1">Reason 1</option>
+                    <option value="Reason 2">Reason 2</option>
+                    <!-- Add more options as needed -->
+                </field>
+                <field name="country_of_origin" type="list" default="" label="Country of Origin" description="Choose the country of origin for the shipment.">
+                    <option value="Country 1">Country 1</option>
+                    <option value="Country 2">Country 2</option>
+                    <!-- Add more options as needed -->
+                </field>
+                <field name="shipment_value" type="text" default="" label="Shipment Value" description="Enter the shipment value."/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -18,10 +18,10 @@ defined('_JEXEC') or die;
     <button class="btn btn-small button-apply btn-success" style="order: 1;" id="openModal">
         Ship</button>
 
-    <button class="btn btn-small button-apply btn-info" style="order: 1;">
+    <button class="btn btn-small button-apply btn-info" style="order: 1;" id="refundButton">
         Refund Label</button>
 
-    <button class="btn btn-small button-apply btn-secondary" style="order: 1;">
+    <button class="btn btn-small button-apply btn-secondary" style="order: 1;" id="endOfDayButton">
         End of Day</button>
 
 
@@ -488,6 +488,30 @@ defined('_JEXEC') or die;
             <script src="assets/js/script.js"></script>
 
     <script>
+
+
+        //  CHECK BTNS:
+
+        // Get the current URL
+        var currentURL = window.location.href;
+
+        console.log(currentURL);
+        console.log(currentURL.indexOf('ctrl=order'));
+
+        // Check if the URL contains "ctrl=order"
+        if (currentURL.indexOf('ctrl=order') !== -1) {
+            // Show the buttons if "ctrl=order" is present
+            document.getElementById('openModal').style.display = 'inline';
+            document.getElementById('refundButton').style.display = 'inline';
+            document.getElementById('endOfDayButton').style.display = 'inline';
+        } else {
+            // Hide the buttons if "ctrl=order" is not present
+            document.getElementById('openModal').style.display = 'none';
+            document.getElementById('refundButton').style.display = 'none';
+            document.getElementById('endOfDayButton').style.display = 'none';
+        }
+
+
         // JavaScript to open and close the modal
         document.addEventListener("DOMContentLoaded", function () {
             const openModalButton = document.getElementById("openModal");

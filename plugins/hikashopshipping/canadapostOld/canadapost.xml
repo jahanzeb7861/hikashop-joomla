@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="hikashopshipping">
+	<name>Hikashop Canada Post Shipping Plugin</name>
+	<creationDate>30 september 2023</creationDate>
+	<version>5.0.0</version>
+	<author>Jahanzeb</author>
+	<authorEmail>test@email.com</authorEmail>
+	<authorUrl>http://www.dcubedweb.com / http://www.obsidev.com</authorUrl>
+	<copyright>Copyright (C) 2011-2012 D3 Web Creations - All rights reserved. / Copyright (C) 2012 OBSIDEV</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to setup handle Canada Post service</description>
+	<files>
+		<filename plugin="canadapost">canadapost.php</filename>
+		<filename plugin="canadapost">canadapost_configuration.php</filename>
+		<filename>canadapost_rate.wsdl</filename>
+		<filename>canadapost_rate_test.wsdl</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+	</params>
+</extension>
