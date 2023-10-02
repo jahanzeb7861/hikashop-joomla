@@ -8,10 +8,87 @@
  */
 
 defined('_JEXEC') or die;
-// TODO CHANGE HERE
-//  echo $displayData['id']; 
-//  echo $displayData['id']; 
+
+// Assuming you have already established a MySQL database connection.
+// Replace these variables with your actual database connection details.
+$hostname = "localhost";
+$username = "root";
+$password = "";
+$database = "test_joomla";
+
+// Create a MySQL connection
+$mysqli = new mysqli($hostname, $username, $password, $database);
+
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
+// Query to fetch data from the kuv9p_hikashop_address table (assuming you have a unique identifier like an ID)
+$sql = "SELECT * FROM kuv9p_hikashop_address WHERE address_id = 3"; // Replace '1' with the actual ID you want to retrieve.
+$sql2 = "SELECT * FROM kuv9p_hikashop_address WHERE address_id = 2"; // Replace '1' with the actual ID you want to retrieve.
+$sql3 = "SELECT * FROM kuv9p_extensions WHERE element = 'canadapost'"; // Replace '1' with the actual ID you want to retrieve.
+
+
+// echo $sql;
+
+$result = $mysqli->query($sql);
+
+
+$result2 = $mysqli->query($sql2);
+
+$result3 = $mysqli->query($sql3);
+
+
+
+if ($result->num_rows > 0) {
+    
+    $row = $result->fetch_assoc();
+
+    // Fill in the HTML form fields with the retrieved data
+    echo '<script>';
+    echo '</script>';
+} else {
+    echo "No records found";
+}
+
+if ($result2->num_rows > 0) {
+    
+    $row2 = $result2->fetch_assoc();
+
+    // Fill in the HTML form fields with the retrieved data
+    echo '<script>';
+    echo '</script>';
+} else {
+    echo "No records found";
+}
+
+if ($result3->num_rows > 0) {
+    
+    $row3 = $result3->fetch_assoc();
+
+    // echo $row3["params"];
+
+    $decodedObject = json_decode($row3["params"]);
+
+    $printerType = $decodedObject->printer_type;
+
+    // Output the value of printer_type
+    // echo $printerType;
+
+
+    // Fill in the HTML form fields with the retrieved data
+    echo '<script>';
+    // echo 'document.getElementById("fname-shipping").value = "' . $row3["params"]["company_number"] . '";';
+    echo '</script>';
+} else {
+    echo "No records found";
+}
+
+// Close the database connection
+$mysqli->close();
 ?>
+
 <div class="btn-toolbar" style="display: flex;" role="toolbar" aria-label="<?php echo JText::_('JTOOLBAR'); ?>"
     id="<?php echo $displayData['id']; ?>">
 
@@ -64,7 +141,6 @@ defined('_JEXEC') or die;
         .close:hover {
             color: #000;
         }
-
 
         /* Styling for the modal */
         .modal {
@@ -121,7 +197,6 @@ defined('_JEXEC') or die;
             padding: 20px;
         }
 
-
         /* Form input styles */
         input[type="text"],
         select {
@@ -160,9 +235,6 @@ defined('_JEXEC') or die;
             border-radius: 4px;
         }
 
-        /* Add more styles as needed for specific elements within your form */
-
-        /* Example: Style a container div within the modal */
         .container-div {
             background-color: #f7f7f7;
             padding: 10px;
@@ -177,16 +249,11 @@ defined('_JEXEC') or die;
 
     </style>
 
-
-    
-
-
     <div id="myModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
 
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Canada Post</h1>
-                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     <span class="close" id="closeModal">&times;</span>
                 </div>
                 <div class="modal-body">
@@ -204,14 +271,14 @@ defined('_JEXEC') or die;
                                                         <tr>
                                                             <td>First Name</td>
                                                             <td>
-                                                                <input type="text" id="fname-shipping" value="john"
+                                                                <input type="text" id="fname-shipping" value="<?php echo $row['address_firstname']; ?>"
                                                                     class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Last Name</td>
                                                             <td>
-                                                                <input type="text" id="lname-shipping" value="doe"
+                                                                <input type="text" id="lname-shipping" value="<?php echo $row['address_lastname']; ?>"
                                                                     class="form-control border-0">
                                                             </td>
                                                         </tr>
@@ -219,7 +286,7 @@ defined('_JEXEC') or die;
                                                             <td>Address</td>
                                                             <td>
                                                                 <input type="text" id="address1-shipping"
-                                                                    value="test address1" class="form-control border-0">
+                                                                    value="<?php echo $row['address_street']; ?>" class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -227,7 +294,7 @@ defined('_JEXEC') or die;
                                                             <td>Address Line 2</td>
                                                             <td>
                                                                 <input type="text" id="address2-shipping"
-                                                                    value="test address2" class="form-control border-0">
+                                                                    value="<?php echo $row['address_street2']; ?>" class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -236,6 +303,7 @@ defined('_JEXEC') or die;
                                                                 <select name="country_shipping" id="country-shipping"
                                                                     class="form-select border-0 country-dropdown">
                                                                     <option value="">Select</option>
+                                                                    <option value="<?php echo $row['address_country']; ?>" selected> <?php echo $row['address_country']; ?> </option>
                                                                     <option value="CA">Canada</option>
                                                                     <option value="US">United States</option>
                                                                     <option value="CH">Switzerland</option>
@@ -247,6 +315,7 @@ defined('_JEXEC') or die;
                                                             <td>
                                                                 <select name="state_shipping" id="state-shipping"
                                                                     class="form-select border-0 state-dropdown">
+                                                                    <option value="<?php echo $row['address_state']; ?>" selected> <?php echo $row['address_state']; ?> </option>
                                                                 </select>
                                                             </td>
                                                         </tr>
@@ -255,10 +324,10 @@ defined('_JEXEC') or die;
                                                             <td>
                                                                 <input type="text" name="zip_code"
                                                                     id="zip-code-shipping"
-                                                                    class="form-control border-0">
+                                                                    class="form-control border-0" value="<?php echo $row['address_post_code']; ?>">
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        <!-- <tr>
                                                             <td>Print Type</td>
                                                             <td>
                                                                 <select name="printer_type" id="printer_type"
@@ -268,12 +337,12 @@ defined('_JEXEC') or die;
                                                                     <option value="4x6">4x6</option>
                                                                 </select>
                                                             </td>
-                                                        </tr>
+                                                        </tr> -->
                                                         <tr>
                                                             <td>City</td>
                                                             <td>
                                                                 <input type="text" disabled id="city-shipping"
-                                                                    class="form-control border-0">
+                                                                    class="form-control border-0" value="<?php echo $row['address_city']; ?>">
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -285,21 +354,21 @@ defined('_JEXEC') or die;
                                                             <td>First Name</td>
                                                             <td>
                                                                 <input type="text" id="fname-billing"
-                                                                    class="form-control border-0">
+                                                                    class="form-control border-0" value="<?php echo $row2['address_firstname']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Last Name</td>
                                                             <td>
                                                                 <input type="text" id="lname-billing"
-                                                                    class="form-control border-0">
+                                                                    class="form-control border-0" value="<?php echo $row2['address_lastname']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Address</td>
                                                             <td>
                                                                 <input type="text" id="address1-billing"
-                                                                    class="form-control border-0">
+                                                                    class="form-control border-0"  value="<?php echo $row2['address_street']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -307,7 +376,7 @@ defined('_JEXEC') or die;
                                                             <td>Address Line 2</td>
                                                             <td>
                                                                 <input type="text" id="address2-billing"
-                                                                    class="form-control border-0">
+                                                                    class="form-control border-0" value="<?php echo $row2['address_street2']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -316,6 +385,7 @@ defined('_JEXEC') or die;
                                                                 <select name="country_billing" id="country-billing"
                                                                     class="form-select border-0 country-dropdown">
                                                                     <option value="">Select</option>
+                                                                    <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option>
                                                                     <option value="CA">Canada</option>
                                                                     <option value="US">United States</option>
                                                                     <option value="CH">Switzerland</option>
@@ -327,6 +397,7 @@ defined('_JEXEC') or die;
                                                             <td>
                                                                 <select name="state_billing" id="state-billing"
                                                                     class="form-select border-0 state-dropdown">
+                                                                    <option value="<?php echo $row2['address_state']; ?>" selected> <?php echo $row2['address_state']; ?> </option>
                                                                 </select>
                                                             </td>
                                                         </tr>
@@ -335,13 +406,14 @@ defined('_JEXEC') or die;
                                                             <td>
                                                                 <input type="text" name="zip_code" id="zip-code-billing"
                                                                     class="form-control border-0">
+                                                                    value="<?php echo $row2['address_post_code']; ?>"
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>City</td>
                                                             <td>
                                                                 <input type="text" disabled id="city-billing"
-                                                                    class="form-control border-0">
+                                                                    class="form-control border-0" value="<?php echo $row2['address_city']; ?>">
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -438,7 +510,6 @@ defined('_JEXEC') or die;
                                                 <div class="col-md-4 my-2 py-2" id="parcel-type-parent"
                                                     style="display: none;">
                                                     <div id="parcel-types"></div>
-                                                    <!-- <button class="btn btn-primary" type="button" style="display: none;" id="select-parcel">Continue</button> -->
                                                 </div>
                                                 <div class="col-md-4 extra-fields" style="display: none;">
                                                     <label for="non-delivery-instruction">Non Delivery
@@ -473,15 +544,7 @@ defined('_JEXEC') or die;
                     </section>
                 </div>
             </div>
-
-
-        <!-- <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <h2>Simple Modal</h2>
-            <p>This is a simple modal created with HTML and CSS.</p>
-        </div> -->
     </div>
-
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
             <script src="assets/js/jquery.js"></script>
@@ -489,9 +552,7 @@ defined('_JEXEC') or die;
 
     <script>
 
-
         //  CHECK BTNS:
-
         // Get the current URL
         var currentURL = window.location.href;
 
@@ -535,14 +596,7 @@ defined('_JEXEC') or die;
 
 
             // MORE CODE
-            // console.log(document.getElementById("country-billing"));
-
             document.getElementById("country_shipping_chzn").addEventListener("click", function () {
-                console.log('CLICKED');
-                // modal.style.display = "none";
-                // console.log(document.getElementsByClassName("chzn-single"));
-                // console.log($("#country_shipping_chzn > a > span").text());
-
                 let country = $("#country_shipping_chzn > a > span").text();
 
                 if (country == 'Canada') {
@@ -563,24 +617,26 @@ defined('_JEXEC') or die;
                     $(".state-dropdown").css("display", "block");
                     $("#state_shipping_chzn").css("display", "none");
                     $("#state_billing_chzn").css("display", "none");
+
+                    if (states.length == 0) {
+                        $(".state-dropdown").append("<option value='<?php echo $row["address_state"]; ?>' selected><?php echo $row['address_state']; ?></option>");
+                    }
+
                     states.forEach((state)=>{
-                        // console.log(state);
                         $(".state-dropdown").append(`<option value="${state.state_code}">${state.name}</option>`)
-                        console.log( $(".state-dropdown"));
                     })
                 })
 
             });
 
 
-            document.getElementById("printer_type").addEventListener("click", function () {
+            // document.getElementById("printer_type").addEventListener("click", function () {
 
-                console.log('PRINTER CLICKED');
+            //     console.log('PRINTER CLICKED');
 
-            });
+            // });
 
             $(".country-dropdown").on("change",function(){
-                // alert(2);
               
                 let country = $(this).val();
                 $.getJSON('states.json',function(data){
@@ -596,11 +652,7 @@ defined('_JEXEC') or die;
                 })
             })
 
-
-
         });
-
-
 
         // MORE CODE
         $(document).ready(function(){
@@ -611,25 +663,15 @@ defined('_JEXEC') or die;
                 $("#box-height").val(values[2])                
                 $("#box-weight").val(values[3])                
             })
-
-            // $(".country_shipping_chzn").on("change",function(){
-                
-            //     let country = $(this).val();
-
-            //     $.getJSON('states.json',function(data){
-            //         let states = data.filter((state,i)=>{
-            //             if (country==state.country_code) {
-            //                 return state;
-            //             }
-            //         })
-            //         $(".state-dropdown").html("<option value=''>Select</option>");
-            //         states.forEach((state)=>{
-            //             $(".state-dropdown").append(`<option value="${state.state_code}">${state.name}</option>`)
-            //         })
-            //     })
-            // })
-
             $("#confirm-button").on("click",function(){
+
+
+                // Encode the PHP object as a JSON string and pass it to JavaScript
+                var printerType = <?php echo json_encode($decodedObject); ?>;
+
+                // Now, printerType is a JavaScript object that you can access its properties
+                console.log(printerType);
+
                 let weight = $("#box-weight").val();
                 let length = $("#box-length").val();
                 let width = $("#box-width").val();
@@ -714,46 +756,23 @@ defined('_JEXEC') or die;
                 $("#parcel-type-parent").removeClass("border border-danger")
                 $("#shipment-button").parent().find("span.text-danger").hide();
 
-                let printerType = $("#printer_type_chzn > a > span").text();
+                // let printerType = $("#printer_type_chzn > a > span").text();
+
+                let printerType =  $printerType;
+
+                console.log(printerType);
+
+
 
                 let weight = $("#box-weight").val(),length = $("#box-length").val(),width = $("#box-width").val(),height = $("#box-height").val(),zipCode = $("#zip-code-shipping").val(),country = $(".country-dropdown").val();
                 let fname = $("#fname-shipping").val(),lname = $("#lname-shipping").val(),address1 = $("#address1-shipping").val(),address2 = $("#address2-shipping").val(),state = $("#state-shipping").val(),city = $("#city-shipping").val();
                 let parcelType = $(".parcel-type:checked").val();
-                // let isShippingAddress = $("#address_type1").is(":checked");
-                // console.log(isShippingAddress);
-                // if (isShippingAddress) {
-                //     var name = 
-                // }
+             
                 if (!weight || !length || !width || !height || !zipCode || !fname || !lname  || !address1  || !address2  || !state || !city || !parcelType) {
                     alert("Please Fill All the Required Fields");
                     return;
                 }
                 $(".main-loader").fadeIn(300);
-                
-                // $.ajax({
-                //     type:"get",
-                //     url:"shipping/REST/shipping/CreateShipment/CreateShipment.php",
-                //     data:{
-                //         weight,length,width,height,zipCode,fname,lname,address1,address2,state,city,parcelType,country
-                //     },
-                //     success:function(res){
-                //         res = JSON.parse(res);
-                //         res = res.data;
-                //         $(".main-loader").fadeOut(300);
-                //         console.log(res['shipment-id']);
-                //         $("#shipment-button").parent().find("#receipt-div").prepend(`
-                //             <div class="card border border-primary border-2 rounded-2 mb-3 text-center">
-                //                 <div class="card-body">
-                //                     <h5>Your Shippment ID is:</h5>
-                //                     ${res['shipment-id']}
-                //                     <h5>Your Tracking PIN is:</h5>
-                //                     ${res['tracking-pin']}
-                //                 </div>
-                //             </div>
-                //         `)
-                //     }
-                // })
-
                     $.ajax({
                         type: "get",
                         url: "shipping/REST/shipping/CreateShipment/CreateShipment.php",
@@ -794,13 +813,8 @@ defined('_JEXEC') or die;
                 
             });
 
-            // $("#print-pdf").on("click",function(){
-            //     // $("#receipt-div");
-            // });
-
             $("#print-pdf").on("click", function () {
 
-                // let shipmentId = '123';
                 let shipmentId = $("#shipmentId").val();
 
                 $.ajax({
@@ -810,10 +824,6 @@ defined('_JEXEC') or die;
                         shipmentId
                     },
                     success: function (res) {
-                        // res = JSON.parse(res);
-                        // console.log(res);
-                        // res = res.data;
-
 
                        // Split the string into lines
                         const lines = res.split('\n');
@@ -850,10 +860,6 @@ defined('_JEXEC') or die;
                         shipmentId
                     },
                     success: function (res) {
-                        // res = JSON.parse(res);
-                        // console.log(res);
-                        // res = res.data;
-
 
                        // Split the string into lines
                         const lines = res.split('\n');
@@ -889,11 +895,6 @@ defined('_JEXEC') or die;
                         shipmentId
                     },
                     success: function (res) {
-                        // res = JSON.parse(res);
-                        // console.log(res);
-                        // res = res.data;
-
-
                        // Split the string into lines
                         const lines = res.split('\n');
 
@@ -919,22 +920,6 @@ defined('_JEXEC') or die;
                         }
                     }
                 });
-
-                // var receiptDiv = document.getElementById("receipt-div");
-
-                // if (receiptDiv) {
-                //     var printWindow = window.open('', '', 'width=600,height=600');
-                //     printWindow.document.open();
-                //     printWindow.document.write('<html><head><title>Print</title></head><body>');
-                //     printWindow.document.write(receiptDiv.innerHTML);
-                //     printWindow.document.write('</body></html>');
-                //     // printWindow.document.close();
-                //     printWindow.print();
-                //     // printWindow.close();
-                // } else {
-                //     console.log("Element with ID 'receipt-div' not found.");
-                // }
-  
             });
 
             $("#zip-code-shipping").on("change",function(){
@@ -942,11 +927,16 @@ defined('_JEXEC') or die;
                 let zipCode = $(this).val();
                 let country = $('.country-dropdown').val();
                 getCityFromPostalCode(zipCode, country).then(city => {
-                    $("#city-shipping").val(city)
+                    console.log(city);
+                    if (city == null) {
+                        $("#city-shipping").val("<?php echo $row['address_city']; ?>")
+                    }
+                    else {
+                        $("#city-shipping").val(city)
+                    }
                 });
                 
             })
 
         })
-
     </script>

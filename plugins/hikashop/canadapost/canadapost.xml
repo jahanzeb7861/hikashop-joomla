@@ -19,7 +19,11 @@
         <param name="contract_number" type="text" default="" label="Contract Number" description="Enter your Contract Number."/>
         <param name="api_username" type="text" default="" label="API Username" description="Enter your Canada Post API Username."/>
         <param name="api_password" type="password" default="" label="API Password" description="Enter your Canada Post API Password."/>
-        <param name="return_address" type="textarea" default="" label="Return Address" description="Enter your Return Address."/>
+        <param name="printer_type" type="list" default="" label="Printer Type" description="Select Printer Type.">
+           <option value="8.5x11">8.5x11</option>
+			<option value="4x6">4x6</option>
+        </param>
+		<param name="return_address" type="textarea" default="" label="Return Address" description="Enter your Return Address."/>
 
         <!-- Additional Parameters -->
         <param type="spacer" label="Default Shipping Settings">
@@ -28,10 +32,6 @@
             <param name="default_shipping_settings_3" type="checkbox" default="0" label="24 X 8 X 4 INCH (12 LBS)" description="Enable 24 X 8 X 4 INCH (12 LBS)."/>
             <param name="default_shipping_settings_4" type="checkbox" default="0" label="36 X 8 X 4 INCH (12 LBS)" description="Enable 36 X 8 X 4 INCH (12 LBS)."/>
             <!-- Add more fields here as needed -->
-
-			 <!-- Add button to dynamically add more fields -->
-            <!-- <param name="add_shipping_setting" type="button" default="" label="Add Shipping Setting" description="Click to add a new shipping setting." onclick="addShippingSetting();"/> -->
-       		 <!-- <param name="add_shipping_setting" type="button" default="" label="Add Shipping Setting" description="Click to add a new shipping setting." /> -->
 		</param>
 
         <!-- Preset Box Size and Weights -->
@@ -56,23 +56,24 @@
                 <field name="contract_number" type="text" default="" label="Contract Number" description="Enter your Contract Number."/>
                 <field name="api_username" type="text" default="" label="API Username" description="Enter your Canada Post API Username."/>
                 <field name="api_password" type="password" default="" label="API Password" description="Enter your Canada Post API Password."/>
-                <field name="return_address" type="textarea" default="" label="Return Address" description="Enter your Return Address."/>
+                 <field name="printer_type" type="list" default="" label="Printer Type" description="Select Printer Type.">
+                    <option value="8.5x11">8.5x11</option>
+                    <option value="4x6">4x6</option>
+                </field>
+			    <field name="return_address" type="textarea" default="" label="Return Address" description="Enter your Return Address."/>
             </fieldset>
 
             <!-- Additional Parameters -->
             <fieldset name="preset_box" label="Default Shipping Settings">
-                <field name="default_shipping_settings_1" type="checkbox" default="0" label="8 X 6 X 4 INCH (10 LBS)" description="Enable 8 X 6 X 4 INCH (10 LBS)."/>
+                <!-- <field name="default_shipping_settings_1" type="checkbox" default="0" label="8 X 6 X 4 INCH (10 LBS)" description="Enable 8 X 6 X 4 INCH (10 LBS)."/>
                 <field name="default_shipping_settings_2" type="checkbox" default="0" label="12 X 6 X 4 INCH (25 LBS)" description="Enable 12 X 6 X 4 INCH (25 LBS)."/>
                 <field name="default_shipping_settings_3" type="checkbox" default="0" label="24 X 8 X 4 INCH (12 LBS)" description="Enable 24 X 8 X 4 INCH (12 LBS)."/>
-                <field name="default_shipping_settings_4" type="checkbox" default="0" label="36 X 8 X 4 INCH (12 LBS)" description="Enable 36 X 8 X 4 INCH (12 LBS)."/>
+                <field name="default_shipping_settings_4" type="checkbox" default="0" label="36 X 8 X 4 INCH (12 LBS)" description="Enable 36 X 8 X 4 INCH (12 LBS)."/> -->
                 <!-- Add more fields here as needed -->
-
-				 <!-- Add button to dynamically add more fields -->
-                <!-- <field name="add_shipping_setting" type="button" default="" label="Add Shipping Setting" description="Click to add a new shipping setting." onclick="addShippingSetting();"/> -->
-            </fieldset>
+			</fieldset>
 
             <!-- Preset Box Size and Weights Fields -->
-            <fieldset name="preset_box_2" label="Preset Box Size and Weights">
+            <!-- <fieldset name="preset_box_2" label="Preset Box Size and Weights">
                 <field name="preset_length" type="text" default="" label="Length" description="Enter preset box length."/>
                 <field name="preset_width" type="text" default="" label="Width" description="Enter preset box width."/>
                 <field name="preset_height" type="text" default="" label="Height" description="Enter preset box height."/>
@@ -83,7 +84,7 @@
                     <option value="Express">Express</option>
                     <option value="Priority">Priority</option>
                 </field>
-            </fieldset>
+            </fieldset> -->
 
             <!-- Default Customs Form Fields -->
             <fieldset name="preset_box_3" label="Default Customs Form">

@@ -1447,7 +1447,7 @@ class plgHikaShopTaxcloud extends JPlugin {
     }
 
 
-			// Add this function to dynamically add shipping settings
+		// Add this function to dynamically add shipping settings
 	function addShippingSetting($params, $field_name) {
 		// Get the current shipping settings
 		$current_settings = $params[$field_name];
