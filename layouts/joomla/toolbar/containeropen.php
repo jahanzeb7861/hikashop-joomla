@@ -442,7 +442,7 @@ $mysqli->close();
                                                 </div>
                                                 <hr class="border-bottom border-primary border-2">
 
-                                                <h6>Preset Box Size And Weights*</h6>
+                                                <h3>Preset Box Size And Weights*</h3>
                                                 <div style="
     display: flex;
     gap: 10px;
@@ -457,31 +457,29 @@ $mysqli->close();
     align-items: center;
 ">
                                                         <input class="form-check-input prefix-types" name="prefix_types" type="radio" value="<?php echo $preset['box_length'] . '-' . $preset['box_width'] . '-' . $preset['box_height'] . '-' . $preset['box_weight']; ?>" id="reverseCheck<?php echo $preset['id']; ?>">
-                                                        <label class="form-check-label" style="
-    margin-left: 5px;
-    margin-bottom: 0px;
-" for="reverseCheck<?php echo $preset['id']; ?>">
-                                                            <?php echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' INCH (' . $preset['box_weight'] . ' LBS)'; ?>
+                                                        <label class="form-check-label" style="margin-left: 5px; margin-bottom: 0px;" for="reverseCheck<?php echo $preset['id']; ?>">
+                                                            <strong><?php echo $preset['box_name']; ?>:</strong> <?php echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' INCH (' . $preset['box_weight'] . ' LBS)'; ?>
                                                         </label>
+                                                    </div>
+                                                    <?php endforeach; ?>
+                                                </div>
 
-                                                        <!-- Add the "Switch to Metric" or "Switch to Imperial" button based on box_unit_type -->
-                                                        <?php if ($preset['box_unit_type'] == 'Metric'): ?>
+                                                <?php if ($preset['box_unit_type'] == 'Metric'): ?>
                                                             <button class="btn btn-primary switch-button" style="
     margin-left: 5px;
     margin-bottom: 0px;
+    margin-top: 5px;
 " data-unit-type="imperial">Switch to Imperial</button>
                                                         <?php else: ?>
                                                             <button class="btn btn-primary switch-button" style="
     margin-left: 5px;
     margin-bottom: 0px;
+    margin-top: 5px;
 " data-unit-type="metric">Switch to Metric</button>
                                                         <?php endif; ?>
-                                                    </div>
-                                                    <?php endforeach; ?>
-                                                </div>
 
                                                 <!-- <div class="">
-                                                    <h6>Preset Box Size And Weights*</h6>
+                                                    <h3>Preset Box Size And Weights*</h3>
                                                     <div class="form-check form-check">
                                                         <input class="form-check-input prefix-types" name="prefix_types"
                                                             type="radio" value="8-6-4-10" id="reverseCheck1">
@@ -515,7 +513,7 @@ $mysqli->close();
                                                 </div> -->
 
                                                 <div class="form-group col-md-12 box-details text-start mt-3">
-                                                    <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 4% auto;">
+                                                    <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
                                                         <div>
                                                             <label for="">Length</label>
                                                             <input type="number" placeholder="Length" id="box-length"
@@ -545,9 +543,9 @@ $mysqli->close();
                                                 </div>
 
 
-                                                <h6>Custom Form:</h6>
+                                                <h3>Custom Form:</h3>
                                                 <div class="form-group col-md-12 box-details text-start mt-3">
-                                                    <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 4% auto;">
+                                                    <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
                                                         <div>
                                                             <label for="">Non-delivery of Goods</label>
                                                             <select name="non_delivery" id="country-billing"
