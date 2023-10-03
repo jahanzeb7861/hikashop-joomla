@@ -3744,7 +3744,7 @@ input[type="submit"].btn.btn-mini {
 	background-color: #fff;
 	cursor: default;
 }
-.modal-backdrop {
+.modals-backdrop {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -3753,40 +3753,40 @@ input[type="submit"].btn.btn-mini {
 	z-index: 1040;
 	background-color: #000;
 }
-.modal-backdrop.fade {
+.modals-backdrop.fade {
 	opacity: 0;
 }
-.modal-backdrop,
-.modal-backdrop.fade.in {
+.modals-backdrop,
+.modals-backdrop.fade.in {
 	opacity: 0.8;
 	filter: alpha(opacity=80);
 }
-.modal-header {
+.modals-header {
 	padding: 9px 15px;
 	border-bottom: 1px solid #eee;
 }
-.modal-header .close {
+.modals-header .close {
 	margin-top: 2px;
 }
-.modal-header h3 {
+.modals-header h3 {
 	margin: 0;
 	line-height: 30px;
 }
-.modal-body {
+.modals-body {
 	width: 98%;
 	position: relative;
 	max-height: 400px;
 	padding: 1%;
 }
-.modal-body iframe {
+.modals-body iframe {
 	width: 100%;
 	max-height: none;
 	border: 0 !important;
 }
-.modal-form {
+.modals-form {
 	margin-bottom: 0;
 }
-.modal-footer {
+.modals-footer {
 	padding: 14px 15px 15px;
 	margin-bottom: 0;
 	text-align: right;
@@ -3800,23 +3800,23 @@ input[type="submit"].btn.btn-mini {
 	box-shadow: inset 0 1px 0 #fff;
 	*zoom: 1;
 }
-.modal-footer:before,
-.modal-footer:after {
+.modals-footer:before,
+.modals-footer:after {
 	display: table;
 	content: "";
 	line-height: 0;
 }
-.modal-footer:after {
+.modals-footer:after {
 	clear: both;
 }
-.modal-footer .btn + .btn {
+.modals-footer .btn + .btn {
 	margin-left: 5px;
 	margin-bottom: 0;
 }
-.modal-footer .btn-group .btn + .btn {
+.modals-footer .btn-group .btn + .btn {
 	margin-left: -1px;
 }
-.modal-footer .btn-block + .btn-block {
+.modals-footer .btn-block + .btn-block {
 	margin-left: 0;
 }
 .tooltip {
@@ -4760,7 +4760,7 @@ a.badge:focus {
 		margin-right: 0;
 		margin-left: 0;
 	}
-	.modal-header .close {
+	.modals-header .close {
 		padding: 10px;
 		margin: -10px;
 	}
@@ -5655,7 +5655,7 @@ a.disabled:hover {
 .blog-item-rule {
 	border: 0;
 }
-body.modal {
+body.modals {
 	padding-top: 0;
 }
 .row-even,
@@ -6085,7 +6085,7 @@ th .tooltip-inner {
 .alert-info .alert-link {
 	color: #245269;
 }
-div.modal {
+div.modals {
 	position: fixed;
 	top: 5%;
 	left: 50%;
@@ -6107,21 +6107,21 @@ div.modal {
 	background-clip: padding-box;
 	outline: none;
 }
-div.modal.fade {
+div.modals.fade {
 	-webkit-transition: opacity .3s linear, top .3s ease-out;
 	-moz-transition: opacity .3s linear, top .3s ease-out;
 	-o-transition: opacity .3s linear, top .3s ease-out;
 	transition: opacity .3s linear, top .3s ease-out;
 	top: -25%;
 }
-div.modal.fade.in {
+div.modals.fade.in {
 	top: 5%;
 }
-.modal-batch {
+.modals-batch {
 	overflow-y: visible;
 }
-.modal-body[class^="jviewport-height"],
-.modal-body[class*="jviewport-height"] {
+.modals-body[class^="jviewport-height"],
+.modals-body[class*="jviewport-height"] {
 	max-height: none;
 }
 .jviewport-height10 {
@@ -6154,48 +6154,48 @@ div.modal.fade.in {
 .jviewport-height100 {
 	height: 100vh;
 }
-div.modal.jviewport-width10 {
+div.modals.jviewport-width10 {
 	width: 10vw;
 	margin-left: -5vw;
 }
-div.modal.jviewport-width20 {
+div.modals.jviewport-width20 {
 	width: 20vw;
 	margin-left: -10vw;
 }
-div.modal.jviewport-width30 {
+div.modals.jviewport-width30 {
 	width: 30vw;
 	margin-left: -15vw;
 }
-div.modal.jviewport-width40 {
+div.modals.jviewport-width40 {
 	width: 40vw;
 	margin-left: -20vw;
 }
-div.modal.jviewport-width50 {
+div.modals.jviewport-width50 {
 	width: 50vw;
 	margin-left: -25vw;
 }
-div.modal.jviewport-width60 {
+div.modals.jviewport-width60 {
 	width: 60vw;
 	margin-left: -30vw;
 }
-div.modal.jviewport-width70 {
+div.modals.jviewport-width70 {
 	width: 70vw;
 	margin-left: -35vw;
 }
-div.modal.jviewport-width80 {
+div.modals.jviewport-width80 {
 	width: 80vw;
 	margin-left: -40vw;
 }
-div.modal.jviewport-width90 {
+div.modals.jviewport-width90 {
 	width: 90vw;
 	margin-left: -45vw;
 }
-div.modal.jviewport-width100 {
+div.modals.jviewport-width100 {
 	width: 100vw;
 	margin-left: -50vw;
 }
 @media (max-width: 767px) {
-	div.modal {
+	div.modals {
 		position: fixed;
 		top: 20px;
 		left: 20px;
@@ -6203,19 +6203,19 @@ div.modal.jviewport-width100 {
 		width: auto;
 		margin: 0;
 	}
-	div.modal.fade {
+	div.modals.fade {
 		top: -100px;
 	}
-	div.modal.fade.in {
+	div.modals.fade.in {
 		top: 20px;
 	}
-	div.modal[class*="jviewport-width"] {
+	div.modals[class*="jviewport-width"] {
 		width: auto;
 		margin: 0;
 	}
 }
 @media (max-width: 480px) {
-	div.modal {
+	div.modals {
 		top: 10px;
 		left: 10px;
 		right: 10px;
@@ -8025,18 +8025,18 @@ ul.manager .height-50 .icon-folder-2 {
 .uploadform {
 	margin-top: 20px;
 }
-body.modal-open {
+body.modals-open {
 	-ms-overflow-style: none;
 }
-.modal-header {
+.modals-header {
 	padding: 0 20px;
 	text-align: left;
 }
-.modal-header h3 {
+.modals-header h3 {
 	font-weight: normal;
 	line-height: 50px;
 }
-.modal-header .close {
+.modals-header .close {
 	width: 50px;
 	margin-top: 0;
 	margin-right: -15px;
@@ -8044,17 +8044,17 @@ body.modal-open {
 	line-height: 50px;
 	border-left: 1px solid #ccc;
 }
-.modal-body {
+.modals-body {
 	padding: 0;
 	width: 100%;
 	height: auto;
 	max-height: none;
 }
-.modal-body .container-fluid {
+.modals-body .container-fluid {
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-.modal-footer {
+.modals-footer {
 	clear: both;
 }
 .contentpane {
@@ -8062,7 +8062,7 @@ body.modal-open {
 	height: auto;
 }
 @media (min-width: 768px) {
-	.row-fluid .modal-batch [class*="span"] {
+	.row-fluid .modals-batch [class*="span"] {
 		margin-left: 0;
 	}
 }

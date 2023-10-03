@@ -114,188 +114,171 @@ $mysqli->close();
         End of Day</button>
 
 
-    <style>
-        /* Styling for the modal */
-        body {
-            font-family: Arial, sans-serif;
-        }
+        <style>
+            /* Styling for the modal */
+            body {
+                font-family: Arial, sans-serif;
+            }
 
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
+            /* Modal styles */
+            .custom-modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 1;
+                overflow: auto; /* Enable scrolling */
+            }
 
-        .modal-content {
-            background-color: #fff;
-            margin: 10% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        }
+            .modal-content {
+                background-color: #fff;
+                margin: 5% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                max-width: 1000px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                overflow-y: auto; /* Enable content scrolling */
+                
+            }
 
-        /* Styling for the close button */
-        .close {
-            color: #888;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+            /* Styling for the close button */
+            .custom-close {
+                color: #888;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
 
-        .close:hover {
-            color: #000;
-        }
+            .custom-close:hover {
+                color: #000;
+            }
 
-        /* Styling for the modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-            overflow: auto;
-        }
+            /* Modal header */
+            .modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
 
-        .modal-content {
-            background-color: #fff;
-            margin: 10% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        }
+            .modal-title {
+                font-size: 24px;
+                font-weight: bold;
+            }
 
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+            /* Close button for modal header */
+            .btn-close {
+                background: none;
+                border: none;
+                font-size: 24px;
+                font-weight: bold;
+                cursor: pointer;
+            }
 
-        .modal-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
+            .btn-close:hover {
+                color: #000;
+            }
 
-        .btn-close {
-            background: none;
-            border: none;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+            /* Modal body */
+            .modal-body {
+                padding: 20px;
+            }
 
-        .btn-close:hover {
-            color: #000;
-        }
+            /* Wizard section */
+            .wizard-section {
+                padding: 20px;
+            }
 
-        .modal-body {
-            padding: 20px;
-        }
+            /* Form input styles */
+            .custom-input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
 
-        .wizard-section {
-            padding: 20px;
-        }
+            /* Form button styles */
+            .custom-button {
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
 
-        /* Form input styles */
-        input[type="text"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+            .custom-button:hover {
+                background-color: #0056b3;
+            }
 
-        /* Form button styles */
-        button[type="button"] {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+            /* Radio button styles */
+            .custom-radio {
+                margin-right: 5px;
+            }
 
-        button[type="button"]:hover {
-            background-color: #0056b3;
-        }
+            /* Select styles */
+            .custom-select {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
 
-        /* Radio button styles */
-        .form-check-input[type="radio"] {
-            margin-right: 5px;
-        }
+            /* Container div styles */
+            .container-div {
+                background-color: #f7f7f7;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-bottom: 15px;
+            }
 
-        /* Select styles */
-        .form-select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .container-div {
-            background-color: #f7f7f7;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-
-        select {
-            height: 37px !important;
-        }
-
+            /* Additional styles */
+            .custom-select {
+                height: 37px !important;
+            }
     </style>
 
-    <div id="myModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Canada Post</h1>
-                    <span class="close" id="closeModal">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <section class="wizard-section">
-                        <div class="row no-gutters">
-                            <div class="col-lg-12 col-md-6">
-                                <div class="form-wizard">
-                                    <form action="" method="post" role="form">
-                                        <fieldset class="wizard-fieldset show pb-5 mb-5">
-                                            <h3>Enter Details</h3>
-                                            <div class="row text-start">
-                                                <div class="col-md-6">
-                                                    <h5>Shipping Address</h5>
+<div id="myModal" class="custom-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Canada Post</h1>
+                <span class="custom-close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <section class="wizard-section">
+                <div class="row no-gutters">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="form-wizard">
+                            <form action="" method="post" role="form">
+                                <fieldset class="wizard-fieldset show pb-5 mb-5">
+                                            <div class="row text-start" style="display: flex; gap: 48px;">
+                                                <div class="col-md-6 order-md-2">
+                                                    <h5>Billing Address</h5>
                                                     <table class="table table-sm table-bordered address-table">
                                                         <tr>
-                                                            <td>First Name</td>
+                                                            <td><label for="first_name">First Name</label></td>
                                                             <td>
                                                                 <input type="text" id="fname-shipping" value="<?php echo $row['address_firstname']; ?>"
                                                                     class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Last Name</td>
+                                                            <td><label for="Last Name">Last Name</label></td>
                                                             <td>
                                                                 <input type="text" id="lname-shipping" value="<?php echo $row['address_lastname']; ?>"
                                                                     class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Address</td>
+                                                            <td><label for="Address">Address</label></td>
                                                             <td>
                                                                 <input type="text" id="address1-shipping"
                                                                     value="<?php echo $row['address_street']; ?>" class="form-control border-0">
@@ -303,14 +286,14 @@ $mysqli->close();
                                                         </tr>
                                                         <tr>
 
-                                                            <td>Address Line 2</td>
+                                                            <td><label for="Address Line 2">Address Line 2</label></td>
                                                             <td>
                                                                 <input type="text" id="address2-shipping"
                                                                     value="<?php echo $row['address_street2']; ?>" class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Country</td>
+                                                            <td><label for="Country">Country</label></td>
                                                             <td>
                                                                 <select name="country_shipping" id="country-shipping"
                                                                     class="form-select border-0 country-dropdown">
@@ -323,7 +306,7 @@ $mysqli->close();
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Province/State</td>
+                                                            <td><label for="Province/State">Province/State</label></td>
                                                             <td>
                                                                 <select name="state_shipping" id="state-shipping"
                                                                     class="form-select border-0 state-dropdown">
@@ -332,26 +315,15 @@ $mysqli->close();
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Postal Address/Zip Code</td>
+                                                            <td><label for="Postal Address/Zip Code">Postal Address/Zip Code</label></td>
                                                             <td>
                                                                 <input type="text" name="zip_code"
                                                                     id="zip-code-shipping"
                                                                     class="form-control border-0" value="<?php echo $row['address_post_code']; ?>">
                                                             </td>
                                                         </tr>
-                                                        <!-- <tr>
-                                                            <td>Print Type</td>
-                                                            <td>
-                                                                <select name="printer_type" id="printer_type"
-                                                                    class="form-select border-0 country-dropdown">
-                                                                    <option value="">Select</option>
-                                                                    <option value="8.5x11">8.5x11</option>
-                                                                    <option value="4x6">4x6</option>
-                                                                </select>
-                                                            </td>
-                                                        </tr> -->
                                                         <tr>
-                                                            <td>City</td>
+                                                            <td><label for="City">City</label></td>
                                                             <td>
                                                                 <input type="text" disabled id="city-shipping"
                                                                     class="form-control border-0" value="<?php echo $row['address_city']; ?>">
@@ -360,24 +332,24 @@ $mysqli->close();
                                                     </table>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <h5>Billing Address</h5>
+                                                    <h5>Shipping Address</h5>
                                                     <table class="table table-sm table-bordered address-table">
                                                         <tr>
-                                                            <td>First Name</td>
+                                                            <td><label for="First Name">First Name</label></td>
                                                             <td>
                                                                 <input type="text" id="fname-billing"
                                                                     class="form-control border-0" value="<?php echo $row2['address_firstname']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Last Name</td>
+                                                            <td><label for="Last Name">Last Name</label></td>
                                                             <td>
                                                                 <input type="text" id="lname-billing"
                                                                     class="form-control border-0" value="<?php echo $row2['address_lastname']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Address</td>
+                                                            <td><label for="Address">Address</label></td>
                                                             <td>
                                                                 <input type="text" id="address1-billing"
                                                                     class="form-control border-0"  value="<?php echo $row2['address_street']; ?>">
@@ -385,14 +357,14 @@ $mysqli->close();
                                                         </tr>
                                                         <tr>
 
-                                                            <td>Address Line 2</td>
+                                                            <td><label for="Address Line 2">Address Line 2</label></td>
                                                             <td>
                                                                 <input type="text" id="address2-billing"
                                                                     class="form-control border-0" value="<?php echo $row2['address_street2']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Country</td>
+                                                            <td><label for="Country">Country</label></td>
                                                             <td>
                                                                 <select name="country_billing" id="country-billing"
                                                                     class="form-select border-0 country-dropdown">
@@ -405,7 +377,7 @@ $mysqli->close();
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Province/State</td>
+                                                            <td><label for="Province/State">Province/State</label></td>
                                                             <td>
                                                                 <select name="state_billing" id="state-billing"
                                                                     class="form-select border-0 state-dropdown">
@@ -414,7 +386,7 @@ $mysqli->close();
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Postal Address/Zip Code</td>
+                                                            <td><label for="Postal Address/Zip Code">Postal Address/Zip Code</label></td>
                                                             <td>
                                                                 <input type="text" name="zip_code" id="zip-code-billing"
                                                                     class="form-control border-0">
@@ -422,7 +394,7 @@ $mysqli->close();
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>City</td>
+                                                            <td><label for="City">City</label></td>
                                                             <td>
                                                                 <input type="text" disabled id="city-billing"
                                                                     class="form-control border-0" value="<?php echo $row2['address_city']; ?>">
@@ -430,20 +402,39 @@ $mysqli->close();
                                                         </tr>
                                                     </table>
                                                 </div>
-                                                <div class="col-md-6 my-3">
+                                            </div>
+
+                                            <div class="col-md-6 my-3">
                                                     <h5>Which Address Do You Want to Use as Shipping Label?</h5>
-                                                    <div class="d-flex gap-3">
-                                                        <div class="form-check">
+                                                    <div class="d-flex gap-3" style="
+                                                                                    display: flex;
+                                                                                    gap: 40px;
+                                                                                    ">
+                                                        <div class="form-check" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+">
                                                             <input class="form-check-input" type="radio"
                                                                 name="address_type" id="address_type1">
-                                                            <label class="form-check-label" for="address_type1">
+                                                            <label class="form-check-label" for="address_type1" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+">
                                                                 Shipping Address
                                                             </label>
                                                         </div>
-                                                        <div class="form-check">
+                                                        <div class="form-check"style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+">
                                                             <input class="form-check-input" type="radio"
                                                                 name="address_type" id="address_type2">
-                                                            <label class="form-check-label" for="address_type2">
+                                                            <label class="form-check-label" for="address_type2" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+">
                                                                 Billing Address
                                                             </label>
                                                         </div>
@@ -451,21 +442,39 @@ $mysqli->close();
                                                 </div>
                                                 <hr class="border-bottom border-primary border-2">
 
-
-                                                <div class="">
-                                                    <h6>Preset Box Size And Weights*</h6>
+                                                <h6>Preset Box Size And Weights*</h6>
+                                                <div style="
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+">
+                                                    
+                                                    <br>
                                                     <?php foreach ($presets as $preset): ?>
-                                                    <div class="form-check form-check">
+                                                    <div class="form-check form-check" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+">
                                                         <input class="form-check-input prefix-types" name="prefix_types" type="radio" value="<?php echo $preset['box_length'] . '-' . $preset['box_width'] . '-' . $preset['box_height'] . '-' . $preset['box_weight']; ?>" id="reverseCheck<?php echo $preset['id']; ?>">
-                                                        <label class="form-check-label" for="reverseCheck<?php echo $preset['id']; ?>">
+                                                        <label class="form-check-label" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+" for="reverseCheck<?php echo $preset['id']; ?>">
                                                             <?php echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' INCH (' . $preset['box_weight'] . ' LBS)'; ?>
                                                         </label>
 
                                                         <!-- Add the "Switch to Metric" or "Switch to Imperial" button based on box_unit_type -->
                                                         <?php if ($preset['box_unit_type'] == 'Metric'): ?>
-                                                            <button class="btn btn-primary switch-button" data-unit-type="imperial">Switch to Imperial</button>
+                                                            <button class="btn btn-primary switch-button" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+" data-unit-type="imperial">Switch to Imperial</button>
                                                         <?php else: ?>
-                                                            <button class="btn btn-primary switch-button" data-unit-type="metric">Switch to Metric</button>
+                                                            <button class="btn btn-primary switch-button" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+" data-unit-type="metric">Switch to Metric</button>
                                                         <?php endif; ?>
                                                     </div>
                                                     <?php endforeach; ?>
@@ -507,7 +516,12 @@ $mysqli->close();
                                                 </div> -->
 
                                                 <div class="form-group col-md-12 box-details text-start mt-3">
-                                                    <div class="d-flex gap-2 mb-3 single-box">
+                                                    <div class="d-flex gap-2 mb-3 single-box" style="
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 4% auto;
+">
                                                         <div>
                                                             <label for="">Length</label>
                                                             <input type="text" placeholder="Length" id="box-length"
@@ -564,8 +578,6 @@ $mysqli->close();
                                                         id="shipment-button">Save Shipment</button>
                                                         <button class="btn btn-secondary" type="button" style="display: none;" id="print-pdf">Print</button>
                                                 </div>
-
-                                            </div>
 
                                         </fieldset>
 
