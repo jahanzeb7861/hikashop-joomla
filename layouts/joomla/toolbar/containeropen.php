@@ -28,16 +28,21 @@ if ($mysqli->connect_error) {
 $sql = "SELECT * FROM kuv9p_hikashop_address WHERE address_id = 3"; // Replace '1' with the actual ID you want to retrieve.
 $sql2 = "SELECT * FROM kuv9p_hikashop_address WHERE address_id = 2"; // Replace '1' with the actual ID you want to retrieve.
 $sql3 = "SELECT * FROM kuv9p_extensions WHERE element = 'canadapost'"; // Replace '1' with the actual ID you want to retrieve.
+$sql4 = "SELECT * FROM kuv9p_preset_boxes"; // Replace '1' with the actual ID you want to retrieve.
 
 
 // echo $sql;
 
 $result = $mysqli->query($sql);
 
+// Create a connection to the database
+$connection = mysqli_connect($hostname, $username, $password, $database);
+
 
 $result2 = $mysqli->query($sql2);
 
 $result3 = $mysqli->query($sql3);
+$result4 = mysqli_query($connection, $sql4);
 
 
 
@@ -84,6 +89,13 @@ if ($result3->num_rows > 0) {
 } else {
     echo "No records found";
 }
+
+
+$presets = array();
+while ($row4 = mysqli_fetch_assoc($result4)) {
+    $presets[] = $row4; 
+}
+
 
 // Close the database connection
 $mysqli->close();
@@ -439,7 +451,27 @@ $mysqli->close();
                                                 </div>
                                                 <hr class="border-bottom border-primary border-2">
 
+
                                                 <div class="">
+                                                    <h6>Preset Box Size And Weights*</h6>
+                                                    <?php foreach ($presets as $preset): ?>
+                                                    <div class="form-check form-check">
+                                                        <input class="form-check-input prefix-types" name="prefix_types" type="radio" value="<?php echo $preset['box_length'] . '-' . $preset['box_width'] . '-' . $preset['box_height'] . '-' . $preset['box_weight']; ?>" id="reverseCheck<?php echo $preset['id']; ?>">
+                                                        <label class="form-check-label" for="reverseCheck<?php echo $preset['id']; ?>">
+                                                            <?php echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' INCH (' . $preset['box_weight'] . ' LBS)'; ?>
+                                                        </label>
+
+                                                        <!-- Add the "Switch to Metric" or "Switch to Imperial" button based on box_unit_type -->
+                                                        <?php if ($preset['box_unit_type'] == 'Metric'): ?>
+                                                            <button class="btn btn-primary switch-button" data-unit-type="imperial">Switch to Imperial</button>
+                                                        <?php else: ?>
+                                                            <button class="btn btn-primary switch-button" data-unit-type="metric">Switch to Metric</button>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                    <?php endforeach; ?>
+                                                </div>
+
+                                                <!-- <div class="">
                                                     <h6>Preset Box Size And Weights*</h6>
                                                     <div class="form-check form-check">
                                                         <input class="form-check-input prefix-types" name="prefix_types"
@@ -472,7 +504,7 @@ $mysqli->close();
                                                     </div>
 
 
-                                                </div>
+                                                </div> -->
 
                                                 <div class="form-group col-md-12 box-details text-start mt-3">
                                                     <div class="d-flex gap-2 mb-3 single-box">
@@ -663,6 +695,65 @@ $mysqli->close();
                 $("#box-height").val(values[2])                
                 $("#box-weight").val(values[3])                
             })
+
+                // Define a variable to keep track of the current unit type
+                var currentUnitType = 'imperial'; // Assuming the initial unit type is imperial
+                
+
+                // Function to toggle the button text
+                function toggleSwitchButton() {
+                    if (currentUnitType === 'metric') {
+                        $('.switch-button').text('Switch to Metric');
+                    } else {
+                        $('.switch-button').text('Switch to Imperial');
+                    }
+                }
+
+
+
+            $('.switch-button').click(function () {
+
+                event.preventDefault(); // Prevent page reload
+
+                // Toggle the unit type and button text
+                currentUnitType = currentUnitType === 'metric' ? 'imperial' : 'metric';
+                toggleSwitchButton();
+
+
+                var unitType = $(this).data('unit-type');
+                if (unitType === 'metric') {
+                    // Switch to metric units logic here
+                    $('#box-length').val(convertToMetric($('#box-length').val()));
+                    $('#box-width').val(convertToMetric($('#box-width').val()));
+                    $('#box-height').val(convertToMetric($('#box-height').val()));
+                    $('#box-weight').val(convertToMetric($('#box-weight').val()));
+                } else {
+                    // Switch to imperial units logic here
+                    $('#box-length').val(convertToImperial($('#box-length').val()));
+                    $('#box-width').val(convertToImperial($('#box-width').val()));
+                    $('#box-height').val(convertToImperial($('#box-height').val()));
+                    $('#box-weight').val(convertToImperial($('#box-weight').val()));
+                }
+            });
+
+            // Call the toggleSwitchButton function to set the initial button text
+            toggleSwitchButton();
+
+                // Function to convert from metric to imperial units
+                function convertToImperial(metricValue) {
+                    // Implement conversion logic here
+                    // For example, if metricValue is in centimeters, convert it to inches
+                    return metricValue / 2.54;
+                }
+
+                // Function to convert from imperial to metric units
+                function convertToMetric(imperialValue) {
+                    // Implement conversion logic here
+                    // For example, if imperialValue is in inches, convert it to centimeters
+                    return imperialValue * 2.54;
+                }
+
+
             $("#confirm-button").on("click",function(){
 
 

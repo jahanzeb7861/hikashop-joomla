@@ -680,6 +680,27 @@ JFactory::getDocument()->addScriptDeclaration("
 
 			<!-- TEST 3 -->
 			<script>
+						setTimeout(() => {
+							// Select the element with the specified ID
+								var container = document.getElementById('jform_params_address_country_chzn');
+
+								console.log(container);
+
+								// Check if the text content of the selected element is "Canada"
+								if (container && container.textContent.trim() === "Canada") {
+								// Find the anchor tag with href="#attrib-preset_box_3" and hide it
+								var anchorTag = document.querySelector('a[href="#attrib-preset_box_3"]');
+								if (anchorTag) {
+									anchorTag.style.display = 'none'; // Hide the anchor tag
+									console.log("The value is Canada, and the anchor tag is hidden.");
+								}
+								} else {
+								console.log("The value is not Canada");
+								}
+						}, 2000);
+
+
+
 					 // Get the 'presetBox' element by its ID
 				 	var presetBox = document.getElementById("attrib-preset_box");
 
@@ -719,6 +740,7 @@ JFactory::getDocument()->addScriptDeclaration("
 							// Create a flex container div element
 							var flexContainer = document.createElement("div");
 							flexContainer.style.display = "flex";
+							flexContainer.style.marginBottom = "20px";
 							
 							// Create a label element
 							var newLabel = document.createElement("label");
@@ -748,27 +770,29 @@ JFactory::getDocument()->addScriptDeclaration("
 							 // Append the label to the flex container
 							 flexContainer.appendChild(newLabel);
 
-							var selectButton = document.createElement("button");
-								selectButton.type = "button";
-								selectButton.id = "<?php echo $boxId ?>";
-								selectButton.className = "btn btn-primary";
-								selectButton.textContent = "Select";
-								selectButton.addEventListener("click", function () {
-									// Handle the selection action here
-									selectShippingBox(this,<?php echo $boxId ?>); // Pass the button element as an argument to identify the box to select
-								});
+							// var selectButton = document.createElement("button");
+							// 	selectButton.type = "button";
+							// 	selectButton.id = "<?php echo $boxId ?>";
+							// 	selectButton.className = "btn btn-primary";
+							// 	selectButton.textContent = "Select";
+							// 	selectButton.addEventListener("click", function () {
+							// 		// Handle the selection action here
+							// 		selectShippingBox(this,<?php echo $boxId ?>); // Pass the button element as an argument to identify the box to select
+							// 	});
 
 
 								var removeButton = document.createElement("button");
 									removeButton.type = "button";
-									removeButton.className = "btn btn-danger";
-									selectButton.id = "<?php echo $boxId ?>";
+									removeButton.className = "btn btn-sm btn-danger";
+									removeButton.id = "<?php echo $boxId ?>";
 									removeButton.textContent = "Remove";
+									removeButton.style.paddingTop = "3px";
+									removeButton.style.paddingBottom = "3px";
 									removeButton.addEventListener("click", function () {
 										removeShippingBox(this,<?php echo $boxId ?>); // Pass the button element as an argument to identify the box to remove
 									});
 										// Append the label to the flex container 
-								flexContainer.appendChild(selectButton);
+								// flexContainer.appendChild(selectButton);
 								// Append the label to the flex container
 								flexContainer.appendChild(removeButton);
 
@@ -898,6 +922,8 @@ JFactory::getDocument()->addScriptDeclaration("
 				var saveBoxButton = document.createElement("button");
 				saveBoxButton.type = "button";
 				saveBoxButton.id = "saveBoxButton";
+				// saveBoxButton.style.paddingTop = "3px";
+				// saveBoxButton.style.paddingBottom = "3px";
 				saveBoxButton.className = "btn btn-primary"; // Keep the existing class
 				saveBoxButton.textContent = "ADD BOX";
 
@@ -928,7 +954,7 @@ JFactory::getDocument()->addScriptDeclaration("
 				form.appendChild(overrideFieldGroup);
 				form.appendChild(boxNameFieldGroup);
 				form.appendChild(saveBoxButton);
-				form.appendChild(editBoxButton);
+				// form.appendChild(editBoxButton);
 
 				// Append the form to the 'presetBox' element
 				presetBox.appendChild(form);
@@ -1273,6 +1299,9 @@ JFactory::getDocument()->addScriptDeclaration("
 				
 					// 	return mockData;
 					// }
+
+
+							
 
 
 			</script>

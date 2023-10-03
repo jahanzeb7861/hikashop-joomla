@@ -51,47 +51,52 @@
     <config>
         <fields name="params" addfieldpath="/components/com_hikashop/fields">
             <fieldset name="basic" label="Basic Settings">
-                <field name="company_number" type="text" default="" label="Company Number" description="Enter your Company Number."/>
+                <field name="company_number" type="number" default="" label="Company Number" description="Enter your Company Number."/>
                 <field name="company_name" type="text" default="" label="Company Name" description="Enter your Company Name."/>
-                <field name="contract_number" type="text" default="" label="Contract Number" description="Enter your Contract Number."/>
+                <field name="contract_number" type="number" default="" label="Contract Number" description="Enter your Contract Number."/>
                 <field name="api_username" type="text" default="" label="API Username" description="Enter your Canada Post API Username."/>
-                <field name="api_password" type="password" default="" label="API Password" description="Enter your Canada Post API Password."/>
+                <field name="api_password" type="text" default="" label="API Password" description="Enter your Canada Post API Password."/>
                  <field name="printer_type" type="list" default="" label="Printer Type" description="Select Printer Type.">
                     <option value="8.5x11">8.5x11</option>
                     <option value="4x6">4x6</option>
                 </field>
-			    <field name="return_address" type="textarea" default="" label="Return Address" description="Enter your Return Address."/>
+
+			    <!-- <field name="return_address" type="textarea" default="" label="Return Address" description="Enter your Return Address."/> -->
+                 <!-- Add a heading or spacer here within the fieldset -->
+                <field name="heading_field" type="spacer" default="" label="RETURN ADDRESS"/>
+
+                
+                <field name="address_name" type="text" default="" label="Address Name" description="Enter your Address Name."/>
+                <field name="address_line_1" type="text" default="" label="Address Line 1" description="Enter your Address Line 1."/>
+                <field name="address_line_2" type="text" default="" label="Address Line 2" description="Enter your Address Line 2."/>
+                <field name="address_city" type="text" default="" label="City" description="Enter your City."/>
+
+                <field name="address_country" type="list" default="" label="Country" description="Select Country.">
+                    <option value="Canada">Canada</option>
+                    <option value="USA">USA</option>
+                </field>
+
+                 <field name="address_province" type="list" default="" label="Province" description="Select Province.">
+                    <option value="Ontario">Ontario</option>
+                </field>
+
+                <field name="address_postal_code" type="text" default="" label="Postal Code" description="Enter your Postal Code."/>
+                <field name="address_contact_phone" type="number" default="" label="Contact Phone" description="Enter your Contact Phone."/>
+                <field name="address_email" type="email" default="" label="Contact Email" description="Enter your Contact Email."/>
+
             </fieldset>
 
             <!-- Additional Parameters -->
             <fieldset name="preset_box" label="Default Shipping Settings">
-                <!-- <field name="default_shipping_settings_1" type="checkbox" default="0" label="8 X 6 X 4 INCH (10 LBS)" description="Enable 8 X 6 X 4 INCH (10 LBS)."/>
-                <field name="default_shipping_settings_2" type="checkbox" default="0" label="12 X 6 X 4 INCH (25 LBS)" description="Enable 12 X 6 X 4 INCH (25 LBS)."/>
-                <field name="default_shipping_settings_3" type="checkbox" default="0" label="24 X 8 X 4 INCH (12 LBS)" description="Enable 24 X 8 X 4 INCH (12 LBS)."/>
-                <field name="default_shipping_settings_4" type="checkbox" default="0" label="36 X 8 X 4 INCH (12 LBS)" description="Enable 36 X 8 X 4 INCH (12 LBS)."/> -->
-                <!-- Add more fields here as needed -->
+            
 			</fieldset>
-
-            <!-- Preset Box Size and Weights Fields -->
-            <!-- <fieldset name="preset_box_2" label="Preset Box Size and Weights">
-                <field name="preset_length" type="text" default="" label="Length" description="Enter preset box length."/>
-                <field name="preset_width" type="text" default="" label="Width" description="Enter preset box width."/>
-                <field name="preset_height" type="text" default="" label="Height" description="Enter preset box height."/>
-                <field name="preset_weight" type="text" default="" label="Weight" description="Enter preset box weight."/>
-                <field name="preset_insurance" type="text" default="100" label="Insurance" description="Enter preset box insurance."/>
-                <field name="preset_shipping_speed" type="list" default="" label="Shipping Speed" description="Select preset box shipping speed.">
-                    <option value="Standard">Standard</option>
-                    <option value="Express">Express</option>
-                    <option value="Priority">Priority</option>
-                </field>
-            </fieldset> -->
 
             <!-- Default Customs Form Fields -->
             <fieldset name="preset_box_3" label="Default Customs Form">
-                <field name="display_form_if_shipment_outside_country" type="list" default="" label="Display Form if Shipment Outside the Country" description="Choose whether to display the form if the shipment is outside the country.">
+                <!-- <field name="display_form_if_shipment_outside_country" type="list" default="" label="Display Form if Shipment Outside the Country" description="Choose whether to display the form if the shipment is outside the country.">
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
-                </field>
+                </field> -->
                 <field name="non_delivery_of_goods" type="list" default="" label="Non-delivery of Goods" description="Choose the non-delivery status for goods.">
                     <option value="Option 1">Option 1</option>
                     <option value="Option 2">Option 2</option>
