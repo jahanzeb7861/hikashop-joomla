@@ -934,8 +934,8 @@ JFactory::getDocument()->addScriptDeclaration("
 				var saveBoxButton = document.createElement("button");
 				saveBoxButton.type = "button";
 				saveBoxButton.id = "saveBoxButton";
-				// saveBoxButton.style.paddingTop = "3px";
-				// saveBoxButton.style.paddingBottom = "3px";
+				saveBoxButton.style.marginTop = "15px";
+				saveBoxButton.style.marginBottom = "15px";
 				saveBoxButton.className = "btn btn-primary"; // Keep the existing class
 				saveBoxButton.textContent = "ADD BOX";
 
@@ -1090,8 +1090,8 @@ JFactory::getDocument()->addScriptDeclaration("
 					newControlGroup.appendChild(removeButton);
 
 					  // Replace the radio input with a "Select" button
-					var selectButton = createSelectButton();
-					newControlGroup.replaceChild(selectButton, newCheckbox);
+					// var selectButton = createSelectButton();
+					// newControlGroup.replaceChild(selectButton, newCheckbox);
 				
 
 

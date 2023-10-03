@@ -512,16 +512,10 @@ $mysqli->close();
                                                         </label>
                                                     </div>
 
-
                                                 </div> -->
 
                                                 <div class="form-group col-md-12 box-details text-start mt-3">
-                                                    <div class="d-flex gap-2 mb-3 single-box" style="
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    margin: 4% auto;
-">
+                                                    <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 4% auto;">
                                                         <div>
                                                             <label for="">Length</label>
                                                             <input type="text" placeholder="Length" id="box-length"
@@ -549,6 +543,50 @@ $mysqli->close();
                                                         </div>
                                                     </div>
                                                 </div>
+
+
+                                                <h6>Custom Form:</h6>
+                                                <div class="form-group col-md-12 box-details text-start mt-3">
+                                                    <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 4% auto;">
+                                                        <div>
+                                                            <label for="">Non-delivery of Goods</label>
+                                                            <select name="non_delivery" id="country-billing"
+                                                                    class="form-select border-0 country-dropdown">
+                                                                    <option value="">Select</option>
+                                                                    <!-- <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option> -->
+                                                                    <option value="Option 1">Option 1</option>
+                                                                    <option value="Option 2">Option 2</option>
+                                                                </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="">Reason for Export</label>
+                                                            <select name="reason_export" id="country-billing"
+                                                                    class="form-select border-0 country-dropdown">
+                                                                    <option value="">Select</option>
+                                                                    <!-- <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option> -->
+                                                                    <option value="Reason 1">Reason 1</option>
+                                                                    <option value="Reason 2">Reason 2</option>
+                                                                </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="">Country of Origin</label>
+                                                                <select name="origin_country" id="country-billing"
+                                                                    class="form-select border-0 country-dropdown">
+                                                                    <option value="">Select</option>
+                                                                    <!-- <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option> -->
+                                                                    <option value="Canada">Canada</option>
+                                                                    <option value="USA">USA</option>
+                                                                </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="">Shipment Value</label>
+                                                            <input type="text" placeholder="Shipment Value" id="box-weight"
+                                                                class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
                                                 <div class="col-12 text-end">
                                                     <button class="btn btn-primary" type="button"
                                                         id="confirm-button">Confirm</button>
