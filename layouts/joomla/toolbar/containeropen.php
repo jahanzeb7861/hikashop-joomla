@@ -518,27 +518,27 @@ $mysqli->close();
                                                     <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 4% auto;">
                                                         <div>
                                                             <label for="">Length</label>
-                                                            <input type="text" placeholder="Length" id="box-length"
+                                                            <input type="number" placeholder="Length" id="box-length"
                                                                 class="form-control">
                                                         </div>
                                                         <div>
                                                             <label for="">Width</label>
-                                                            <input type="text" placeholder="Width" id="box-width"
+                                                            <input type="number" placeholder="Width" id="box-width"
                                                                 class="form-control">
                                                         </div>
                                                         <div>
                                                             <label for="">Height</label>
-                                                            <input type="text" placeholder="Height" id="box-height"
+                                                            <input type="number" placeholder="Height" id="box-height"
                                                                 class="form-control">
                                                         </div>
                                                         <div>
                                                             <label for="">Weight</label>
-                                                            <input type="text" placeholder="Weight" id="box-weight"
+                                                            <input type="number" placeholder="Weight" id="box-weight"
                                                                 class="form-control">
                                                         </div>
                                                         <div>
                                                             <label for="">Insurance</label>
-                                                            <input type="text" placeholder="Insurance"
+                                                            <input type="number" placeholder="Insurance"
                                                                 id="box-insurance" class="form-control" value="100">
                                                         </div>
                                                     </div>
@@ -633,6 +633,22 @@ $mysqli->close();
             <script src="assets/js/script.js"></script>
 
     <script>
+
+
+            // JavaScript to limit input length to 5 digits for each field individually
+            const inputIds = ["box-length", "box-width", "box-height", "box-weight", "box-insurance"];
+            
+            inputIds.forEach((id) => {
+                const inputField = document.getElementById(id);
+                if (inputField) {
+                    inputField.addEventListener('input', () => {
+                        if (inputField.value.length > 5) {
+                            inputField.value = inputField.value.slice(0, 5);
+                        }
+                    });
+                }
+            });
+
 
         //  CHECK BTNS:
         // Get the current URL
@@ -773,16 +789,16 @@ $mysqli->close();
                 var unitType = $(this).data('unit-type');
                 if (unitType === 'metric') {
                     // Switch to metric units logic here
-                    $('#box-length').val(convertToMetric($('#box-length').val()));
-                    $('#box-width').val(convertToMetric($('#box-width').val()));
-                    $('#box-height').val(convertToMetric($('#box-height').val()));
-                    $('#box-weight').val(convertToMetric($('#box-weight').val()));
+                    $('#box-length').val(convertToMetric($('#box-length').val()).toFixed());
+                    $('#box-width').val(convertToMetric($('#box-width').val()).toFixed());
+                    $('#box-height').val(convertToMetric($('#box-height').val()).toFixed());
+                    $('#box-weight').val(convertToMetric($('#box-weight').val()).toFixed());
                 } else {
                     // Switch to imperial units logic here
-                    $('#box-length').val(convertToImperial($('#box-length').val()));
-                    $('#box-width').val(convertToImperial($('#box-width').val()));
-                    $('#box-height').val(convertToImperial($('#box-height').val()));
-                    $('#box-weight').val(convertToImperial($('#box-weight').val()));
+                    $('#box-length').val(convertToImperial($('#box-length').val()).toFixed());
+                    $('#box-width').val(convertToImperial($('#box-width').val()).toFixed());
+                    $('#box-height').val(convertToImperial($('#box-height').val()).toFixed());
+                    $('#box-weight').val(convertToImperial($('#box-weight').val()).toFixed());
                 }
             });
 
@@ -793,14 +809,14 @@ $mysqli->close();
                 function convertToImperial(metricValue) {
                     // Implement conversion logic here
                     // For example, if metricValue is in centimeters, convert it to inches
-                    return metricValue / 2.54;
+                    return metricValue / 2.54.toFixed();
                 }
 
                 // Function to convert from imperial to metric units
                 function convertToMetric(imperialValue) {
                     // Implement conversion logic here
                     // For example, if imperialValue is in inches, convert it to centimeters
-                    return imperialValue * 2.54;
+                    return imperialValue * 2.54.toFixed();
                 }
 
 
