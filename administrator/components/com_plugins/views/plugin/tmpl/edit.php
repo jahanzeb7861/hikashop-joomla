@@ -680,24 +680,24 @@ JFactory::getDocument()->addScriptDeclaration("
 
 			<!-- TEST 3 -->
 			<script>
-						setTimeout(() => {
-							// Select the element with the specified ID
-								var container = document.getElementById('jform_params_address_country_chzn');
+						// setTimeout(() => {
+						// 	// Select the element with the specified ID
+						// 		var container = document.getElementById('jform_params_address_country_chzn');
 
-								console.log(container);
+						// 		console.log(container);
 
-								// Check if the text content of the selected element is "Canada"
-								if (container && container.textContent.trim() === "Canada") {
-								// Find the anchor tag with href="#attrib-preset_box_3" and hide it
-								var anchorTag = document.querySelector('a[href="#attrib-preset_box_3"]');
-								if (anchorTag) {
-									anchorTag.style.display = 'none'; // Hide the anchor tag
-									console.log("The value is Canada, and the anchor tag is hidden.");
-								}
-								} else {
-								console.log("The value is not Canada");
-								}
-						}, 2000);
+						// 		// Check if the text content of the selected element is "Canada"
+						// 		if (container && container.textContent.trim() === "Canada") {
+						// 		// Find the anchor tag with href="#attrib-preset_box_3" and hide it
+						// 		var anchorTag = document.querySelector('a[href="#attrib-preset_box_3"]');
+						// 		if (anchorTag) {
+						// 			anchorTag.style.display = 'none'; // Hide the anchor tag
+						// 			console.log("The value is Canada, and the anchor tag is hidden.");
+						// 		}
+						// 		} else {
+						// 		console.log("The value is not Canada");
+						// 		}
+						// }, 2000);
 
 
 
@@ -853,43 +853,55 @@ JFactory::getDocument()->addScriptDeclaration("
 					// Insert the new control-group div before the form
 					// presetBox.insertBefore(newControlGroup, form);
 
-				// Create a form element
+				// Create a form element with Bootstrap form class
 				var form = document.createElement("form");
+				form.className = "form-horizontal";
+
+				// Create a div to wrap all field groups with display: flex
+				var fieldGroupsWrapper = document.createElement("div");
+				fieldGroupsWrapper.style.display = "flex";
+				fieldGroupsWrapper.style.flexWrap = "wrap"; // Allow wrapping to new rows if needed
+				fieldGroupsWrapper.style.gap = "40px"; // Allow wrapping to new rows if needed
+				fieldGroupsWrapper.style.marginTop = "10px"; // Allow wrapping to new rows if needed
 
 				// Function to create a field group with a label, input, and class names
 				function createFieldGroup(inputType, labelText, inputPlaceholder, inputId, inputName, inputValue, dataContent) {
-				// Create a field group container (div with class "control-group")
-				var fieldGroup = document.createElement("div");
-				fieldGroup.className = "control-group";
+					// Create a field group container (div with class "form-group")
+					var fieldGroup = document.createElement("div");
+					fieldGroup.className = "form-group";
 
-				// Create a label element
-				var labelElement = document.createElement("label");
-				labelElement.id = "jform_params_" + inputId + "-lbl";
-				labelElement.htmlFor = "jform_params_" + inputId;
-				labelElement.className = "hasPopover control-label";
-				labelElement.textContent = labelText;
-				labelElement.title = "";
-				labelElement.setAttribute("data-content", dataContent);
-				labelElement.setAttribute("data-original-title", labelText);
+					// Create a label element with Bootstrap class
+					var labelElement = document.createElement("label");
+					labelElement.id = "jform_params_" + inputId + "-lbl";
+					labelElement.htmlFor = "jform_params_" + inputId;
+					labelElement.className = "col-sm-3 control-label"; // Adjust the column width as needed
+					labelElement.textContent = labelText;
+					labelElement.title = "";
+					labelElement.setAttribute("data-content", dataContent);
+					labelElement.setAttribute("data-original-title", labelText);
 
-				// Create a div for the input container
-				var inputDiv = document.createElement("div");
-				inputDiv.className = "controls";
+					// Create a div for the input container with Bootstrap class
+					var inputDiv = document.createElement("div");
+					inputDiv.className = "col-sm-9";
 
-				// Create the input element
-				var inputElement = document.createElement("input");
-				inputElement.type = inputType;
-				inputElement.name = inputName;
-				inputElement.id = "jform_params_" + inputId;
-				inputElement.placeholder = inputPlaceholder;
-				inputElement.value = inputValue;
+					// Create the input element with Bootstrap class
+					var inputElement = document.createElement("input");
+					inputElement.type = inputType;
+					inputElement.name = inputName;
+					inputElement.id = "jform_params_" + inputId;
+					inputElement.className = "form-control"; // Bootstrap form-control class
+					inputElement.placeholder = inputPlaceholder;
+					inputElement.value = inputValue;
 
-				// Append the label and input to the field group
-				inputDiv.appendChild(inputElement);
-				fieldGroup.appendChild(labelElement);
-				fieldGroup.appendChild(inputDiv);
+					// Append the label and input to the field group
+					inputDiv.appendChild(inputElement);
+					fieldGroup.appendChild(labelElement);
+					fieldGroup.appendChild(inputDiv);
 
-				return fieldGroup;
+					// Append the field group to the wrapper
+					fieldGroupsWrapper.appendChild(fieldGroup);
+
+					return fieldGroup;
 				}
 
 				// Create a dropdown/select element for unit selection
@@ -946,15 +958,10 @@ JFactory::getDocument()->addScriptDeclaration("
 				});
 
 				// Append the input fields, dropdown, and button to the form
+				// Append the fieldGroupsWrapper to the form
 				form.appendChild(unitSystemDropdown);
-				form.appendChild(lengthFieldGroup);
-				form.appendChild(widthFieldGroup);
-				form.appendChild(heightFieldGroup);
-				form.appendChild(weightFieldGroup);
-				form.appendChild(overrideFieldGroup);
-				form.appendChild(boxNameFieldGroup);
+				form.appendChild(fieldGroupsWrapper); // Append the wrapper instead of individual field groups
 				form.appendChild(saveBoxButton);
-				// form.appendChild(editBoxButton);
 
 				// Append the form to the 'presetBox' element
 				presetBox.appendChild(form);
