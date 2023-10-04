@@ -77,6 +77,11 @@ if ($result3->num_rows > 0) {
     $decodedObject = json_decode($row3["params"]);
 
     $printerType = $decodedObject->printer_type;
+    $addressCountry = $decodedObject->address_country;
+    $NonDeliveryGoods = $decodedObject->non_delivery_of_goods;
+    $ReasonForExport = $decodedObject->reason_for_export;
+    $CountryOfOrigin = $decodedObject->country_of_origin;
+    $ShipmentValue = $decodedObject->shipment_value;
 
     // Output the value of printer_type
     // echo $printerType;
@@ -514,47 +519,50 @@ $mysqli->close();
                                                 </div>
 
 
-                                                <h3>Custom Form:</h3>
-                                                <div class="form-group col-md-12 box-details text-start mt-3">
-                                                    <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
-                                                        <div>
-                                                            <label for="">Non-delivery of Goods</label>
-                                                            <select name="non_delivery" id="country-billing"
-                                                                    class="form-select border-0 country-dropdown">
-                                                                    <option value="">Select</option>
-                                                                    <!-- <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option> -->
-                                                                    <option value="Option 1">Option 1</option>
-                                                                    <option value="Option 2">Option 2</option>
-                                                                </select>
+                                                <?php if ($addressCountry !== "Canada"): ?>
+                                                <div>
+                                                        <h3>Custom Form:</h3>
+                                                        <div class="form-group col-md-12 box-details text-start mt-3">
+                                                            <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
+                                                                <div>
+                                                                    <label for="">Non-delivery of Goods</label>
+                                                                    <select name="non_delivery" id="country-billing"
+                                                                            class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <option value="<?php echo $NonDeliveryGoods; ?>" selected> <?php echo  $NonDeliveryGoods; ?> </option>
+                                                                            <option value="Option 1">Option 1</option>
+                                                                            <option value="Option 2">Option 2</option>
+                                                                        </select>
+                                                                </div>
+                                                                <div>
+                                                                    <label for="">Reason for Export</label>
+                                                                    <select name="reason_export" id="country-billing"
+                                                                            class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <option value="<?php echo  $ReasonForExport; ?>" selected> <?php echo  $ReasonForExport; ?> </option>
+                                                                            <option value="Reason 1">Reason 1</option>
+                                                                            <option value="Reason 2">Reason 2</option>
+                                                                        </select>
+                                                                </div>
+                                                                <div>
+                                                                    <label for="">Country of Origin</label>
+                                                                        <select name="origin_country" id="country-billing"
+                                                                            class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <option value="<?php echo  $CountryOfOrigin; ?>" selected> <?php echo $CountryOfOrigin; ?> </option>
+                                                                            <option value="Canada">Canada</option>
+                                                                            <option value="USA">USA</option>
+                                                                        </select>
+                                                                </div>
+                                                                <div>
+                                                                    <label for="">Shipment Value</label>
+                                                                    <input type="text" placeholder="Shipment Value" value="<?php echo  $ShipmentValue; ?>" id="box-weight"
+                                                                        class="form-control">
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div>
-                                                            <label for="">Reason for Export</label>
-                                                            <select name="reason_export" id="country-billing"
-                                                                    class="form-select border-0 country-dropdown">
-                                                                    <option value="">Select</option>
-                                                                    <!-- <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option> -->
-                                                                    <option value="Reason 1">Reason 1</option>
-                                                                    <option value="Reason 2">Reason 2</option>
-                                                                </select>
-                                                        </div>
-                                                        <div>
-                                                            <label for="">Country of Origin</label>
-                                                                <select name="origin_country" id="country-billing"
-                                                                    class="form-select border-0 country-dropdown">
-                                                                    <option value="">Select</option>
-                                                                    <!-- <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option> -->
-                                                                    <option value="Canada">Canada</option>
-                                                                    <option value="USA">USA</option>
-                                                                </select>
-                                                        </div>
-                                                        <div>
-                                                            <label for="">Shipment Value</label>
-                                                            <input type="text" placeholder="Shipment Value" id="box-weight"
-                                                                class="form-control">
-                                                        </div>
-                                                    </div>
                                                 </div>
-
+                                               <?php endif; ?>
 
                                                 <div class="col-12 text-end">
                                                     <button class="btn btn-primary" type="button"
