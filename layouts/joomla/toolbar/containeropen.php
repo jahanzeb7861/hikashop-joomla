@@ -163,7 +163,6 @@ $mysqli->close();
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-bottom: 20px;
             }
 
             .modal-title {
@@ -187,6 +186,7 @@ $mysqli->close();
             /* Modal body */
             .modal-body {
                 padding: 20px;
+                padding-top: 0px;
             }
 
             /* Wizard section */
@@ -243,6 +243,10 @@ $mysqli->close();
             /* Additional styles */
             .custom-select {
                 height: 37px !important;
+            }
+
+            td > input {
+                margin-bottom: 0px !important;
             }
     </style>
 
@@ -464,54 +468,21 @@ $mysqli->close();
                                                     <?php endforeach; ?>
                                                 </div>
 
-                                                <?php if ($preset['box_unit_type'] == 'Metric'): ?>
-                                                            <button class="btn btn-primary switch-button" style="
+                                              
+                                                            <button class="btn btn-primary switch-button" id="imperialBtn" style="
     margin-left: 5px;
     margin-bottom: 0px;
     margin-top: 5px;
 " data-unit-type="imperial">Switch to Imperial</button>
-                                                        <?php else: ?>
-                                                            <button class="btn btn-primary switch-button" style="
+                                                       
+                                                            <button class="btn btn-primary switch-button" id="MetricBtn" style="
     margin-left: 5px;
     margin-bottom: 0px;
     margin-top: 5px;
+    display:none;
 " data-unit-type="metric">Switch to Metric</button>
-                                                        <?php endif; ?>
-
-                                                <!-- <div class="">
-                                                    <h3>Preset Box Size And Weights*</h3>
-                                                    <div class="form-check form-check">
-                                                        <input class="form-check-input prefix-types" name="prefix_types"
-                                                            type="radio" value="8-6-4-10" id="reverseCheck1">
-                                                        <label class="form-check-label" for="reverseCheck1">
-                                                            8 x 6 x 4 INCH ( 10 LBS )
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check form-check">
-                                                        <input class="form-check-input prefix-types" name="prefix_types"
-                                                            type="radio" value="12-6-4-25" id="reverseCheck2">
-                                                        <label class="form-check-label" for="reverseCheck2">
-                                                            12 x 6 x 4 INCH ( 25 LBS )
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="form-check form-check">
-                                                        <input class="form-check-input prefix-types" name="prefix_types"
-                                                            type="radio" value="36-8-4-12" id="reverseCheck3">
-                                                        <label class="form-check-label" for="reverseCheck3">
-                                                            36 x 8 x 4 INCH ( 12 LBS )
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check form-check">
-                                                        <input class="form-check-input prefix-types" name="prefix_types"
-                                                            type="radio" value="24-4-4- 2" id="reverseCheck4">
-                                                        <label class="form-check-label" for="reverseCheck4">
-                                                            24 x 4 x 4 INCH ( 2 LBS )
-                                                        </label>
-                                                    </div>
-
-                                                </div> -->
-
+                                                       
+                                                
                                                 <div class="form-group col-md-12 box-details text-start mt-3">
                                                     <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
                                                         <div>
@@ -752,27 +723,50 @@ $mysqli->close();
 
         // MORE CODE
         $(document).ready(function(){
+               
+            var originalValues = {
+                    length: $('#box-length').val(),
+                    width: $('#box-width').val(),
+                    height: $('#box-height').val(),
+                    weight: $('#box-weight').val()
+                };
+
             $(".prefix-types").on("change",function(){
                 let values = $(this).val().split("-");
                 $("#box-length").val(values[0])                
                 $("#box-width").val(values[1])                
                 $("#box-height").val(values[2])                
-                $("#box-weight").val(values[3])                
+                $("#box-weight").val(values[3])       
+                
+                 // Define variables to store original values
+                
             })
+
+
 
                 // Define a variable to keep track of the current unit type
                 var currentUnitType = 'imperial'; // Assuming the initial unit type is imperial
                 
 
-                // Function to toggle the button text
+               // Function to toggle the button text
                 function toggleSwitchButton() {
                     if (currentUnitType === 'metric') {
+
+                        $('#MetricBtn').css('display', 'block');
+                        $('#imperialBtn').css('display', 'none');
+
+                       
+
                         $('.switch-button').text('Switch to Metric');
+
                     } else {
+
+                        $('#MetricBtn').css('display', 'none');
+                        $('#imperialBtn').css('display', 'block');
+
                         $('.switch-button').text('Switch to Imperial');
                     }
                 }
-
 
 
             $('.switch-button').click(function () {
@@ -783,38 +777,66 @@ $mysqli->close();
                 currentUnitType = currentUnitType === 'metric' ? 'imperial' : 'metric';
                 toggleSwitchButton();
 
+               
+
 
                 var unitType = $(this).data('unit-type');
+
+                // Assuming you have a button element with an id attribute
+                var buttonId = $('.switch-button').attr('id');
+             
                 if (unitType === 'metric') {
+                    // console.log('HEREE 2');
                     // Switch to metric units logic here
-                    $('#box-length').val(convertToMetric($('#box-length').val()).toFixed());
-                    $('#box-width').val(convertToMetric($('#box-width').val()).toFixed());
-                    $('#box-height').val(convertToMetric($('#box-height').val()).toFixed());
-                    $('#box-weight').val(convertToMetric($('#box-weight').val()).toFixed());
+                    $('#box-length').val(convertToMetric($('#box-length').val()).toFixed(1));
+                    $('#box-width').val(convertToMetric($('#box-width').val()).toFixed(1));
+                    $('#box-height').val(convertToMetric($('#box-height').val()).toFixed(1));
+                    $('#box-weight').val(convertToMetric($('#box-weight').val()).toFixed(1));
                 } else {
-                    // Switch to imperial units logic here
-                    $('#box-length').val(convertToImperial($('#box-length').val()).toFixed());
-                    $('#box-width').val(convertToImperial($('#box-width').val()).toFixed());
-                    $('#box-height').val(convertToImperial($('#box-height').val()).toFixed());
-                    $('#box-weight').val(convertToImperial($('#box-weight').val()).toFixed());
+
+                          
+
+                    // console.log('here');
+                    // console.log(originalValues);
+                    // // Switch to imperial units logic here
+                    $('#box-length').val(convertToImperial($('#box-length').val()).toFixed(1));
+                    $('#box-width').val(convertToImperial($('#box-width').val()).toFixed(1));
+                    $('#box-height').val(convertToImperial($('#box-height').val()).toFixed(1));
+                    $('#box-weight').val(convertToImperial($('#box-weight').val()).toFixed(1));
+
+                     // Reverting back original Values
+                    // $('#box-length').val(originalValues.length);
+                    // $('#box-width').val(originalValues.width);
+                    // $('#box-height').val(originalValues.height);
+                    // $('#box-weight').val(originalValues.weight);
                 }
             });
+
+
 
             // Call the toggleSwitchButton function to set the initial button text
             toggleSwitchButton();
 
                 // Function to convert from metric to imperial units
                 function convertToImperial(metricValue) {
+                    // console.log('metric Value ready to convert');
+                    // console.log(metricValue);
+                    // console.log('AFTER CONVERSION');
+                    // console.log(Math.round(metricValue / 2.54.toFixed(1)));
                     // Implement conversion logic here
                     // For example, if metricValue is in centimeters, convert it to inches
-                    return metricValue / 2.54.toFixed();
+                    return Math.round(metricValue / 2.54.toFixed(1));
                 }
 
                 // Function to convert from imperial to metric units
                 function convertToMetric(imperialValue) {
+                    // console.log('imperial Value ready to convert');
+                    // console.log(imperialValue);
+                    // console.log('AFTER CONVERSION');
+                    // console.log(Math.round(imperialValue * 2.54.toFixed(1)));
                     // Implement conversion logic here
                     // For example, if imperialValue is in inches, convert it to centimeters
-                    return imperialValue * 2.54.toFixed();
+                    return Math.round(imperialValue * 2.54.toFixed(1));
                 }
 
 
