@@ -334,7 +334,7 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="City">City</label></td>
                                                             <td>
-                                                                <input type="text" disabled id="city-shipping"
+                                                                <input type="text" id="city-shipping"
                                                                     class="form-control border-0" value="<?php echo $row['address_city']; ?>">
                                                             </td>
                                                         </tr>
@@ -405,7 +405,7 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="City">City</label></td>
                                                             <td>
-                                                                <input type="text" disabled id="city-billing"
+                                                                <input type="text" id="city-billing"
                                                                     class="form-control border-0" value="<?php echo $row2['address_city']; ?>">
                                                             </td>
                                                         </tr>
@@ -466,15 +466,17 @@ $mysqli->close();
     align-items: center;
 ">
                                                         <input class="form-check-input prefix-types" name="prefix_types" type="radio" value="<?php echo $preset['box_length'] . '-' . $preset['box_width'] . '-' . $preset['box_height'] . '-' . $preset['box_weight']; ?>" id="reverseCheck<?php echo $preset['id']; ?>">
+                                                         
                                                         <label class="form-check-label" style="margin-left: 5px; margin-bottom: 0px;" for="reverseCheck<?php echo $preset['id']; ?>">
-                                                            <strong><?php echo $preset['box_name']; ?>:</strong> <?php echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' INCH (' . $preset['box_weight'] . ' LBS)'; ?>
+                                                            <strong><?php echo $preset['box_name']; ?>:</strong> <br>      
+                                                            <?php echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' INCH (' . $preset['box_weight'] . ' LBS)'; ?>
                                                         </label>
                                                     </div>
                                                     <?php endforeach; ?>
                                                 </div>
 
                                               
-                                                            <button class="btn btn-primary switch-button" id="imperialBtn" style="
+                                                            <!-- <button class="btn btn-primary switch-button" id="imperialBtn" style="
     margin-left: 5px;
     margin-bottom: 0px;
     margin-top: 5px;
@@ -485,7 +487,7 @@ $mysqli->close();
     margin-bottom: 0px;
     margin-top: 5px;
     display:none;
-" data-unit-type="metric">Switch to Metric</button>
+" data-unit-type="metric">Switch to Metric</button> -->
                                                        
                                                 
                                                 <div class="form-group col-md-12 box-details text-start mt-3">
@@ -493,29 +495,46 @@ $mysqli->close();
                                                         <div>
                                                             <label for="">Length</label>
                                                             <input type="number" placeholder="Length" id="box-length"
-                                                                class="form-control">
+                                                                class="form-control" style="width: 70px;">
                                                         </div>
                                                         <div>
                                                             <label for="">Width</label>
                                                             <input type="number" placeholder="Width" id="box-width"
-                                                                class="form-control">
+                                                                class="form-control" style="width: 70px;">
                                                         </div>
                                                         <div>
                                                             <label for="">Height</label>
                                                             <input type="number" placeholder="Height" id="box-height"
-                                                                class="form-control">
+                                                                class="form-control" style="width: 70px;">
                                                         </div>
                                                         <div>
                                                             <label for="">Weight</label>
                                                             <input type="number" placeholder="Weight" id="box-weight"
-                                                                class="form-control">
+                                                                class="form-control" style="width: 70px;">
                                                         </div>
                                                         <div>
                                                             <label for="">Insurance</label>
                                                             <input type="number" placeholder="Insurance"
-                                                                id="box-insurance" class="form-control" value="100">
+                                                                id="box-insurance" class="form-control" value="100" style="width: 70px;">
                                                         </div>
+
+                                                        <button class="btn btn-primary switch-button" id="imperialBtn" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+    margin-top: 21px;
+    height: 30px;
+" data-unit-type="imperial">Switch to Imperial</button>
+                                                       
+                                                            <button class="btn btn-primary switch-button" id="MetricBtn" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+    margin-top: 21px;
+    height: 30px;
+    display:none;
+" data-unit-type="metric">Switch to Metric</button>
                                                     </div>
+
+                                                    
                                                 </div>
 
 
@@ -566,11 +585,11 @@ $mysqli->close();
 
                                                 <div class="col-12 text-end">
                                                     <button class="btn btn-primary" type="button"
-                                                        id="confirm-button">Confirm</button>
+                                                        id="confirm-button">Get Rates</button>
                                                 </div>
                                                 <div class="col-md-4 my-2 py-2" id="parcel-type-parent"
                                                     style="display: none;">
-                                                    <div id="parcel-types"></div>
+                                                    <div id="parcel-types" style="display: flex;flex-wrap: wrap;"></div>
                                                 </div>
                                                 <div class="col-md-4 extra-fields" style="display: none;">
                                                     <label for="non-delivery-instruction">Non Delivery
@@ -590,7 +609,7 @@ $mysqli->close();
                                                 <div class="col-md-4">
                                                     <div id="receipt-div"></div>
                                                     <button class="btn btn-primary" type="button" style="display: none;"
-                                                        id="shipment-button">Save Shipment</button>
+                                                        id="shipment-button">Create Label</button>
                                                         <button class="btn btn-secondary" type="button" style="display: none;" id="print-pdf">Print</button>
                                                 </div>
 
@@ -785,9 +804,6 @@ $mysqli->close();
                 currentUnitType = currentUnitType === 'metric' ? 'imperial' : 'metric';
                 toggleSwitchButton();
 
-               
-
-
                 var unitType = $(this).data('unit-type');
 
                 // Assuming you have a button element with an id attribute
@@ -867,6 +883,13 @@ $mysqli->close();
                     alert("Please Fill All the Required Fields");
                     return;
                 }
+                if (country == 'Canada') {
+                    country = "CA";
+                } else if (country == 'United States') {
+                    country = "US";
+
+                }
+
                 $(".main-loader").fadeIn(300)
                 $.ajax({
                     type:"GET",
@@ -880,7 +903,8 @@ $mysqli->close();
                         res = JSON.parse(res);
                         if (res.status==500) {
                             $("#parcel-types").html("");
-                            alert("Something Went Wrong");
+                            alert(res.data.message.description);
+                            // alert("Something Went Wrong");
                             return;
                         }
                         res = res.data['price-quote'];
@@ -891,7 +915,7 @@ $mysqli->close();
                             parcelType = res;
                             let days = dateDifference(parcelType["service-standard"]["expected-delivery-date"]);
                             $("#parcel-types").append(`
-                                <label for="parcel-type-0" class="card flex-row mb-2" style="cursor:pointer">
+                                <label for="parcel-type-0" class="card flex-row mb-2" style="cursor:pointer;border: 1px solid blue;border-radius: 10px;padding: 10px;margin: 10px;">
                                     <span class="px-3">
                                         <input type="radio" id="parcel-type-0" value="${parcelType["service-code"]}" name="parcel_type" id="parcel_type" class="form-radio parcel-type">
                                     </span>
@@ -907,7 +931,7 @@ $mysqli->close();
                         res.forEach((parcelType,i)=>{
                             let days = dateDifference(parcelType["service-standard"]["expected-delivery-date"]);
                             $("#parcel-types").append(`
-                                <label for="parcel-type-${i}" class="card flex-row mb-2" style="cursor:pointer">
+                                <label for="parcel-type-${i}" class="card flex-row mb-2" style="cursor:pointer;border: 1px solid blue;border-radius: 10px;padding: 10px;margin: 10px;">
                                     <span class="px-3">
                                         <input type="radio" id="parcel-type-${i}" value="${parcelType["service-code"]}" name="parcel_type" id="parcel_type" class="form-radio parcel-type">
                                     </span>
@@ -943,7 +967,7 @@ $mysqli->close();
 
                 // let printerType = $("#printer_type_chzn > a > span").text();
 
-                let printerType =  $printerType;
+                let printerType = "<?php echo $printerType ?>";
 
                 console.log(printerType);
 
@@ -957,6 +981,13 @@ $mysqli->close();
                     alert("Please Fill All the Required Fields");
                     return;
                 }
+
+                if (country == 'Canada') {
+                    country = "CA";
+                } else if (country == 'United States') {
+                    country = "US";
+                }
+
                 $(".main-loader").fadeIn(300);
                     $.ajax({
                         type: "get",
@@ -965,13 +996,51 @@ $mysqli->close();
                             weight, length, width, height, zipCode, fname, lname, address1, address2, state, city, parcelType, country, printerType
                         },
                         success: function (res) {
+
+                            // Split the response into lines
+                            var lines = res.split('\n');
+
+                            // Initialize variables to store error code and error message
+                            var errorCode = null;
+                            var errorMessage = null;
+                            var responseStatus = null;
+
+                            // Loop through the lines to find error code and message
+                            for (var i = 0; i < lines.length; i++) {
+                                var line = lines[i].trim();
+                                if (line.startsWith("Error Code:")) {
+                                    errorCode = line.split(":")[1].trim();
+                                } else if (line.startsWith("Error Msg:")) {
+                                    errorMessage = line.split(":")[1].trim();
+                                }
+                                else if (line.startsWith("HTTP Response Status:")) {
+                                    responseStatus = line.split(":")[1].trim();
+                                }
+                            }
+
+                            // alert(errorMessage);
+
+                            if (errorCode === "2653") {
+                                alert(errorMessage);
+                                // TODO: Optional 
+                                return;
+                            }
+
+
                             res = JSON.parse(res);
                             res = res.data;
                             $(".main-loader").fadeOut(300);
                             
                             // Log the value before updating the HTML
-                            console.log("Shipment ID:", res['shipment-id']);
-                            console.log("Tracking PIN:", res['tracking-pin']);
+                            // console.log("Shipment ID:", res['shipment-id']);
+                            // console.log("Tracking PIN:", res['tracking-pin']);
+
+                            localStorage.setItem('shipmentId', res['shipment-id']);
+
+
+
+                          
+
 
                             // Ensure that the element with ID "receipt-div" exists
                             var receiptDiv = $("#receipt-div");
@@ -1036,41 +1105,78 @@ $mysqli->close();
                     }
                 });
 
+                 
 
-                // RequestShipmentRefund.php
-                $.ajax({
-                    type: "get",
-                    url: "shipping/REST/shipping/RequestShipmentRefund/RequestShipmentRefund.php",
-                    data: {
-                        shipmentId
-                    },
-                    success: function (res) {
+                // // RequestShipmentRefund.php
+                // $.ajax({
+                //     type: "get",
+                //     url: "shipping/REST/shipping/RequestShipmentRefund/RequestShipmentRefund.php",
+                //     data: {
+                //         shipmentId
+                //     },
+                //     success: function (res) {
 
-                       // Split the string into lines
-                        const lines = res.split('\n');
+                //        // Split the string into lines
+                //         const lines = res.split('\n');
 
-                        // Initialize a variable to store the label value
-                        let labelValue = null;
+                //         // Initialize a variable to store the label value
+                //         let labelValue = null;
 
-                        // Iterate through the lines
-                        for (const line of lines) {
-                            // Check if the line contains "label:"
-                            if (line.includes("label:")) {
-                                // Extract the value after "label:"
-                                labelValue = line.split("label:")[1].trim();
-                                break; // Exit the loop once the label value is found
-                            }
-                        }
+                //         // Iterate through the lines
+                //         for (const line of lines) {
+                //             // Check if the line contains "label:"
+                //             if (line.includes("label:")) {
+                //                 // Extract the value after "label:"
+                //                 labelValue = line.split("label:")[1].trim();
+                //                 break; // Exit the loop once the label value is found
+                //             }
+                //         }
 
-                        // Open the labelValue URL in a new tab
-                        if (labelValue) {
-                            $("#myModal").hide();
-                            window.open(labelValue, '_blank');
-                        } else {
-                            console.log("Label URL not found.");
-                        }
-                    }
-                });
+                //         // Open the labelValue URL in a new tab
+                //         if (labelValue) {
+                //             $("#myModal").hide();
+                //             window.open(labelValue, '_blank');
+                //         } else {
+                //             console.log("Label URL not found.");
+                //         }
+                //     }
+                // });
+
+                // // VoidShipment.php
+                //   $.ajax({
+                //     type: "get",
+                //     url: "shipping/REST/shipping/VoidShipment/VoidShipment.php",
+                //     data: {
+                //         shipmentId
+                //     },
+                //     success: function (res) {
+
+                //         console.log(res);
+                //     //    // Split the string into lines
+                //     //     const lines = res.split('\n');
+
+                //     //     // Initialize a variable to store the label value
+                //     //     let labelValue = null;
+
+                //     //     // Iterate through the lines
+                //     //     for (const line of lines) {
+                //     //         // Check if the line contains "label:"
+                //     //         if (line.includes("label:")) {
+                //     //             // Extract the value after "label:"
+                //     //             labelValue = line.split("label:")[1].trim();
+                //     //             break; // Exit the loop once the label value is found
+                //     //         }
+                //     //     }
+
+                //     //     // Open the labelValue URL in a new tab
+                //     //     if (labelValue) {
+                //     //         $("#myModal").hide();
+                //     //         window.open(labelValue, '_blank');
+                //     //     } else {
+                //     //         console.log("Label URL not found.");
+                //     //     }
+                //     }
+                // });
 
                 // GetManifest.php
                 $.ajax({
@@ -1105,7 +1211,233 @@ $mysqli->close();
                         }
                     }
                 });
+
+                // GetArtifact.php
+                //   $.ajax({
+                //     type: "get",
+                //     url: "returns/REST/returns/GetArtifact/GetArtifact.php",
+                //     data: {
+                //         shipmentId
+                //     },
+                //     success: function (res) {
+
+                //         console.log(res);
+                //     //    // Split the string into lines
+                //     //     const lines = res.split('\n');
+
+                //     //     // Initialize a variable to store the label value
+                //     //     let labelValue = null;
+
+                //     //     // Iterate through the lines
+                //     //     for (const line of lines) {
+                //     //         // Check if the line contains "label:"
+                //     //         if (line.includes("label:")) {
+                //     //             // Extract the value after "label:"
+                //     //             labelValue = line.split("label:")[1].trim();
+                //     //             break; // Exit the loop once the label value is found
+                //     //         }
+                //     //     }
+
+                //     //     // Open the labelValue URL in a new tab
+                //     //     if (labelValue) {
+                //     //         $("#myModal").hide();
+                //     //         window.open(labelValue, '_blank');
+                //     //     } else {
+                //     //         console.log("Label URL not found.");
+                //     //     }
+                //     }
+                // });
             });
+
+            $("#refundButton").on("click",function(){
+
+                // Disable the button
+                $("#refundButton").prop("disabled", true);
+
+                var shipmentId = localStorage.getItem('shipmentId');
+               
+                // RequestShipmentRefund.php
+                $.ajax({
+                    type: "get",
+                    url: "shipping/REST/shipping/RequestShipmentRefund/RequestShipmentRefund.php",
+                    data: {
+                        shipmentId
+                    },
+                    success: function (res) {
+
+                        console.log(res);
+
+                        // Split the response into lines
+                        var lines = res.split('\n');
+
+                        // Initialize variables to store error code and error message
+                        var errorCode = null;
+                        var errorMessage = null;
+                        var responseStatus = null;
+                        // var serviceTicketId = null;
+                        // var serviceTicketDate = null;
+
+                        // Loop through the lines to find error code and message
+                        for (var i = 0; i < lines.length; i++) {
+                            var line = lines[i].trim();
+                            if (line.startsWith("Error Code:")) {
+                                errorCode = line.split(":")[1].trim();
+                            } else if (line.startsWith("Error Msg:")) {
+                                errorMessage = line.split(":")[1].trim();
+                            }
+                            else if (line.startsWith("HTTP Response Status:")) {
+                                responseStatus = line.split(":")[1].trim();
+                            }
+                            // else if (line.startsWith("Service Ticket ID:")) {
+                            //     serviceTicketId = line.split(":")[1].trim();
+                            // }
+                            // else if (line.startsWith("Service Ticket Date:")) {
+                            //     serviceTicketDate = line.split(":")[1].trim();
+                            // }
+                        }
+
+                        // Check if the error code is 7291
+                        if (errorCode === "7291") {
+                            // Show a confirmation dialog
+                            var confirmation = confirm("The shipment has not been transmitted. Do you want to Void it?");
+                            
+                            if (confirmation) {
+                                
+                                // VoidShipment.php
+                                    $.ajax({
+                                        type: "get",
+                                        url: "shipping/REST/shipping/VoidShipment/VoidShipment.php",
+                                        data: {
+                                            shipmentId
+                                        },
+                                        success: function (res) {
+                                            console.log(res);
+
+                                            if (res.trim() === "HTTP Response Status: 404") {
+                                                // Show an alert if the response is "HTTP Response Status: 404"
+                                                alert("Shipment not voided.");
+                                            } else {
+                                                // Handle other response cases here
+                                                // You can add additional checks or actions if needed
+                                                // Example: alert("Shipment voided."); if the response is something else
+                                                alert("Shipment voided.");
+
+                                            }
+
+                                        }
+                                    });
+                                // User clicked "OK" (Yes)
+                            } else {
+                                // User clicked "Cancel"
+                                alert("Shipment not voided.");
+                            }
+                        } else if(errorCode === "7292"){
+                            alert("A refund has already been requested for this shipment. Note that refund requests may take a few days to be processed.");
+                        } else if(errorCode === "405"){
+                            alert("No Shipment Id. Please Create Shipment First.");
+                        } else {
+                                // Split the response into parts based on spaces
+                                var parts = res.split(' ');
+
+                                // Initialize variables to store HTTP response status, service ticket ID, and service ticket date
+
+                                // Loop through the parts to find the relevant information
+                               // Initialize variables to store service ticket ID and date
+                                    var serviceTicketId = null;
+                                    var serviceTicketDate = null;
+
+                                    // Loop through the lines to find service ticket ID and date
+                                    for (var i = 0; i < lines.length; i++) {
+                                        var line = lines[i].trim();
+                                        if (line.startsWith("Service Ticket ID:")) {
+                                            serviceTicketId = line.split(":")[1].trim();
+                                        } else if (line.startsWith("Service Ticket Date:")) {
+                                            serviceTicketDate = line.split(":")[1].trim();
+                                        }
+                                    }
+
+
+                                alert("Shipment Refunded! Service Ticket ID: " + serviceTicketId + " Service Ticket Date: " + serviceTicketDate);
+
+                                // // Check if the HTTP response status is 200
+                                // if (httpResponseStatus === "200") {
+                                //     // Show an alert with the service ticket ID and date
+                                //     alert("Shipment Refunded! Service Ticket ID: " + serviceTicketID + " Service Ticket Date: " + serviceTicketDate);
+                                // } else {
+                                //     // Handle other response statuses or errors here
+                                //     alert("No Shipment. Please Create Shipment First.");
+                                // }
+                        }
+                        // Enable the button after receiving the response
+                        $("#refundButton").prop("disabled", false);
+                    },
+                    error: function () {
+                        // Handle errors here if needed
+                        // Enable the button in case of an error
+                        $("#refundButton").prop("disabled", false);
+                    }
+                });
+            })
+
+            $("#endOfDayButton").on("click",function(){
+
+                // Disable the button
+                $("#endOfDayButton").prop("disabled", true);
+
+                var shipmentId = localStorage.getItem('shipmentId');
+               
+               // TransmitShipments.php
+               $.ajax({
+                   type: "get",
+                   url: "shipping/REST/shipping/TransmitShipments/TransmitShipments.php",
+                   data: {
+                       shipmentId
+                   },
+                   success: function (res) {
+                       console.log(res);
+
+                       // Split the response into lines
+                       var lines = res.split('\n');
+
+                        // Initialize variables to store error code and error message
+                        var errorCode = null;
+                        var errorMessage = null;
+                        var responseStatus = null;
+
+                        // Loop through the lines to find error code and message
+                        for (var i = 0; i < lines.length; i++) {
+                            var line = lines[i].trim();
+                            if (line.startsWith("Error Code:")) {
+                                errorCode = line.split(":")[1].trim();
+                            } else if (line.startsWith("Error Msg:")) {
+                                errorMessage = line.split(":")[1].trim();
+                            } else if (line.startsWith("HTTP Response Status:")) {
+                                responseStatus = line.split(":")[1].trim();
+                            }
+                        }
+
+                        if(errorCode === "9122"){
+                            // alert("All groups in the transmit request were empty or all shipments were excluded; there was nothing to transmit");
+                            alert("There was nothing to transmit. Please Create Shipment First.");
+                            
+                        } else {
+                            if (responseStatus == "200") {
+                                alert("Shipment transmitted Successfully!");
+                            }
+                        }
+
+                         // Enable the button after receiving the response
+                        $("#endOfDayButton").prop("disabled", false);
+
+                   },
+                   error: function () {
+                        // Handle errors here if needed
+                        // Enable the button in case of an error
+                        $("#endOfDayButton").prop("disabled", false);
+                    }
+               });
+
+            })
 
             $("#zip-code-shipping").on("change",function(){
 

@@ -1,38 +1,26 @@
 <?php
- /**
- * Sample code for the VoidShipment Canada Post service.
+/**
+ * Sample code for the DeleteOpenReturnTemplate Canada Post service.
  * 
- * The VoidShipment service is used to indicate to Canada Post that a printed label 
- * has been spoiled or cancelled and that it will not be used and should not be 
- * transmitted or billed.
- *
+ * The DeleteOpenReturnTemplate service is used to delete an existing active open
+ * return template. 
+ * 
  * This sample is configured to access the Developer Program sandbox environment. 
  * Use your development key username and password for the web service credentials.
  * 
- **/
+ */
 
 // Your username, password and customer number are imported from the following file    	
-// CPCWS_Shipping_PHP_Samples\REST\shipping\user.ini
+// CPCWS_Returns_PHP_Samples\REST\returns\user.ini
 $userProperties = parse_ini_file(realpath(dirname($_SERVER['SCRIPT_FILENAME'])) . '/../user.ini');
 
-// $username = $userProperties['username']; 
-// $password = $userProperties['password'];
-// $mailedBy = $userProperties['customerNumber'];
-// $mobo = $userProperties['customerNumber'];
-
-$username = "f0c0e47bb8bdaa6a"; 
-$password = "f564ee137e96231fe92fb1";
-$mailedBy = "0008193924";
-$mobo = "0008193924";
-$contractId = '0042721049';
-
-$shipmentId = $_GET['shipmentId'];
+$username = $userProperties['username']; 
+$password = $userProperties['password'];
+$mailedBy = $userProperties['customerNumber'];
+$mobo = $userProperties['customerNumber'];
 
 // REST URL
-// $service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/340531309186521749';
-// $service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/825321695927090169';
-
-$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/' . $shipmentId;
+$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/openreturn/349641323786705649';
 
 $curl = curl_init($service_url); // Create REST Request
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
@@ -72,6 +60,6 @@ if ( curl_getinfo($curl,CURLINFO_HTTP_CODE) == 204 ) {
 	}
 }
 
-curl_close($curl);	
+curl_close($curl);
 ?>
 

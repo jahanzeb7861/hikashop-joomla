@@ -15,10 +15,17 @@
 // CPCWS_Shipping_PHP_Samples\REST\shipping\user.ini
 $userProperties = parse_ini_file(realpath(dirname($_SERVER['SCRIPT_FILENAME'])) . '/../user.ini');
 
-$username = $userProperties['username']; 
-$password = $userProperties['password'];
-$mailedBy = $userProperties['customerNumber'];
-$mobo = $userProperties['customerNumber'];
+// $username = $userProperties['username']; 
+// $password = $userProperties['password'];
+// $mailedBy = $userProperties['customerNumber'];
+// $mobo = $userProperties['customerNumber'];
+
+
+$username = "f0c0e47bb8bdaa6a"; 
+$password = "f564ee137e96231fe92fb1";
+$mailedBy = "0008193924";
+$mobo = "0008193924";
+
 
 // REST URL
 $service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/manifest';

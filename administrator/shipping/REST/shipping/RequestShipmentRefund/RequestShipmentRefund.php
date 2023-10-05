@@ -28,9 +28,12 @@ $password = "f564ee137e96231fe92fb1";
 $mailedBy = "0008193924";
 $mobo = "0008193924";
 
+$shipmentId = $_GET['shipmentId'];
+
 // REST URL
 // $service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/340531309186521749/refund';
-$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/825321695927090169/refund';
+// $service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/954221696415746476/refund';
+$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/'. $shipmentId .'/refund';
 // $service_url = 'https://soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/shipment/825321695927090169/refund';
 
 // Create request xml

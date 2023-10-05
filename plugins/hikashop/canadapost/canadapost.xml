@@ -54,6 +54,7 @@
                 <field name="company_number" type="number" default="" label="Company Number" description="Enter your Company Number."/>
                 <field name="company_name" type="text" default="" label="Company Name" description="Enter your Company Name."/>
                 <field name="contract_number" type="number" default="" label="Contract Number" description="Enter your Contract Number."/>
+                <field name="contract_email" type="email" default="" label="Email" description="Enter your Email."/>
                 <field name="api_username" type="text" default="" label="API Username" description="Enter your Canada Post API Username."/>
                 <field name="api_password" type="text" default="" label="API Password" description="Enter your Canada Post API Password."/>
                  <field name="printer_type" type="list" default="" label="Printer Type" description="Select Printer Type.">
@@ -98,21 +99,26 @@
                     <option value="No">No</option>
                 </field> -->
                 <field name="non_delivery_of_goods" type="list" default="" label="Non-delivery of Goods" description="Choose the non-delivery status for goods.">
-                    <option value="Option 1">Option 1</option>
-                    <option value="Option 2">Option 2</option>
+                    <option value="RASE">Return at Sender's Expense</option>
+                    <option value="RTS">Return to Sender</option>
+                    <option value="ABAN">Abandon</option>
                     <!-- Add more options as needed -->
                 </field>
                 <field name="reason_for_export" type="list" default="" label="Reason for Export" description="Choose the reason for export.">
-                    <option value="Reason 1">Reason 1</option>
-                    <option value="Reason 2">Reason 2</option>
+                    <option value="DOC">Document</option>
+                    <option value="SAM">Commercial Sample</option>
+                    <option value="REP">Repair or Warranty</option>
+                    <option value="SOG">Sale of Goods</option>
+                    <option value="OTH">Other</option>
                     <!-- Add more options as needed -->
                 </field>
                 <field name="country_of_origin" type="list" default="" label="Country of Origin" description="Choose the country of origin for the shipment.">
-                    <option value="Country 1">Country 1</option>
-                    <option value="Country 2">Country 2</option>
+                    <option value="CA">Canada</option>
+                    <option value="US">USA</option>
+                    <option value="PK">PAKISTAN</option>
                     <!-- Add more options as needed -->
                 </field>
-                <field name="shipment_value" type="text" default="" label="Shipment Value" description="Enter the shipment value."/>
+                <field name="shipment_value" type="number" default="" label="Shipment Value" description="Enter the shipment value."/>
             </fieldset>
         </fields>
     </config>
