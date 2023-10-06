@@ -304,13 +304,30 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="Country">Country</label></td>
                                                             <td>
-                                                                <select name="country_shipping" id="country-shipping"
+                                                                <!-- <select name="country_shipping" id="country-shipping"
                                                                     class="form-select border-0 country-dropdown">
                                                                     <option value="">Select</option>
                                                                     <option value="<?php echo $row['address_country']; ?>" selected> <?php echo $row['address_country']; ?> </option>
                                                                     <option value="CA">Canada</option>
                                                                     <option value="US">United States</option>
                                                                     <option value="CH">Switzerland</option>
+                                                                </select> -->
+
+                                                                <select name="country_shipping" id="country-shipping" class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <?php
+                                                                            $row['address_country'] = $row['address_country']; // Replace this with the actual value of $row['address_country']
+                                                                            $options = [
+                                                                                "CA" => "Canada",
+                                                                                "United States" => "United States",
+                                                                                "Pakistan" => "Pakistan"
+                                                                            ];
+
+                                                                            foreach ($options as $value => $content) {
+                                                                                $selected = ($row['address_country'] === $value) ? 'selected' : '';
+                                                                                echo '<option value="' . $value . '" ' . $selected . '>' . $content . '</option>';
+                                                                            }
+                                                                            ?>
                                                                 </select>
                                                             </td>
                                                         </tr>
@@ -375,13 +392,30 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="Country">Country</label></td>
                                                             <td>
-                                                                <select name="country_billing" id="country-billing"
+                                                                <!-- <select name="country_billing" id="country-billing"
                                                                     class="form-select border-0 country-dropdown">
                                                                     <option value="">Select</option>
                                                                     <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option>
                                                                     <option value="CA">Canada</option>
                                                                     <option value="US">United States</option>
                                                                     <option value="CH">Switzerland</option>
+                                                                </select> -->
+
+                                                                <select name="country_shipping" id="country_billing" class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <?php
+                                                                            $row2['address_country'] = $row2['address_country']; // Replace this with the actual value of $row['address_country']
+                                                                            $options = [
+                                                                                "Canada" => "Canada",
+                                                                                "USA" => "USA",
+                                                                                "PAKISTAN" => "PAKISTAN"
+                                                                            ];
+
+                                                                            foreach ($options as $value => $content) {
+                                                                                $selected = ($row['address_country'] === $value) ? 'selected' : '';
+                                                                                echo '<option value="' . $value . '" ' . $selected . '>' . $content . '</option>';
+                                                                            }
+                                                                            ?>
                                                                 </select>
                                                             </td>
                                                         </tr>
@@ -413,26 +447,28 @@ $mysqli->close();
                                                 </div>
                                             </div>
 
+
+                                            <div class="form-check" style="
+    display: flex;
+    align-items: center;
+">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="same_shipping_information" id="same_shipping_information">
+                                                            <label class="form-check-label" for="same_shipping_information" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+">
+                                                                My Shipping information is the same as my billing information
+                                                            </label>
+                                                        </div>
+
                                             <div class="col-md-6 my-3">
                                                     <h5>Which Address Do You Want to Use as Shipping Label?</h5>
                                                     <div class="d-flex gap-3" style="
                                                                                     display: flex;
                                                                                     gap: 40px;
                                                                                     ">
-                                                        <div class="form-check" style="
-    display: flex;
-    justify-content: center;
-    align-items: center;
-">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="address_type" id="address_type1">
-                                                            <label class="form-check-label" for="address_type1" style="
-    margin-left: 5px;
-    margin-bottom: 0px;
-">
-                                                                Shipping Address
-                                                            </label>
-                                                        </div>
+                                                       
                                                         <div class="form-check"style="
     display: flex;
     justify-content: center;
@@ -446,10 +482,152 @@ $mysqli->close();
 ">
                                                                 Billing Address
                                                             </label>
+
+                                                            
+                                                            <input class="form-check-input" type="radio"
+                                                                name="address_type" id="address_type1">
+                                                            <label class="form-check-label" for="address_type1" style="
+    margin-left: 5px;
+    margin-bottom: 0px;
+">
+                                                                Shipping Address
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <hr class="border-bottom border-primary border-2">
+
+                                                <div class="form-check" style="
+    display: flex;
+    align-items: center;
+">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="signature" id="signature">
+                                                            <label class="form-check-label" for="signature" style="
+    margin-left: 5px;
+    justify-content: center;
+    margin-bottom: 0px;
+">
+                                                                Signature
+                                                            </label>
+
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="hold_for_pickup" id="hold_for_pickup" style="
+    margin-left: 15px;
+">
+                                                            <label class="form-check-label" for="hold_for_pickup" style="
+    margin-left: 5px;
+    justify-content: center;
+    margin-bottom: 0px;
+">
+                                                               Hold for Pickup
+                                                            </label>
+                                                        </div>
+
+                                                        <hr class="border-bottom border-primary border-2">
+
+                                                <div id="custom_form">
+                                                        <h3>Custom Form:</h3>
+                                                        <div class="form-group col-md-12 box-details text-start mt-3">
+                                                            <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
+                                                                <div>
+                                                                    <label for="">Non-delivery of Goods</label>
+                                                                    <!-- <select name="non_delivery" id="country-billing"
+                                                                            class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <option value="<?php echo $NonDeliveryGoods; ?>" selected> <?php echo  $NonDeliveryGoods; ?> </option>
+                                                                            <option value="RASE">Return at Sender's Expense</option>
+                                                                            <option value="RTS">Return to Sender</option>
+                                                                            <option value="ABAN">Abandon</option>
+                                                                        </select> -->
+
+                                                                        <select name="non_delivery" id="country-billing" class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <?php
+                                                                            $NonDeliveryGoods = $NonDeliveryGoods; // Replace this with the actual value of $NonDeliveryGoods
+                                                                            $options = [
+                                                                                "RASE" => "Return at Sender's Expense",
+                                                                                "RTS" => "Return to Sender",
+                                                                                "ABAN" => "Abandon"
+                                                                            ];
+
+                                                                            foreach ($options as $value => $content) {
+                                                                                $selected = ($NonDeliveryGoods === $value) ? 'selected' : '';
+                                                                                echo '<option value="' . $value . '" ' . $selected . '>' . $content . '</option>';
+                                                                            }
+                                                                            ?>
+                                                                        </select>
+                                                                </div>
+                                                                <div>
+                                                                    <label for="">Reason for Export</label>
+                                                                    <!-- <select name="reason_export" id="country-billing"
+                                                                            class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <option value="<?php echo  $ReasonForExport; ?>" selected> <?php echo  $ReasonForExport; ?> </option>
+                                                                            <option value="DOC">Document</option>
+                                                                            <option value="SAM">Commercial Sample</option>
+                                                                            <option value="REP">Repair or Warranty</option>
+                                                                            <option value="SOG">Sale of Goods</option>
+                                                                            <option value="OTH">Other</option>
+                                                                        </select> -->
+                                                                        <select name="reason_export" id="country-billing" class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <?php
+                                                                            $ReasonForExport = $ReasonForExport; // Replace this with the actual value of $ReasonForExport
+                                                                            $options = [
+                                                                                "DOC" => "Document",
+                                                                                "SAM" => "Commercial Sample",
+                                                                                "REP" => "Repair or Warranty",
+                                                                                "SOG" => "Sale of Goods",
+                                                                                "OTH" => "Other"
+                                                                            ];
+
+                                                                            foreach ($options as $value => $content) {
+                                                                                $selected = ($ReasonForExport === $value) ? 'selected' : '';
+                                                                                echo '<option value="' . $value . '" ' . $selected . '>' . $content . '</option>';
+                                                                            }
+                                                                            ?>
+                                                                        </select>
+                                                                </div>
+                                                                <div>
+                                                                    <label for="">Country of Origin</label>
+                                                                        <!-- <select name="origin_country" id="country-billing"
+                                                                            class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <option value="<?php echo  $CountryOfOrigin; ?>" selected> <?php echo $CountryOfOrigin; ?> </option>
+                                                                            <option value="CA">Canada</option>
+                                                                            <option value="US">USA</option>
+                                                                            <option value="PK">PAKISTAN</option>
+                                                                        </select> -->
+
+                                                                        <select name="origin_country" id="country-billing" class="form-select border-0 country-dropdown">
+                                                                            <option value="">Select</option>
+                                                                            <?php
+                                                                            $CountryOfOrigin = $CountryOfOrigin; // Replace this with the actual value of $CountryOfOrigin
+                                                                            $options = [
+                                                                                "CA" => "Canada",
+                                                                                "US" => "USA",
+                                                                                "PK" => "PAKISTAN"
+                                                                            ];
+
+                                                                            foreach ($options as $value => $content) {
+                                                                                $selected = ($CountryOfOrigin === $value) ? 'selected' : '';
+                                                                                echo '<option value="' . $value . '" ' . $selected . '>' . $content . '</option>';
+                                                                            }
+                                                                            ?>
+                                                                        </select>
+                                                                </div>
+                                                                <div>
+                                                                    <label for="">Shipment Value</label>
+                                                                    <input type="text" placeholder="Shipment Value" value="<?php echo  $ShipmentValue; ?>" id="box-weight"
+                                                                        class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+
+                                                <hr class="border-bottom border-primary border-2">
+
 
                                                 <h3>Preset Box Size And Weights*</h3>
                                                 <div style="
@@ -538,50 +716,8 @@ $mysqli->close();
                                                 </div>
 
 
-                                                <?php if ($addressCountry !== "Canada"): ?>
-                                                <div>
-                                                        <h3>Custom Form:</h3>
-                                                        <div class="form-group col-md-12 box-details text-start mt-3">
-                                                            <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
-                                                                <div>
-                                                                    <label for="">Non-delivery of Goods</label>
-                                                                    <select name="non_delivery" id="country-billing"
-                                                                            class="form-select border-0 country-dropdown">
-                                                                            <option value="">Select</option>
-                                                                            <option value="<?php echo $NonDeliveryGoods; ?>" selected> <?php echo  $NonDeliveryGoods; ?> </option>
-                                                                            <option value="Option 1">Option 1</option>
-                                                                            <option value="Option 2">Option 2</option>
-                                                                        </select>
-                                                                </div>
-                                                                <div>
-                                                                    <label for="">Reason for Export</label>
-                                                                    <select name="reason_export" id="country-billing"
-                                                                            class="form-select border-0 country-dropdown">
-                                                                            <option value="">Select</option>
-                                                                            <option value="<?php echo  $ReasonForExport; ?>" selected> <?php echo  $ReasonForExport; ?> </option>
-                                                                            <option value="Reason 1">Reason 1</option>
-                                                                            <option value="Reason 2">Reason 2</option>
-                                                                        </select>
-                                                                </div>
-                                                                <div>
-                                                                    <label for="">Country of Origin</label>
-                                                                        <select name="origin_country" id="country-billing"
-                                                                            class="form-select border-0 country-dropdown">
-                                                                            <option value="">Select</option>
-                                                                            <option value="<?php echo  $CountryOfOrigin; ?>" selected> <?php echo $CountryOfOrigin; ?> </option>
-                                                                            <option value="Canada">Canada</option>
-                                                                            <option value="USA">USA</option>
-                                                                        </select>
-                                                                </div>
-                                                                <div>
-                                                                    <label for="">Shipment Value</label>
-                                                                    <input type="text" placeholder="Shipment Value" value="<?php echo  $ShipmentValue; ?>" id="box-weight"
-                                                                        class="form-control">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                               <?php endif; ?>
+                                               
+                                             
 
                                                 <div class="col-12 text-end">
                                                     <button class="btn btn-primary" type="button"
@@ -913,7 +1049,8 @@ $mysqli->close();
                         
                         if (!Array.isArray(res)) {   
                             parcelType = res;
-                            let days = dateDifference(parcelType["service-standard"]["expected-delivery-date"]);
+                            // let days = dateDifference(parcelType["service-standard"]["expected-delivery-date"]);
+                            let days = parcelType["service-standard"]["expected-transit-time"];
                             $("#parcel-types").append(`
                                 <label for="parcel-type-0" class="card flex-row mb-2" style="cursor:pointer;border: 1px solid blue;border-radius: 10px;padding: 10px;margin: 10px;">
                                     <span class="px-3">
@@ -929,7 +1066,8 @@ $mysqli->close();
                             return;
                         }
                         res.forEach((parcelType,i)=>{
-                            let days = dateDifference(parcelType["service-standard"]["expected-delivery-date"]);
+                            // let days = dateDifference(parcelType["service-standard"]["expected-delivery-date"]);
+                            let days = parcelType["service-standard"]["expected-transit-time"];
                             $("#parcel-types").append(`
                                 <label for="parcel-type-${i}" class="card flex-row mb-2" style="cursor:pointer;border: 1px solid blue;border-radius: 10px;padding: 10px;margin: 10px;">
                                     <span class="px-3">
@@ -943,12 +1081,18 @@ $mysqli->close();
                                 </label>
                             `)
                         })
+
+                        console.log(country);
                         
                         if (country!="CA") {
+                            console.log('HERE');
                             $("#shipment-button,.extra-fields").show()
+                            $("#custom_form").show()
                         }
                         else{
+                            console.log('HERE 2');
                             $(".extra-fields").hide()
+                            $("#custom_form").hide()
                             $("#shipment-button").show()
                         }
                     }
@@ -1455,5 +1599,9 @@ $mysqli->close();
                 
             })
 
+            // country-billing
+            $('#country_shipping_chzn').change(function() {
+                console.log('IS CHANGING');
+            })
         })
     </script>
