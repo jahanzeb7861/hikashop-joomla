@@ -25,10 +25,14 @@ $username = "f0c0e47bb8bdaa6a";
 $password = "f564ee137e96231fe92fb1";
 $mailedBy = "0008193924";
 $mobo = "0008193924";
+$lastPart = $_GET['lastPart'];
+$manifestURL = $_GET['manifestURL'];
 
 // REST URL
 // $service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/manifest/347891314723499921';
-$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/manifest/825321695927090169';
+$service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/manifest/' . $lastPart;
+// $service_url = $manifestURL;
+// $service_url = 'https://ct.soa-gw.canadapost.ca/rs/' . $mailedBy . '/' . $mobo . '/manifest/954221696614792012';
 
 $curl = curl_init($service_url); // Create REST Request
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);

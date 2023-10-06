@@ -275,14 +275,14 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="first_name">First Name</label></td>
                                                             <td>
-                                                                <input type="text" id="fname-shipping" value="<?php echo $row['address_firstname']; ?>"
+                                                                <input type="text" id="fname-shipping" value="<?php echo $row2['address_firstname']; ?>"
                                                                     class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="Last Name">Last Name</label></td>
                                                             <td>
-                                                                <input type="text" id="lname-shipping" value="<?php echo $row['address_lastname']; ?>"
+                                                                <input type="text" id="lname-shipping" value="<?php echo $row2['address_lastname']; ?>"
                                                                     class="form-control border-0">
                                                             </td>
                                                         </tr>
@@ -290,7 +290,7 @@ $mysqli->close();
                                                             <td><label for="Address">Address</label></td>
                                                             <td>
                                                                 <input type="text" id="address1-shipping"
-                                                                    value="<?php echo $row['address_street']; ?>" class="form-control border-0">
+                                                                    value="<?php echo $row2['address_street']; ?>" class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -298,7 +298,7 @@ $mysqli->close();
                                                             <td><label for="Address Line 2">Address Line 2</label></td>
                                                             <td>
                                                                 <input type="text" id="address2-shipping"
-                                                                    value="<?php echo $row['address_street2']; ?>" class="form-control border-0">
+                                                                    value="<?php echo $row2['address_street2']; ?>" class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -307,7 +307,7 @@ $mysqli->close();
                                                                 <!-- <select name="country_shipping" id="country-shipping"
                                                                     class="form-select border-0 country-dropdown">
                                                                     <option value="">Select</option>
-                                                                    <option value="<?php echo $row['address_country']; ?>" selected> <?php echo $row['address_country']; ?> </option>
+                                                                    <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option>
                                                                     <option value="CA">Canada</option>
                                                                     <option value="US">United States</option>
                                                                     <option value="CH">Switzerland</option>
@@ -316,15 +316,15 @@ $mysqli->close();
                                                                 <select name="country_shipping" id="country-shipping" class="form-select border-0 country-dropdown">
                                                                             <option value="">Select</option>
                                                                             <?php
-                                                                            $row['address_country'] = $row['address_country']; // Replace this with the actual value of $row['address_country']
+                                                                            $row2['address_country'] = $row2['address_country']; // Replace this with the actual value of $row['address_country']
                                                                             $options = [
-                                                                                "CA" => "Canada",
+                                                                                "Canada" => "Canada",
                                                                                 "United States" => "United States",
                                                                                 "Pakistan" => "Pakistan"
                                                                             ];
 
                                                                             foreach ($options as $value => $content) {
-                                                                                $selected = ($row['address_country'] === $value) ? 'selected' : '';
+                                                                                $selected = ($row2['address_country'] === $value) ? 'selected' : '';
                                                                                 echo '<option value="' . $value . '" ' . $selected . '>' . $content . '</option>';
                                                                             }
                                                                             ?>
@@ -336,7 +336,7 @@ $mysqli->close();
                                                             <td>
                                                                 <select name="state_shipping" id="state-shipping"
                                                                     class="form-select border-0 state-dropdown">
-                                                                    <option value="<?php echo $row['address_state']; ?>" selected> <?php echo $row['address_state']; ?> </option>
+                                                                    <option value="<?php echo $row2['address_state']; ?>" selected> <?php echo $row2['address_state']; ?> </option>
                                                                 </select>
                                                             </td>
                                                         </tr>
@@ -345,14 +345,14 @@ $mysqli->close();
                                                             <td>
                                                                 <input type="text" name="zip_code"
                                                                     id="zip-code-shipping"
-                                                                    class="form-control border-0" value="<?php echo $row['address_post_code']; ?>">
+                                                                    class="form-control border-0" value="<?php echo $row2['address_post_code']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="City">City</label></td>
                                                             <td>
                                                                 <input type="text" id="city-shipping"
-                                                                    class="form-control border-0" value="<?php echo $row['address_city']; ?>">
+                                                                    class="form-control border-0" value="<?php echo $row2['address_city']; ?>">
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -364,21 +364,21 @@ $mysqli->close();
                                                             <td><label for="First Name">First Name</label></td>
                                                             <td>
                                                                 <input type="text" id="fname-billing"
-                                                                    class="form-control border-0" value="<?php echo $row2['address_firstname']; ?>">
+                                                                    class="form-control border-0" value="<?php echo $row['address_firstname']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="Last Name">Last Name</label></td>
                                                             <td>
                                                                 <input type="text" id="lname-billing"
-                                                                    class="form-control border-0" value="<?php echo $row2['address_lastname']; ?>">
+                                                                    class="form-control border-0" value="<?php echo $row['address_lastname']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="Address">Address</label></td>
                                                             <td>
                                                                 <input type="text" id="address1-billing"
-                                                                    class="form-control border-0"  value="<?php echo $row2['address_street']; ?>">
+                                                                    class="form-control border-0"  value="<?php echo $row['address_street']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -386,7 +386,7 @@ $mysqli->close();
                                                             <td><label for="Address Line 2">Address Line 2</label></td>
                                                             <td>
                                                                 <input type="text" id="address2-billing"
-                                                                    class="form-control border-0" value="<?php echo $row2['address_street2']; ?>">
+                                                                    class="form-control border-0" value="<?php echo $row['address_street2']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -395,7 +395,7 @@ $mysqli->close();
                                                                 <!-- <select name="country_billing" id="country-billing"
                                                                     class="form-select border-0 country-dropdown">
                                                                     <option value="">Select</option>
-                                                                    <option value="<?php echo $row2['address_country']; ?>" selected> <?php echo $row2['address_country']; ?> </option>
+                                                                    <option value="<?php echo $row['address_country']; ?>" selected> <?php echo $row['address_country']; ?> </option>
                                                                     <option value="CA">Canada</option>
                                                                     <option value="US">United States</option>
                                                                     <option value="CH">Switzerland</option>
@@ -404,15 +404,15 @@ $mysqli->close();
                                                                 <select name="country_shipping" id="country_billing" class="form-select border-0 country-dropdown">
                                                                             <option value="">Select</option>
                                                                             <?php
-                                                                            $row2['address_country'] = $row2['address_country']; // Replace this with the actual value of $row['address_country']
-                                                                            $options = [
+                                                                             $row['address_country'] =  $row['address_country']; // Replace this with the actual value of $row['address_country']
+                                                                             $options = [
                                                                                 "Canada" => "Canada",
-                                                                                "USA" => "USA",
-                                                                                "PAKISTAN" => "PAKISTAN"
+                                                                                "United States" => "United States",
+                                                                                "Pakistan" => "Pakistan"
                                                                             ];
 
                                                                             foreach ($options as $value => $content) {
-                                                                                $selected = ($row['address_country'] === $value) ? 'selected' : '';
+                                                                                $selected = ( $row['address_country'] === $value) ? 'selected' : '';
                                                                                 echo '<option value="' . $value . '" ' . $selected . '>' . $content . '</option>';
                                                                             }
                                                                             ?>
@@ -424,7 +424,7 @@ $mysqli->close();
                                                             <td>
                                                                 <select name="state_billing" id="state-billing"
                                                                     class="form-select border-0 state-dropdown">
-                                                                    <option value="<?php echo $row2['address_state']; ?>" selected> <?php echo $row2['address_state']; ?> </option>
+                                                                    <option value="<?php echo $row['address_state']; ?>" selected> <?php echo $row['address_state']; ?> </option>
                                                                 </select>
                                                             </td>
                                                         </tr>
@@ -433,14 +433,14 @@ $mysqli->close();
                                                             <td>
                                                                 <input type="text" name="zip_code" id="zip-code-billing"
                                                                     class="form-control border-0">
-                                                                    value="<?php echo $row2['address_post_code']; ?>"
+                                                                    value="<?php echo $row['address_post_code']; ?>"
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="City">City</label></td>
                                                             <td>
                                                                 <input type="text" id="city-billing"
-                                                                    class="form-control border-0" value="<?php echo $row2['address_city']; ?>">
+                                                                    class="form-control border-0" value="<?php echo $row['address_city']; ?>">
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -526,7 +526,7 @@ $mysqli->close();
 
                                                         <hr class="border-bottom border-primary border-2">
 
-                                                <div id="custom_form">
+                                                <div id="custom_form" style="display: none;">
                                                         <h3>Custom Form:</h3>
                                                         <div class="form-group col-md-12 box-details text-start mt-3">
                                                             <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
@@ -727,7 +727,7 @@ $mysqli->close();
                                                     style="display: none;">
                                                     <div id="parcel-types" style="display: flex;flex-wrap: wrap;"></div>
                                                 </div>
-                                                <div class="col-md-4 extra-fields" style="display: none;">
+                                                <!-- <div class="col-md-4 extra-fields" style="display: none;">
                                                     <label for="non-delivery-instruction">Non Delivery
                                                         Instructions</label>
                                                     <select name="non_delivery_instruction"
@@ -741,7 +741,7 @@ $mysqli->close();
                                                         class="form-select">
                                                         <option>Repair/Warranty</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                                 <div class="col-md-4">
                                                     <div id="receipt-div"></div>
                                                     <button class="btn btn-primary" type="button" style="display: none;"
@@ -1118,10 +1118,26 @@ $mysqli->close();
 
 
                 let weight = $("#box-weight").val(),length = $("#box-length").val(),width = $("#box-width").val(),height = $("#box-height").val(),zipCode = $("#zip-code-shipping").val(),country = $(".country-dropdown").val();
-                let fname = $("#fname-shipping").val(),lname = $("#lname-shipping").val(),address1 = $("#address1-shipping").val(),address2 = $("#address2-shipping").val(),state = $("#state-shipping").val(),city = $("#city-shipping").val();
+                let fname = $("#fname-shipping").val(),lname = $("#lname-shipping").val(),address1 = $("#address1-shipping").val(),address2 = $("#address2-shipping").val(),city = $("#city-shipping").val();
                 let parcelType = $(".parcel-type:checked").val();
+                let signature = $('#signature').prop('checked');
+                let holdForPackup = $("#hold_for_pickup").prop('checked');
+
+                if (signature) {
+                    signature = 'SO';
+                }
+
+                if (holdForPackup) {
+                    holdForPackup = 'HFP';
+                }
+
+                var state = $("#state-shipping").val();
+                
+                if (state == "Ontario ") {
+                    state = "ON";
+                }
              
-                if (!weight || !length || !width || !height || !zipCode || !fname || !lname  || !address1  || !address2  || !state || !city || !parcelType) {
+                if (!weight || !length || !width || !height || !zipCode || !fname || !lname  || !address1 || !state || !city || !parcelType) {
                     alert("Please Fill All the Required Fields");
                     return;
                 }
@@ -1137,7 +1153,7 @@ $mysqli->close();
                         type: "get",
                         url: "shipping/REST/shipping/CreateShipment/CreateShipment.php",
                         data: {
-                            weight, length, width, height, zipCode, fname, lname, address1, address2, state, city, parcelType, country, printerType
+                            weight, length, width, height, zipCode, fname, lname, address1, address2, state, city, parcelType, country, printerType,signature,holdForPackup
                         },
                         success: function (res) {
 
@@ -1322,39 +1338,7 @@ $mysqli->close();
                 //     }
                 // });
 
-                // GetManifest.php
-                $.ajax({
-                    type: "get",
-                    url: "shipping/REST/shipping/GetManifest/GetManifest.php",
-                    data: {
-                        shipmentId
-                    },
-                    success: function (res) {
-                       // Split the string into lines
-                        const lines = res.split('\n');
-
-                        // Initialize a variable to store the label value
-                        let labelValue = null;
-
-                        // Iterate through the lines
-                        for (const line of lines) {
-                            // Check if the line contains "label:"
-                            if (line.includes("label:")) {
-                                // Extract the value after "label:"
-                                labelValue = line.split("label:")[1].trim();
-                                break; // Exit the loop once the label value is found
-                            }
-                        }
-
-                        // Open the labelValue URL in a new tab
-                        if (labelValue) {
-                            $("#myModal").hide();
-                            window.open(labelValue, '_blank');
-                        } else {
-                            console.log("Label URL not found.");
-                        }
-                    }
-                });
+                
 
                 // GetArtifact.php
                 //   $.ajax({
@@ -1547,6 +1531,7 @@ $mysqli->close();
                         var errorCode = null;
                         var errorMessage = null;
                         var responseStatus = null;
+                        var manifestURL = null;
 
                         // Loop through the lines to find error code and message
                         for (var i = 0; i < lines.length; i++) {
@@ -1557,6 +1542,8 @@ $mysqli->close();
                                 errorMessage = line.split(":")[1].trim();
                             } else if (line.startsWith("HTTP Response Status:")) {
                                 responseStatus = line.split(":")[1].trim();
+                            } else if (line.startsWith("manifest:")) {
+                                manifestURL = line.split("/")[1].trim();
                             }
                         }
 
@@ -1567,6 +1554,63 @@ $mysqli->close();
                         } else {
                             if (responseStatus == "200") {
                                 alert("Shipment transmitted Successfully!");
+
+                                // Split the string by spaces to get individual words
+                                const words = res.split(' ');
+
+                                console.log('Finding data:');
+                                console.log(manifestURL);
+                                console.log(res);
+                                console.log('Words:');
+                                console.log(words);
+                                const manifestIndex = words.indexOf('manifest:');
+                                console.log('manifestURL:');
+                                console.log(words[words.length - 1]);
+
+                                // Find the word "manifest:" in the array
+
+                                // If "manifest:" is found, get the URL part after it
+                                if (words.length > 0) {
+                                    const manifestURL = words[words.length - 1];
+                                    // Extract the last part of the URL
+                                    const parts = manifestURL.split('/');
+                                    const lastPart = parts[parts.length - 1].trim();
+                                    console.log(lastPart);
+
+                                    if (lastPart) {
+                                            $.ajax({
+                                                type: "get",
+                                                url: "shipping/REST/shipping/GetManifest/GetManifest.php",
+                                                data: {
+                                                    lastPart,
+                                                    manifestURL
+                                                },
+                                                success: function (response) {
+                                                    console.log(response);
+
+                                                    // Regular expression to match the artifact URL
+                                                    var regex = /artifact: (https:\/\/[^ ]+)/;
+
+                                                    // Use the regex to extract the artifact URL
+                                                    var match = response.match(regex);
+
+                                                    // Check if a match was found
+                                                    if (match && match[1]) {
+                                                        var artifactUrl = match[1];
+                                                        console.log("Artifact URL:", artifactUrl);
+                                                        if (artifactUrl) {
+                                                            window.open(artifactUrl, '_blank');
+                                                        } 
+                                                    } else {
+                                                        console.log("Artifact URL not found in the input string.");
+                                                    }
+                                                }
+                                            });
+                                    }
+
+                                } else {
+                                    console.log("Manifest URL not found in the string.");
+                                }
                             }
                         }
 
@@ -1580,6 +1624,9 @@ $mysqli->close();
                         $("#endOfDayButton").prop("disabled", false);
                     }
                });
+
+               // GetManifest.php
+              
 
             })
 
