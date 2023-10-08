@@ -654,7 +654,13 @@ $mysqli->close();
                                                          
                                                         <label class="form-check-label" style="margin-left: 5px; margin-bottom: 0px;" for="reverseCheck<?php echo $preset['id']; ?>">
                                                             <strong><?php echo $preset['box_name']; ?>:</strong> <br>      
-                                                            <?php echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' INCH (' . $preset['box_weight'] . ' LBS)'; ?>
+                                                            <?php
+                                                                if ($preset['box_unit_type'] === "Metric") {
+                                                                    echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' CM (' . $preset['box_weight'] . ' KG)';
+                                                                } else {
+                                                                    echo $preset['box_length'] . ' x ' . $preset['box_width'] . ' x ' . $preset['box_height'] . ' INCH (' . $preset['box_weight'] . ' LBS)';
+                                                                }
+                                                                ?>
                                                         </label>
                                                     </div>
                                                     <?php endforeach; ?>
@@ -678,42 +684,42 @@ $mysqli->close();
                                                 <div class="form-group col-md-12 box-details text-start mt-3">
                                                     <div class="d-flex gap-2 mb-3 single-box" style="display: flex;gap: 5px;flex-wrap: wrap;margin: 1% auto;">
                                                         <div>
-                                                            <label for="">Length</label>
+                                                            <label for="">Length <span class="metricspan">(CM)</span> <span class="imperialspan">(INCH)</span></label>
                                                             <input type="number" placeholder="Length" id="box-length"
                                                                 class="form-control" style="width: 70px;">
                                                         </div>
                                                         <div>
-                                                            <label for="">Width</label>
+                                                            <label for="">Width <span class="metricspan">(CM)</span> <span class="imperialspan">(INCH)</span></label>
                                                             <input type="number" placeholder="Width" id="box-width"
                                                                 class="form-control" style="width: 70px;">
                                                         </div>
                                                         <div>
-                                                            <label for="">Height</label>
+                                                            <label for="">Height <span class="metricspan">(CM)</span> <span class="imperialspan">(INCH)</span></label>
                                                             <input type="number" placeholder="Height" id="box-height"
                                                                 class="form-control" style="width: 70px;">
                                                         </div>
                                                         <div>
-                                                            <label for="">Weight</label>
+                                                            <label for="">Weight <span id="metricweightspan">(KG)</span> <span id="imperialweightspan">(LB)</span></label>
                                                             <input type="number" placeholder="Weight" id="box-weight"
-                                                                class="form-control" style="width: 70px;">
+                                                                class="form-control" style="width: 70px;margin-top: 4px;">
                                                         </div>
                                                         <div>
-                                                            <label for="">Insurance</label>
+                                                            <label for="">Insurance <span style="display: block;">(NUM)</span> <span style="display: none;">(LB)</span></label>
                                                             <input type="number" placeholder="Insurance"
-                                                                id="box-insurance" class="form-control" value="100" style="width: 70px;">
+                                                                id="box-insurance" class="form-control" value="100" style="width: 70px; margin-top: 4px;">
                                                         </div>
 
                                                         <button class="btn btn-primary switch-button" id="imperialBtn" style="
     margin-left: 5px;
     margin-bottom: 0px;
-    margin-top: 21px;
+    margin-top: 43px;
     height: 30px;
 " data-unit-type="imperial">Switch to Imperial</button>
                                                        
                                                             <button class="btn btn-primary switch-button" id="MetricBtn" style="
     margin-left: 5px;
     margin-bottom: 0px;
-    margin-top: 21px;
+    margin-top: 43px;
     height: 30px;
     display:none;
 " data-unit-type="metric">Switch to Metric</button>
@@ -966,7 +972,10 @@ $mysqli->close();
 
                         $('#MetricBtn').css('display', 'block');
                         $('#imperialBtn').css('display', 'none');
-
+                        $('.metricspan').css('display', 'none');
+                        $('.imperialspan').css('display', 'block');
+                        $('#metricweightspan').css('display', 'none');
+                        $('#imperialweightspan').css('display', 'block');
                        
 
                         $('.switch-button').text('Switch to Metric');
@@ -975,6 +984,10 @@ $mysqli->close();
 
                         $('#MetricBtn').css('display', 'none');
                         $('#imperialBtn').css('display', 'block');
+                        $('.metricspan').css('display', 'block');
+                        $('.imperialspan').css('display', 'none');
+                        $('#metricweightspan').css('display', 'block');
+                        $('#imperialweightspan').css('display', 'none');
 
                         $('.switch-button').text('Switch to Imperial');
                     }
@@ -1243,6 +1256,96 @@ $mysqli->close();
                         alert('Contact Phone Number is Required.');
                         return;
                     }
+                }
+
+                // Check if the weight and dimensions are in CM and KG
+                if ($('#metricweightspan').css('display') === 'block') {
+                    // Convert weight from KG to pounds (1 KG ≈ 2.20462 pounds)
+                    var convertedweight = weight / 2.20462;
+
+                    // Convert dimensions from CM to inches (1 CM ≈ 0.393701 inches)
+                    var convertedlength = length * 0.393701;
+                    var convertedwidth = width * 0.393701;
+                    var convertedheight = height * 0.393701;
+                } else {
+                    var convertedweight = weight;
+                    var convertedlength = length;
+                    var convertedwidth = width;
+                    var convertedheight = height;
+                }
+
+                console.log(convertedweight);
+
+                // Calculate girth in inches
+                let girth = convertedlength + (convertedheight * 2) + (convertedwidth * 2);
+
+                if (country === "CA") {
+                    // Check if weight is less than 0.2 lb and dimensions are within the specified range
+                    if (convertedweight < 0.2 || convertedlength < 9.1 || convertedwidth < 7.9 || convertedheight < 1.0) {
+                        alert("Dimensions are wrong for this parcel. Minimum requirements: Weight: 0.2 lb, Length: 9.1 in, Width: 7.9 in, Height: 1.0 in");
+                        return;
+                    } else {
+                        // Parcel meets the minimum requirements
+
+                        // Now check if weight is less than 66 lb and the sum of length and girth is less than 118 inches
+                        if (convertedweight > 66 || (convertedlength + girth) > 118) {
+                            alert("Parcel exceeds maximum values. Maximum requirements: Weight: 66 lb, Length + Girth: 118 in");
+                            return;
+                        } else {
+                            // Parcel meets the maximum requirements
+                            // You can continue with your code here
+                        }
+                    }
+                } else if (country === "US") {
+                        if (parcelType === "USA.EP") {
+                            // Check if weight is less than 0.2 lb and dimensions are within the specified minimum values
+                            if (weight > 0.2 || length < 8.3 || width < 5.5 || height < 0.2) {
+                            alert("Parcel does not meet minimum requirements for Expedited ParcelTM – USA. Minimum requirements:\nWeight: 0.2 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.2 in");
+                            return;    
+                            } else if (weight > 66 || length + width + height > 107.9) {
+                            alert("Parcel exceeds maximum values for Expedited ParcelTM – USA. Maximum requirements:\nWeight: 66 lb\nLength + Girth: 107.9 in");
+                            return;    
+                            } else {
+                            // Parcel meets the requirements for USA.EP
+                            // You can continue with your code here
+                            }
+                        } else if (parcelType === "USA.XP") {
+                            // Check if weight is less than 0.1 lb and dimensions are within the specified minimum values
+                            if (weight > 0.1 || length < 8.3 || width < 5.5 || height < 0.039) {
+                            alert("Parcel does not meet minimum requirements for XpresspostTM – USA. Minimum requirements:\nWeight: 0.1 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.039 in");
+                            return;   
+                            } else if (weight > 66 || length + width + height > 107.9) {
+                            alert("Parcel exceeds maximum values for XpresspostTM – USA. Maximum requirements:\nWeight: 66 lb\nLength + Girth: 107.9 in");
+                            return;    
+                            } else {
+                            // Parcel meets the requirements for USA.XP
+                            // You can continue with your code here
+                            }
+                        } else {
+                            // Unsupported parcel type for the US
+                            // alert("Unsupported parcel type for the US");
+                            // return;
+                        }
+                 } else {
+                        // Parcel is not going to Canada, so no need to check dimensions
+                        // You can continue with your code here
+                        if (parcelType === "INT.XP") {
+                                    // Check if weight is less than 0.2 lb and dimensions are within the specified minimum values
+                                    if (weight > 0.2 || length < 8.3 || width < 5.5 || height < 0.039) {
+                                    alert("Parcel does not meet minimum requirements for XpresspostTM – International . Minimum requirements:\nWeight: 0.2 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.039 in");
+                                    return;    
+                                    } else if (weight > 66 || length + width + height > 118) {
+                                    alert("Parcel exceeds maximum values for XpresspostTM – International . Maximum requirements:\nWeight: 66 lb\nLength + Girth: 118 in");
+                                    return;    
+                                    } else {
+                                    // Parcel meets the requirements for USA.EP
+                                    // You can continue with your code here
+                                    }
+                        } else {
+                            // Unsupported parcel type for the US
+                            // alert("Unsupported parcel type for the US");
+                            // return;
+                        }
                 }
 
                 $(".main-loader").fadeIn(300);
