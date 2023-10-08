@@ -275,21 +275,21 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="first_name">First Name</label></td>
                                                             <td>
-                                                                <input type="text" id="fname-shipping" value="<?php echo $row2['address_firstname']; ?>"
+                                                                <input type="text" id="fname-billing" value="<?php echo $row2['address_firstname']; ?>"
                                                                     class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="Last Name">Last Name</label></td>
                                                             <td>
-                                                                <input type="text" id="lname-shipping" value="<?php echo $row2['address_lastname']; ?>"
+                                                                <input type="text" id="lname-billing" value="<?php echo $row2['address_lastname']; ?>"
                                                                     class="form-control border-0">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="Address">Address</label></td>
                                                             <td>
-                                                                <input type="text" id="address1-shipping"
+                                                                <input type="text" id="address1-billing"
                                                                     value="<?php echo $row2['address_street']; ?>" class="form-control border-0">
                                                             </td>
                                                         </tr>
@@ -297,7 +297,7 @@ $mysqli->close();
 
                                                             <td><label for="Address Line 2">Address Line 2</label></td>
                                                             <td>
-                                                                <input type="text" id="address2-shipping"
+                                                                <input type="text" id="address2-billing"
                                                                     value="<?php echo $row2['address_street2']; ?>" class="form-control border-0">
                                                             </td>
                                                         </tr>
@@ -313,14 +313,14 @@ $mysqli->close();
                                                                     <option value="CH">Switzerland</option>
                                                                 </select> -->
 
-                                                                <select name="country_shipping" id="country-shipping" class="form-select border-0 country-dropdown">
+                                                                <select name="country_billing" id="country-billing" class="form-select border-0 country-dropdown">
                                                                             <option value="">Select</option>
                                                                             <?php
                                                                             $row2['address_country'] = $row2['address_country']; // Replace this with the actual value of $row['address_country']
                                                                             $options = [
                                                                                 "Canada" => "Canada",
                                                                                 "United States" => "United States",
-                                                                                "Pakistan" => "Pakistan"
+                                                                                "Switzerland" => "Switzerland"
                                                                             ];
 
                                                                             foreach ($options as $value => $content) {
@@ -334,7 +334,7 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="Province/State">Province/State</label></td>
                                                             <td>
-                                                                <select name="state_shipping" id="state-shipping"
+                                                                <select name="state_billing" id="state-billing"
                                                                     class="form-select border-0 state-dropdown">
                                                                     <option value="<?php echo $row2['address_state']; ?>" selected> <?php echo $row2['address_state']; ?> </option>
                                                                 </select>
@@ -344,14 +344,14 @@ $mysqli->close();
                                                             <td><label for="Postal Address/Zip Code">Postal Address/Zip Code</label></td>
                                                             <td>
                                                                 <input type="text" name="zip_code"
-                                                                    id="zip-code-shipping"
+                                                                    id="zip-code-billing"
                                                                     class="form-control border-0" value="<?php echo $row2['address_post_code']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="City">City</label></td>
                                                             <td>
-                                                                <input type="text" id="city-shipping"
+                                                                <input type="text" id="city-billing"
                                                                     class="form-control border-0" value="<?php echo $row2['address_city']; ?>">
                                                             </td>
                                                         </tr>
@@ -363,21 +363,21 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="First Name">First Name</label></td>
                                                             <td>
-                                                                <input type="text" id="fname-billing"
+                                                                <input type="text" id="fname-shipping"
                                                                     class="form-control border-0" value="<?php echo $row['address_firstname']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="Last Name">Last Name</label></td>
                                                             <td>
-                                                                <input type="text" id="lname-billing"
+                                                                <input type="text" id="lname-shipping"
                                                                     class="form-control border-0" value="<?php echo $row['address_lastname']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="Address">Address</label></td>
                                                             <td>
-                                                                <input type="text" id="address1-billing"
+                                                                <input type="text" id="address1-shipping"
                                                                     class="form-control border-0"  value="<?php echo $row['address_street']; ?>">
                                                             </td>
                                                         </tr>
@@ -385,14 +385,14 @@ $mysqli->close();
 
                                                             <td><label for="Address Line 2">Address Line 2</label></td>
                                                             <td>
-                                                                <input type="text" id="address2-billing"
+                                                                <input type="text" id="address2-shipping"
                                                                     class="form-control border-0" value="<?php echo $row['address_street2']; ?>">
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><label for="Country">Country</label></td>
                                                             <td>
-                                                                <!-- <select name="country_billing" id="country-billing"
+                                                                <!-- <select name="country_shipping" id="country-shipping"
                                                                     class="form-select border-0 country-dropdown">
                                                                     <option value="">Select</option>
                                                                     <option value="<?php echo $row['address_country']; ?>" selected> <?php echo $row['address_country']; ?> </option>
@@ -401,14 +401,14 @@ $mysqli->close();
                                                                     <option value="CH">Switzerland</option>
                                                                 </select> -->
 
-                                                                <select name="country_shipping" id="country_billing" class="form-select border-0 country-dropdown">
+                                                                <select name="country_shipping" id="country_shipping" class="form-select border-0 country-dropdown">
                                                                             <option value="">Select</option>
                                                                             <?php
                                                                              $row['address_country'] =  $row['address_country']; // Replace this with the actual value of $row['address_country']
                                                                              $options = [
                                                                                 "Canada" => "Canada",
                                                                                 "United States" => "United States",
-                                                                                "Pakistan" => "Pakistan"
+                                                                                "Switzerland" => "Switzerland"
                                                                             ];
 
                                                                             foreach ($options as $value => $content) {
@@ -422,7 +422,7 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="Province/State">Province/State</label></td>
                                                             <td>
-                                                                <select name="state_billing" id="state-billing"
+                                                                <select name="state_shipping" id="state-shipping"
                                                                     class="form-select border-0 state-dropdown">
                                                                     <option value="<?php echo $row['address_state']; ?>" selected> <?php echo $row['address_state']; ?> </option>
                                                                 </select>
@@ -431,7 +431,7 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="Postal Address/Zip Code">Postal Address/Zip Code</label></td>
                                                             <td>
-                                                                <input type="text" name="zip_code" id="zip-code-billing"
+                                                                <input type="text" name="zip_code" id="zip-code-shipping"
                                                                     class="form-control border-0">
                                                                     value="<?php echo $row['address_post_code']; ?>"
                                                             </td>
@@ -439,7 +439,7 @@ $mysqli->close();
                                                         <tr>
                                                             <td><label for="City">City</label></td>
                                                             <td>
-                                                                <input type="text" id="city-billing"
+                                                                <input type="text" id="city-shipping"
                                                                     class="form-control border-0" value="<?php echo $row['address_city']; ?>">
                                                             </td>
                                                         </tr>
@@ -541,7 +541,7 @@ $mysqli->close();
                                                                             <option value="ABAN">Abandon</option>
                                                                         </select> -->
 
-                                                                        <select name="non_delivery" id="country-billing" class="form-select border-0 country-dropdown">
+                                                                        <select name="non_delivery" id="non_delivery_goods" class="form-select border-0 country-dropdown">
                                                                             <option value="">Select</option>
                                                                             <?php
                                                                             $NonDeliveryGoods = $NonDeliveryGoods; // Replace this with the actual value of $NonDeliveryGoods
@@ -570,7 +570,7 @@ $mysqli->close();
                                                                             <option value="SOG">Sale of Goods</option>
                                                                             <option value="OTH">Other</option>
                                                                         </select> -->
-                                                                        <select name="reason_export" id="country-billing" class="form-select border-0 country-dropdown">
+                                                                        <select name="reason_export" id="reason_export" class="form-select border-0 country-dropdown">
                                                                             <option value="">Select</option>
                                                                             <?php
                                                                             $ReasonForExport = $ReasonForExport; // Replace this with the actual value of $ReasonForExport
@@ -600,7 +600,7 @@ $mysqli->close();
                                                                             <option value="PK">PAKISTAN</option>
                                                                         </select> -->
 
-                                                                        <select name="origin_country" id="country-billing" class="form-select border-0 country-dropdown">
+                                                                        <select name="origin_country" id="origin_country" class="form-select border-0 country-dropdown">
                                                                             <option value="">Select</option>
                                                                             <?php
                                                                             $CountryOfOrigin = $CountryOfOrigin; // Replace this with the actual value of $CountryOfOrigin
@@ -619,7 +619,14 @@ $mysqli->close();
                                                                 </div>
                                                                 <div>
                                                                     <label for="">Shipment Value</label>
-                                                                    <input type="text" placeholder="Shipment Value" value="<?php echo  $ShipmentValue; ?>" id="box-weight"
+                                                                    <input type="number" placeholder="Shipment Value" value="<?php echo  $ShipmentValue; ?>" id="shipment_value"
+                                                                        class="form-control">
+                                                                </div>
+
+                                                                <!-- Contact Phone number -->
+                                                                <div>
+                                                                    <label for="">Contact Phone number</label>
+                                                                    <input type="number" placeholder="Contact Phone number" id="contact_phone_number"
                                                                         class="form-control">
                                                                 </div>
                                                             </div>
@@ -834,9 +841,49 @@ $mysqli->close();
                 } else if (country == 'United States') {
                     country = "US";
 
+                } else if (country == 'Switzerland') {
+                    country = "CH";
                 }
 
-                $.getJSON('states.json',function(data){
+                console.log(country);
+
+                $.getJSON('statesNew.json',function(data){
+                    let states = data.filter((state,i)=>{
+                        if (country==state.country_code) {
+                            return state;
+                        }
+                    })
+
+                    $(".state-dropdown").html("<option value=''>Select</option>");
+                    $(".state-dropdown").css("display", "block");
+                    $("#state_shipping_chzn").css("display", "none");
+                    $("#state_billing_chzn").css("display", "none");
+
+                    if (states.length == 0) {
+                        $(".state-dropdown").append("<option value='<?php echo $row["address_state"]; ?>' selected><?php echo $row['address_state']; ?></option>");
+                    }
+
+                    states.forEach((state)=>{
+                        $(".state-dropdown").append(`<option value="${state.state_code}">${state.name}</option>`)
+                    })
+                })
+
+            });
+
+             // MORE CODE
+             document.getElementById("country_billing_chzn").addEventListener("click", function () {
+                let country = $("#country_billing_chzn > a > span").text();
+
+                if (country == 'Canada') {
+                    country = "CA";
+                } else if (country == 'United States') {
+                    country = "US";
+
+                } else if (country == 'Switzerland') {
+                    country = "CH";
+                }
+
+                $.getJSON('statesNew.json',function(data){
                     let states = data.filter((state,i)=>{
                         if (country==state.country_code) {
                             return state;
@@ -869,6 +916,8 @@ $mysqli->close();
             $(".country-dropdown").on("change",function(){
               
                 let country = $(this).val();
+
+                console.log(country);
                 $.getJSON('states.json',function(data){
                     let states = data.filter((state,i)=>{
                         if (country==state.country_code) {
@@ -1002,6 +1051,13 @@ $mysqli->close();
 
             $("#confirm-button").on("click",function(){
 
+                var useBillingAddress = $('#address_type2').prop('checked');
+                var useShippingAddress = $('#address_type1').prop('checked');
+
+                if (!useBillingAddress && !useShippingAddress) {
+                    alert('Please choose which address you want to use as a shipping label?');
+                    return;
+                }
 
                 // Encode the PHP object as a JSON string and pass it to JavaScript
                 var printerType = <?php echo json_encode($decodedObject); ?>;
@@ -1013,7 +1069,11 @@ $mysqli->close();
                 let length = $("#box-length").val();
                 let width = $("#box-width").val();
                 let height = $("#box-height").val();
-                let zipCode = $("#zip-code-shipping").val();
+                if (useShippingAddress) {
+                   var zipCode = $("#zip-code-shipping").val();
+                } else {
+                    var zipCode = $("#zip-code-billing").val();
+                }
                 let country = $(".country-dropdown").val();
                 if (!weight || !length || !width || !height || !zipCode || !country) {
                     alert("Please Fill All the Required Fields");
@@ -1024,6 +1084,8 @@ $mysqli->close();
                 } else if (country == 'United States') {
                     country = "US";
 
+                } else if (country == 'Switzerland') {
+                    country = "CH";
                 }
 
                 $(".main-loader").fadeIn(300)
@@ -1034,6 +1096,8 @@ $mysqli->close();
                         weight,length,width,height,zipCode,country
                     },
                     success:function(res){
+
+                        $("#shipment-button").show();
                         
                         $(".main-loader").fadeOut(300)
                         res = JSON.parse(res);
@@ -1082,6 +1146,7 @@ $mysqli->close();
                             `)
                         })
 
+                        console.log('COUNTRY:');
                         console.log(country);
                         
                         if (country!="CA") {
@@ -1115,10 +1180,20 @@ $mysqli->close();
 
                 console.log(printerType);
 
+              
+                var useBillingAddress = $('#address_type2').prop('checked');
+                var useShippingAddress = $('#address_type1').prop('checked');
+                
+                if (useBillingAddress) {
+                    console.log('USING BILLING');
+                    var weight = $("#box-weight").val(),length = $("#box-length").val(),width = $("#box-width").val(),height = $("#box-height").val(),zipCode = $("#zip-code-billing").val(),country = $(".country-dropdown").val();
+                    var fname = $("#fname-billing").val(),lname = $("#lname-billing").val(),address1 = $("#address1-billing").val(),address2 = $("#address2-billing").val(),city = $("#city-billing").val();
+                } else {
+                    console.log('USING SHIPPING');
+                    var weight = $("#box-weight").val(),length = $("#box-length").val(),width = $("#box-width").val(),height = $("#box-height").val(),zipCode = $("#zip-code-shipping").val(),country = $(".country-dropdown").val();
+                    var fname = $("#fname-shipping").val(),lname = $("#lname-shipping").val(),address1 = $("#address1-shipping").val(),address2 = $("#address2-shipping").val(),city = $("#city-shipping").val();
+                }
 
-
-                let weight = $("#box-weight").val(),length = $("#box-length").val(),width = $("#box-width").val(),height = $("#box-height").val(),zipCode = $("#zip-code-shipping").val(),country = $(".country-dropdown").val();
-                let fname = $("#fname-shipping").val(),lname = $("#lname-shipping").val(),address1 = $("#address1-shipping").val(),address2 = $("#address2-shipping").val(),city = $("#city-shipping").val();
                 let parcelType = $(".parcel-type:checked").val();
                 let signature = $('#signature').prop('checked');
                 let holdForPackup = $("#hold_for_pickup").prop('checked');
@@ -1146,6 +1221,28 @@ $mysqli->close();
                     country = "CA";
                 } else if (country == 'United States') {
                     country = "US";
+                }  else if (country == 'Switzerland') {
+                    country = "CH";
+                }
+                
+                // alert(zipCode)
+                // return;
+
+                var nonDeliveryGoods = $('#non_delivery_goods').val();
+                var reasonExport = $('#reason_export').val();
+                var originCountry = $('#origin_country').val();
+                var shipmentValue = $('#shipment_value').val();
+                var contactPhoneNumber = $('#contact_phone_number').val();
+
+                if (country == "US") {
+                    if (!nonDeliveryGoods) {
+                        alert('Non Delivery Goods is Required Field.');
+                        return;
+                    }
+                    if (!contactPhoneNumber) {
+                        alert('Contact Phone Number is Required.');
+                        return;
+                    }
                 }
 
                 $(".main-loader").fadeIn(300);
@@ -1153,7 +1250,7 @@ $mysqli->close();
                         type: "get",
                         url: "shipping/REST/shipping/CreateShipment/CreateShipment.php",
                         data: {
-                            weight, length, width, height, zipCode, fname, lname, address1, address2, state, city, parcelType, country, printerType,signature,holdForPackup
+                            weight, length, width, height, zipCode, fname, lname, address1, address2, state, city, parcelType, country, printerType,signature,holdForPackup,nonDeliveryGoods,contactPhoneNumber
                         },
                         success: function (res) {
 

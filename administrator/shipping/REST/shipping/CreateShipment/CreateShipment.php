@@ -45,30 +45,31 @@ $parcelType = $_GET['parcelType'];
 $printerType = $_GET['printerType'];
 $signature = $_GET['signature'];
 $holdForPackup = $_GET['holdForPackup'];
+$nonDeliveryGoods = $_GET['nonDeliveryGoods'];
+$contactPhoneNumber = $_GET['contactPhoneNumber'];
 
-if ($signature) {
-	$signature = 'SO';
-}
+// if ($signature) {
+// 	$signature = 'SO';
+// }
 
-if ($holdForPackup) {
-	$holdForPackup = 'HFP';
-}
+// if ($holdForPackup) {
+// 	$holdForPackup = 'HFP';
+// }
+
+
 
 $xmlRequest = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <shipment xmlns="http://www.canadapost.ca/ws/shipment-v8">
-    <group-id>{$groupId}</group-id>
-    <!-- <quickship-label-requested>true</quickship-label-requested> -->
-    <!-- <transmit-shipment>true</transmit-shipment> -->
-    <requested-shipping-point>{$requestedShippingPoint}</requested-shipping-point>
-    <cpc-pickup-indicator>true</cpc-pickup-indicator>
-    <expected-mailing-date>{$mailingDate}</expected-mailing-date>
-    <delivery-spec>
-        <service-code>{$parcelType}</service-code>
+        <group-id>{$groupId}</group-id>
+        <requested-shipping-point>{$requestedShippingPoint}</requested-shipping-point>
+        <cpc-pickup-indicator>true</cpc-pickup-indicator>
+        <delivery-spec>
+            <service-code>{$parcelType}</service-code>
             <sender>
-                <name>Bulma</name>
-                <company>Capsule Corp.</company>
-                <contact-phone>1 (514) 820 5879</contact-phone>
+                <name>Bob</name>
+                <company>CGI</company>
+                <contact-phone>1 (450) 823-8432</contact-phone>
                 <address-details>
                     <address-line-1>502 MAIN ST N</address-line-1>
                     <city>MONTREAL</city>
@@ -79,53 +80,31 @@ $xmlRequest = <<<XML
             </sender>
             <destination>
                 <name>{$fullName}</name>
-                <!-- <company>ACME Corp</company> -->
+                <company>CGI</company>
                 <address-details>
                     <address-line-1>{$address1}</address-line-1>
-                    <address-line-2>{$address2}</address-line-2>
                     <city>{$city}</city>
                     <prov-state>{$state}</prov-state>
                     <country-code>{$country}</country-code>
                     <postal-zip-code>{$zipCode}</postal-zip-code>
                 </address-details>
             </destination>
-        <options>
-            <option>
-                <option-code>DC</option-code>
-            </option>
-XML;
-
-// Conditionally add the <option> tags for $signature and $holdForPackup
-if (isset($signature)) {
-    $xmlRequest .= <<<XML
-            <option>
-                <option-code>{$signature}</option-code>
-            </option>
-XML;
-}
-
-if (isset($holdForPackup)) {
-    $xmlRequest .= <<<XML
-            <option>
-                <option-code>{$holdForPackup}</option-code>
-            </option>
-XML;
-}
-
-// Complete the XML request
-$xmlRequest .= <<<XML
-        </options>
-        <parcel-characteristics>
-            <weight>{$weight}</weight>
-            <dimensions>
-                <length>{$length}</length>
-                <width>{$width}</width>
-                <height>{$height}</height>
-            </dimensions>
-            <unpackaged>false</unpackaged>
-            <mailing-tube>false</mailing-tube>
-        </parcel-characteristics>
-        <notification>
+            <options>
+                <option>
+                    <option-code>RASE</option-code>
+                </option>
+            </options>
+            <parcel-characteristics>
+                <weight>{$weight}</weight>
+                <dimensions>
+                    <length>{$length}</length>
+                    <width>{$width}</width>
+                    <height>{$height}</height>
+                </dimensions>
+                <unpackaged>false</unpackaged>
+                <mailing-tube>false</mailing-tube>
+            </parcel-characteristics>
+            <notification>
             <email>ryuko.saito@kubere.com</email>
             <on-shipment>true</on-shipment>
             <on-exception>false</on-exception>
@@ -149,8 +128,65 @@ $xmlRequest .= <<<XML
             <intended-method-of-payment>Account</intended-method-of-payment>
         </settlement-info>
     </delivery-spec>
-</shipment>
+    </shipment>
 XML;
+
+// // Conditionally add the <option> tags for $signature and $holdForPackup
+// if (isset($signature) && $signature) {
+//     $xmlRequest .= <<<XML
+//             <option>
+//                 <option-code>{$signature}</option-code>
+//             </option>
+// XML;
+// }
+
+// if (isset($holdForPackup) && $holdForPackup) {
+//     $xmlRequest .= <<<XML
+//             <option>
+//                 <option-code>{$holdForPackup}</option-code>
+//             </option>
+// XML;
+// }
+
+// Complete the XML request
+// $xmlRequest .= <<<XML
+//         </options>
+//         <parcel-characteristics>
+//             <weight>{$weight}</weight>
+//             <dimensions>
+//                 <length>{$length}</length>
+//                 <width>{$width}</width>
+//                 <height>{$height}</height>
+//             </dimensions>
+//             <unpackaged>false</unpackaged>
+//             <mailing-tube>false</mailing-tube>
+//         </parcel-characteristics>
+//         <notification>
+//             <email>ryuko.saito@kubere.com</email>
+//             <on-shipment>true</on-shipment>
+//             <on-exception>false</on-exception>
+//             <on-delivery>true</on-delivery>
+//         </notification>
+//         <print-preferences>
+//             <output-format>{$printerType}</output-format>
+//         </print-preferences>
+//         <preferences>
+//             <show-packing-instructions>true</show-packing-instructions>
+//             <show-postage-rate>false</show-postage-rate>
+//             <show-insured-value>true</show-insured-value>
+//         </preferences>
+//         <references>
+//             <cost-centre>ccent</cost-centre>
+//             <customer-ref-1>ML5</customer-ref-1>
+//             <customer-ref-2>custref2</customer-ref-2>
+//         </references>
+//         <settlement-info>
+//             <contract-id>{$contractId}</contract-id>
+//             <intended-method-of-payment>Account</intended-method-of-payment>
+//         </settlement-info>
+//     </delivery-spec>
+// </shipment>
+// XML;
 
 $curl = curl_init($service_url); // Create REST Request
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
