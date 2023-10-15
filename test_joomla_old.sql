@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2023 at 09:10 PM
+-- Generation Time: Sep 23, 2023 at 09:30 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.22
 
@@ -69,172 +69,7 @@ INSERT INTO `kuv9p_action_logs` (`id`, `message_language_key`, `message`, `log_d
 (24, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_UNINSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"10034\",\"name\":\"Hikashop Credit Card Payment Plugin\",\"extension_name\":\"Hikashop Credit Card Payment Plugin\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-18 15:44:33', 'com_installer', 288, 10034, 'COM_ACTIONLOGS_DISABLED'),
 (25, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":10093,\"name\":\"HikaShop\",\"extension_name\":\"HikaShop\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-18 15:48:34', 'com_installer', 288, 10093, 'COM_ACTIONLOGS_DISABLED'),
 (26, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-19 10:13:58', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(27, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-21 15:37:14', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(28, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2023-09-26 23:15:00', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(29, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-26 23:15:55', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(30, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-27 01:28:56', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(31, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2023-09-27 10:03:50', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(32, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-27 13:00:26', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(33, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-27 22:07:18', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(34, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PACKAGE\",\"id\":false,\"name\":\"PKG_MODALS\",\"extension_name\":\"PKG_MODALS\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-27 23:00:55', 'com_installer', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(35, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PACKAGE\",\"id\":false,\"name\":\"PKG_MODALS\",\"extension_name\":\"PKG_MODALS\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-27 23:05:40', 'com_installer', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(36, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-28 18:24:40', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(37, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-28 18:59:50', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(38, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-28 20:38:51', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(39, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-28 21:16:59', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(40, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-29 12:13:37', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(41, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-29 12:55:10', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(42, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-29 16:52:11', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(43, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-29 17:19:41', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(44, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-29 17:50:18', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(45, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-29 20:35:42', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(46, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10072,\"title\":\"HikaShop UPS shipping plugin\",\"extension_name\":\"HikaShop UPS shipping plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10072\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-29 21:22:01', 'com_plugins.plugin', 288, 10072, 'COM_ACTIONLOGS_DISABLED'),
-(47, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 21:22:01', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(48, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 21:33:26', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(49, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-29 22:02:37', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(50, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 22:36:28', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(51, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 22:54:18', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(52, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 22:55:44', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(53, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 22:58:47', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(54, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10113,\"title\":\"HikaShop Canada Post shipping plugin\",\"extension_name\":\"HikaShop Canada Post shipping plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10113\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-29 23:16:15', 'com_plugins.plugin', 288, 10113, 'COM_ACTIONLOGS_DISABLED'),
-(55, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:16:15', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(56, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:17:09', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(57, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":400,\"title\":\"plg_authentication_gmail\",\"extension_name\":\"plg_authentication_gmail\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=400\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-29 23:18:40', 'com_plugins.plugin', 288, 400, 'COM_ACTIONLOGS_DISABLED'),
-(58, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:18:40', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(59, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:19:13', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(60, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:21:11', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(61, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:23:05', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(62, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10071,\"title\":\"HikaShop manual shipping plugin\",\"extension_name\":\"HikaShop manual shipping plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10071\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-29 23:23:49', 'com_plugins.plugin', 288, 10071, 'COM_ACTIONLOGS_DISABLED'),
-(63, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:23:49', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(64, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:24:00', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(65, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:25:46', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(66, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:34:45', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(67, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10016,\"title\":\"Hikashop TaxCloud Plugin\",\"extension_name\":\"Hikashop TaxCloud Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10016\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-29 23:36:35', 'com_plugins.plugin', 288, 10016, 'COM_ACTIONLOGS_DISABLED'),
-(68, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:36:35', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(69, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10016,\"title\":\"Hikashop TaxCloud Plugin\",\"extension_name\":\"Hikashop TaxCloud Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10016\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-29 23:37:03', 'com_plugins.plugin', 288, 10016, 'COM_ACTIONLOGS_DISABLED'),
-(70, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:37:03', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(71, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:43:19', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(72, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-29 23:57:35', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(73, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-29 23:57:35', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(74, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 00:00:48', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(75, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-30 01:12:04', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(76, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-30 18:04:20', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(77, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 18:15:04', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(78, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 18:15:04', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(79, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 18:34:48', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(80, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 18:34:48', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(81, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 18:52:43', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(82, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 18:52:43', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(83, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 18:55:37', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(84, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 18:55:37', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(85, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 20:20:04', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(86, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 20:20:04', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(87, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 20:20:08', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(88, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 20:20:08', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(89, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 22:05:52', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(90, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 22:05:52', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(91, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 22:08:58', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(92, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 22:08:58', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(93, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 22:10:39', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(94, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 22:10:39', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(95, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-30 23:16:33', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(96, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-09-30 23:58:29', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(97, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-09-30 23:58:29', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(98, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-01 00:16:37', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(99, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-01 00:16:37', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(100, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-01 12:25:02', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(101, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-01 17:47:55', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(102, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-02 16:30:44', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(103, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-02 19:24:38', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(104, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-02 19:24:38', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(105, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-02 19:47:21', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(106, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-02 19:47:21', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(107, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-02 19:48:22', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(108, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-02 19:48:22', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(109, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-02 21:25:26', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(110, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-02 21:43:09', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(111, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-02 22:35:28', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(112, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-02 22:35:28', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(113, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-02 22:46:40', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(114, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-02 22:46:40', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED');
-INSERT INTO `kuv9p_action_logs` (`id`, `message_language_key`, `message`, `log_date`, `extension`, `user_id`, `item_id`, `ip_address`) VALUES
-(115, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-02 23:10:06', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(116, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-02 23:10:06', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(117, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-03 18:12:10', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(118, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-03 19:36:10', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(119, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-03 19:36:10', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(120, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-03 19:36:18', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(121, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-03 19:36:18', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(122, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-03 19:36:43', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(123, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-03 19:36:43', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(124, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-03 19:36:51', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(125, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-03 19:36:51', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(126, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-03 19:36:58', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(127, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-03 19:36:58', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(128, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-03 19:37:12', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(129, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-03 19:37:12', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(130, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-03 19:48:57', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(131, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-03 19:48:57', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(132, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-03 20:14:46', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(133, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-03 20:14:46', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(134, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-03 21:38:36', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(135, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-04 09:22:35', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(136, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-04 09:24:34', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(137, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-04 09:24:34', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(138, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-04 09:24:50', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(139, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-04 09:24:50', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(140, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-04 16:22:36', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(141, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-04 20:55:58', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(142, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-05 17:57:08', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(143, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-05 18:05:13', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(144, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-05 18:05:13', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(145, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-05 18:14:14', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(146, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-05 18:14:14', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(147, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-05 18:15:04', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(148, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-05 18:15:04', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(149, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-05 18:18:58', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(150, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-05 18:18:58', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(151, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-05 18:21:31', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(152, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-05 18:21:31', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(153, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-05 18:22:41', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(154, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-05 18:22:41', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(155, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-05 18:38:18', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(156, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-05 18:38:18', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(157, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-05 18:38:46', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(158, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-05 18:38:46', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(159, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-06 11:39:50', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(160, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-06 13:39:43', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(161, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-06 15:57:14', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(162, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-06 16:15:51', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(163, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-06 16:25:48', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(164, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-06 16:25:48', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(165, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-06 16:26:43', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(166, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-06 16:26:43', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(167, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-06 17:03:33', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(168, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-06 17:03:33', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(169, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-06 17:12:14', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(170, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-06 17:12:14', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(171, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-06 17:14:13', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(172, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-06 17:14:13', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(173, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-06 17:15:00', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(174, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-06 17:15:00', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(175, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":10115,\"title\":\"Hikashop canadapost Plugin\",\"extension_name\":\"Hikashop canadapost Plugin\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=10115\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\"}', '2023-10-06 17:23:59', 'com_plugins.plugin', 288, 10115, 'COM_ACTIONLOGS_DISABLED'),
-(176, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"288\",\"title\":\"yanib33168@vip4e.com\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"table\":\"#__extensions\"}', '2023-10-06 17:23:59', 'com_checkin', 288, 288, 'COM_ACTIONLOGS_DISABLED'),
-(177, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-07 20:12:54', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(178, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-08 11:26:44', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(179, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-08 20:07:51', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(180, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-08 20:36:36', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(181, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-08 20:59:51', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(182, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-09 08:47:55', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(183, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-09 13:38:05', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(184, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-09 17:52:17', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(185, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-09 18:08:36', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(186, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-13 20:33:31', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(187, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-13 21:15:49', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(188, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-13 22:41:14', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(189, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-13 22:56:46', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(190, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-10-15 18:18:12', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED'),
-(191, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2023-10-15 18:19:30', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED');
+(27, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"288\",\"username\":\"yanib33168@vip4e.com\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=288\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-09-21 15:37:14', 'com_users', 288, 0, 'COM_ACTIONLOGS_DISABLED');
 
 -- --------------------------------------------------------
 
@@ -646,7 +481,7 @@ CREATE TABLE `kuv9p_content` (
 --
 
 INSERT INTO `kuv9p_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`, `note`) VALUES
-(1, 61, 'Getting Started', 'getting-started', '<p>It\'s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the \"Submit Article\" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the \"Template Settings\" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the \"Site Settings\" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the \"Site Administrator\" link on the \"User Menu\" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href=\"https://docs.joomla.org/\" target=\"_blank\">Joomla! documentation site</a> and on the<a href=\"https://forum.joomla.org/\" target=\"_blank\"> Joomla! forums</a>.</p>', '', 1, 2, '2023-09-18 15:34:02', 288, '', '0000-00-00 00:00:00', 0, 288, '2023-09-26 23:15:15', '2023-09-18 15:34:02', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_layout\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 5, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', '');
+(1, 61, 'Getting Started', 'getting-started', '<p>It\'s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the \"Submit Article\" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the \"Template Settings\" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the \"Site Settings\" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the \"Site Administrator\" link on the \"User Menu\" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href=\"https://docs.joomla.org/\" target=\"_blank\">Joomla! documentation site</a> and on the<a href=\"https://forum.joomla.org/\" target=\"_blank\"> Joomla! forums</a>.</p>', '', 1, 2, '2023-09-18 15:34:02', 288, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2023-09-18 15:34:02', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_layout\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', '');
 
 -- --------------------------------------------------------
 
@@ -856,8 +691,8 @@ INSERT INTO `kuv9p_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (318, 0, 'mod_sampledata', 'module', 'mod_sampledata', '', 1, 1, 1, 0, '{\"name\":\"mod_sampledata\",\"type\":\"module\",\"creationDate\":\"July 2017\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2017 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.8.0\",\"description\":\"MOD_SAMPLEDATA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_sampledata\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (319, 0, 'mod_latestactions', 'module', 'mod_latestactions', '', 1, 1, 1, 0, '{\"name\":\"mod_latestactions\",\"type\":\"module\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2018 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"MOD_LATESTACTIONS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_latestactions\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (320, 0, 'mod_privacy_dashboard', 'module', 'mod_privacy_dashboard', '', 1, 1, 1, 0, '{\"name\":\"mod_privacy_dashboard\",\"type\":\"module\",\"creationDate\":\"June 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2018 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"MOD_PRIVACY_DASHBOARD_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_privacy_dashboard\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(400, 0, 'plg_authentication_gmail', 'plugin', 'gmail', 'authentication', 0, 0, 1, 0, '{\"name\":\"plg_authentication_gmail\",\"type\":\"plugin\",\"creationDate\":\"February 2006\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_GMAIL_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"gmail\"}', '{\"applysuffix\":0,\"suffix\":\"\",\"verifypeer\":1,\"user_blacklist\":\"\",\"backendLogin\":0}', '', '', 0, '0000-00-00 00:00:00', 1, 0),
-(401, 0, 'plg_authentication_joomla', 'plugin', 'joomla', 'authentication', 0, 1, 1, 1, '{\"name\":\"plg_authentication_joomla\",\"type\":\"plugin\",\"creationDate\":\"November 2005\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}', '', '', '', 288, '2023-09-30 00:01:30', 0, 0),
+(400, 0, 'plg_authentication_gmail', 'plugin', 'gmail', 'authentication', 0, 0, 1, 0, '{\"name\":\"plg_authentication_gmail\",\"type\":\"plugin\",\"creationDate\":\"February 2006\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_GMAIL_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"gmail\"}', '{\"applysuffix\":\"0\",\"suffix\":\"\",\"verifypeer\":\"1\",\"user_blacklist\":\"\"}', '', '', 0, '0000-00-00 00:00:00', 1, 0),
+(401, 0, 'plg_authentication_joomla', 'plugin', 'joomla', 'authentication', 0, 1, 1, 1, '{\"name\":\"plg_authentication_joomla\",\"type\":\"plugin\",\"creationDate\":\"November 2005\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (402, 0, 'plg_authentication_ldap', 'plugin', 'ldap', 'authentication', 0, 0, 1, 0, '{\"name\":\"plg_authentication_ldap\",\"type\":\"plugin\",\"creationDate\":\"November 2005\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_LDAP_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"ldap\"}', '{\"host\":\"\",\"port\":\"389\",\"use_ldapV3\":\"0\",\"negotiate_tls\":\"0\",\"no_referrals\":\"0\",\"auth_method\":\"bind\",\"base_dn\":\"\",\"search_string\":\"\",\"users_dn\":\"\",\"username\":\"admin\",\"password\":\"bobby7\",\"ldap_fullname\":\"fullName\",\"ldap_email\":\"mail\",\"ldap_uid\":\"uid\"}', '', '', 0, '0000-00-00 00:00:00', 3, 0);
 INSERT INTO `kuv9p_extensions` (`extension_id`, `package_id`, `name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`, `params`, `custom_data`, `system_data`, `checked_out`, `checked_out_time`, `ordering`, `state`) VALUES
 (403, 0, 'plg_content_contact', 'plugin', 'contact', 'content', 0, 1, 1, 0, '{\"name\":\"plg_content_contact\",\"type\":\"plugin\",\"creationDate\":\"January 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2014 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.2\",\"description\":\"PLG_CONTENT_CONTACT_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"contact\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
@@ -868,7 +703,7 @@ INSERT INTO `kuv9p_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (409, 0, 'plg_content_vote', 'plugin', 'vote', 'content', 0, 0, 1, 0, '{\"name\":\"plg_content_vote\",\"type\":\"plugin\",\"creationDate\":\"November 2005\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_VOTE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"vote\"}', '', '', '', 0, '0000-00-00 00:00:00', 6, 0),
 (410, 0, 'plg_editors_codemirror', 'plugin', 'codemirror', 'editors', 0, 1, 1, 1, '{\"name\":\"plg_editors_codemirror\",\"type\":\"plugin\",\"creationDate\":\"28 March 2011\",\"author\":\"Marijn Haverbeke\",\"copyright\":\"Copyright (C) 2014 - 2021 by Marijn Haverbeke <marijnh@gmail.com> and others\",\"authorEmail\":\"marijnh@gmail.com\",\"authorUrl\":\"https:\\/\\/codemirror.net\\/\",\"version\":\"5.60.0\",\"description\":\"PLG_CODEMIRROR_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"codemirror\"}', '{\"lineNumbers\":\"1\",\"lineWrapping\":\"1\",\"matchTags\":\"1\",\"matchBrackets\":\"1\",\"marker-gutter\":\"1\",\"autoCloseTags\":\"1\",\"autoCloseBrackets\":\"1\",\"autoFocus\":\"1\",\"theme\":\"default\",\"tabmode\":\"indent\"}', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 (411, 0, 'plg_editors_none', 'plugin', 'none', 'editors', 0, 1, 1, 1, '{\"name\":\"plg_editors_none\",\"type\":\"plugin\",\"creationDate\":\"September 2005\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_NONE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"none\"}', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
-(412, 0, 'plg_editors_tinymce', 'plugin', 'tinymce', 'editors', 0, 1, 1, 0, '{\"name\":\"plg_editors_tinymce\",\"type\":\"plugin\",\"creationDate\":\"2005-2020\",\"author\":\"Tiny Technologies, Inc\",\"copyright\":\"Tiny Technologies, Inc\",\"authorEmail\":\"N\\/A\",\"authorUrl\":\"https:\\/\\/www.tiny.cloud\",\"version\":\"4.5.12\",\"description\":\"PLG_TINY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tinymce\"}', '{\"configuration\":{\"toolbars\":{\"2\":{\"toolbar1\":[\"bold\",\"underline\",\"strikethrough\",\"|\",\"undo\",\"redo\",\"|\",\"bullist\",\"numlist\",\"|\",\"pastetext\"]},\"1\":{\"menu\":[\"edit\",\"insert\",\"view\",\"format\",\"table\",\"tools\"],\"toolbar1\":[\"bold\",\"italic\",\"underline\",\"strikethrough\",\"|\",\"alignleft\",\"aligncenter\",\"alignright\",\"alignjustify\",\"|\",\"formatselect\",\"|\",\"bullist\",\"numlist\",\"|\",\"outdent\",\"indent\",\"|\",\"undo\",\"redo\",\"|\",\"link\",\"unlink\",\"anchor\",\"code\",\"|\",\"hr\",\"table\",\"|\",\"subscript\",\"superscript\",\"|\",\"charmap\",\"pastetext\",\"preview\"]},\"0\":{\"menu\":[\"edit\",\"insert\",\"view\",\"format\",\"table\",\"tools\"],\"toolbar1\":[\"bold\",\"italic\",\"underline\",\"strikethrough\",\"|\",\"alignleft\",\"aligncenter\",\"alignright\",\"alignjustify\",\"|\",\"styleselect\",\"|\",\"formatselect\",\"fontselect\",\"fontsizeselect\",\"|\",\"searchreplace\",\"|\",\"bullist\",\"numlist\",\"|\",\"outdent\",\"indent\",\"|\",\"undo\",\"redo\",\"|\",\"link\",\"unlink\",\"anchor\",\"image\",\"|\",\"code\",\"|\",\"forecolor\",\"backcolor\",\"|\",\"fullscreen\",\"|\",\"table\",\"|\",\"subscript\",\"superscript\",\"|\",\"charmap\",\"emoticons\",\"media\",\"hr\",\"ltr\",\"rtl\",\"|\",\"cut\",\"copy\",\"paste\",\"pastetext\",\"|\",\"visualchars\",\"visualblocks\",\"nonbreaking\",\"blockquote\",\"template\",\"|\",\"print\",\"preview\",\"codesample\",\"insertdatetime\",\"removeformat\"]}},\"setoptions\":{\"2\":{\"access\":[\"1\"],\"skin\":\"0\",\"skin_admin\":\"0\",\"mobile\":\"0\",\"drag_drop\":\"1\",\"path\":\"\",\"entity_encoding\":\"raw\",\"lang_mode\":\"1\",\"text_direction\":\"ltr\",\"content_css\":\"1\",\"content_css_custom\":\"\",\"relative_urls\":\"1\",\"newlines\":\"0\",\"use_config_textfilters\":\"0\",\"invalid_elements\":\"script,applet,iframe\",\"valid_elements\":\"\",\"extended_elements\":\"\",\"resizing\":\"1\",\"resize_horizontal\":\"1\",\"element_path\":\"1\",\"wordcount\":\"1\",\"image_advtab\":\"0\",\"advlist\":\"1\",\"autosave\":\"1\",\"contextmenu\":\"1\",\"custom_plugin\":\"\",\"custom_button\":\"\"},\"1\":{\"access\":[\"6\",\"2\"],\"skin\":\"0\",\"skin_admin\":\"0\",\"mobile\":\"0\",\"drag_drop\":\"1\",\"path\":\"\",\"entity_encoding\":\"raw\",\"lang_mode\":\"1\",\"text_direction\":\"ltr\",\"content_css\":\"1\",\"content_css_custom\":\"\",\"relative_urls\":\"1\",\"newlines\":\"0\",\"use_config_textfilters\":\"0\",\"invalid_elements\":\"script,applet,iframe\",\"valid_elements\":\"\",\"extended_elements\":\"\",\"resizing\":\"1\",\"resize_horizontal\":\"1\",\"element_path\":\"1\",\"wordcount\":\"1\",\"image_advtab\":\"0\",\"advlist\":\"1\",\"autosave\":\"1\",\"contextmenu\":\"1\",\"custom_plugin\":\"\",\"custom_button\":\"\"},\"0\":{\"access\":[\"7\",\"4\",\"8\"],\"skin\":\"0\",\"skin_admin\":\"0\",\"mobile\":\"0\",\"drag_drop\":\"1\",\"path\":\"\",\"entity_encoding\":\"raw\",\"lang_mode\":\"1\",\"text_direction\":\"ltr\",\"content_css\":\"1\",\"content_css_custom\":\"\",\"relative_urls\":\"1\",\"newlines\":\"0\",\"use_config_textfilters\":\"0\",\"invalid_elements\":\"script,applet,iframe\",\"valid_elements\":\"\",\"extended_elements\":\"\",\"resizing\":\"1\",\"resize_horizontal\":\"1\",\"element_path\":\"1\",\"wordcount\":\"1\",\"image_advtab\":\"1\",\"advlist\":\"1\",\"autosave\":\"1\",\"contextmenu\":\"1\",\"custom_plugin\":\"\",\"custom_button\":\"\"}}},\"sets_amount\":3,\"html_height\":\"550\",\"html_width\":\"750\"}', '', '', 288, '2023-09-30 00:01:00', 3, 0),
+(412, 0, 'plg_editors_tinymce', 'plugin', 'tinymce', 'editors', 0, 1, 1, 0, '{\"name\":\"plg_editors_tinymce\",\"type\":\"plugin\",\"creationDate\":\"2005-2020\",\"author\":\"Tiny Technologies, Inc\",\"copyright\":\"Tiny Technologies, Inc\",\"authorEmail\":\"N\\/A\",\"authorUrl\":\"https:\\/\\/www.tiny.cloud\",\"version\":\"4.5.12\",\"description\":\"PLG_TINY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tinymce\"}', '{\"configuration\":{\"toolbars\":{\"2\":{\"toolbar1\":[\"bold\",\"underline\",\"strikethrough\",\"|\",\"undo\",\"redo\",\"|\",\"bullist\",\"numlist\",\"|\",\"pastetext\"]},\"1\":{\"menu\":[\"edit\",\"insert\",\"view\",\"format\",\"table\",\"tools\"],\"toolbar1\":[\"bold\",\"italic\",\"underline\",\"strikethrough\",\"|\",\"alignleft\",\"aligncenter\",\"alignright\",\"alignjustify\",\"|\",\"formatselect\",\"|\",\"bullist\",\"numlist\",\"|\",\"outdent\",\"indent\",\"|\",\"undo\",\"redo\",\"|\",\"link\",\"unlink\",\"anchor\",\"code\",\"|\",\"hr\",\"table\",\"|\",\"subscript\",\"superscript\",\"|\",\"charmap\",\"pastetext\",\"preview\"]},\"0\":{\"menu\":[\"edit\",\"insert\",\"view\",\"format\",\"table\",\"tools\"],\"toolbar1\":[\"bold\",\"italic\",\"underline\",\"strikethrough\",\"|\",\"alignleft\",\"aligncenter\",\"alignright\",\"alignjustify\",\"|\",\"styleselect\",\"|\",\"formatselect\",\"fontselect\",\"fontsizeselect\",\"|\",\"searchreplace\",\"|\",\"bullist\",\"numlist\",\"|\",\"outdent\",\"indent\",\"|\",\"undo\",\"redo\",\"|\",\"link\",\"unlink\",\"anchor\",\"image\",\"|\",\"code\",\"|\",\"forecolor\",\"backcolor\",\"|\",\"fullscreen\",\"|\",\"table\",\"|\",\"subscript\",\"superscript\",\"|\",\"charmap\",\"emoticons\",\"media\",\"hr\",\"ltr\",\"rtl\",\"|\",\"cut\",\"copy\",\"paste\",\"pastetext\",\"|\",\"visualchars\",\"visualblocks\",\"nonbreaking\",\"blockquote\",\"template\",\"|\",\"print\",\"preview\",\"codesample\",\"insertdatetime\",\"removeformat\"]}},\"setoptions\":{\"2\":{\"access\":[\"1\"],\"skin\":\"0\",\"skin_admin\":\"0\",\"mobile\":\"0\",\"drag_drop\":\"1\",\"path\":\"\",\"entity_encoding\":\"raw\",\"lang_mode\":\"1\",\"text_direction\":\"ltr\",\"content_css\":\"1\",\"content_css_custom\":\"\",\"relative_urls\":\"1\",\"newlines\":\"0\",\"use_config_textfilters\":\"0\",\"invalid_elements\":\"script,applet,iframe\",\"valid_elements\":\"\",\"extended_elements\":\"\",\"resizing\":\"1\",\"resize_horizontal\":\"1\",\"element_path\":\"1\",\"wordcount\":\"1\",\"image_advtab\":\"0\",\"advlist\":\"1\",\"autosave\":\"1\",\"contextmenu\":\"1\",\"custom_plugin\":\"\",\"custom_button\":\"\"},\"1\":{\"access\":[\"6\",\"2\"],\"skin\":\"0\",\"skin_admin\":\"0\",\"mobile\":\"0\",\"drag_drop\":\"1\",\"path\":\"\",\"entity_encoding\":\"raw\",\"lang_mode\":\"1\",\"text_direction\":\"ltr\",\"content_css\":\"1\",\"content_css_custom\":\"\",\"relative_urls\":\"1\",\"newlines\":\"0\",\"use_config_textfilters\":\"0\",\"invalid_elements\":\"script,applet,iframe\",\"valid_elements\":\"\",\"extended_elements\":\"\",\"resizing\":\"1\",\"resize_horizontal\":\"1\",\"element_path\":\"1\",\"wordcount\":\"1\",\"image_advtab\":\"0\",\"advlist\":\"1\",\"autosave\":\"1\",\"contextmenu\":\"1\",\"custom_plugin\":\"\",\"custom_button\":\"\"},\"0\":{\"access\":[\"7\",\"4\",\"8\"],\"skin\":\"0\",\"skin_admin\":\"0\",\"mobile\":\"0\",\"drag_drop\":\"1\",\"path\":\"\",\"entity_encoding\":\"raw\",\"lang_mode\":\"1\",\"text_direction\":\"ltr\",\"content_css\":\"1\",\"content_css_custom\":\"\",\"relative_urls\":\"1\",\"newlines\":\"0\",\"use_config_textfilters\":\"0\",\"invalid_elements\":\"script,applet,iframe\",\"valid_elements\":\"\",\"extended_elements\":\"\",\"resizing\":\"1\",\"resize_horizontal\":\"1\",\"element_path\":\"1\",\"wordcount\":\"1\",\"image_advtab\":\"1\",\"advlist\":\"1\",\"autosave\":\"1\",\"contextmenu\":\"1\",\"custom_plugin\":\"\",\"custom_button\":\"\"}}},\"sets_amount\":3,\"html_height\":\"550\",\"html_width\":\"750\"}', '', '', 0, '0000-00-00 00:00:00', 3, 0),
 (413, 0, 'plg_editors-xtd_article', 'plugin', 'article', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_article\",\"type\":\"plugin\",\"creationDate\":\"October 2009\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2009 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_ARTICLE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"article\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 (414, 0, 'plg_editors-xtd_image', 'plugin', 'image', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_image\",\"type\":\"plugin\",\"creationDate\":\"August 2004\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_IMAGE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"image\"}', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 (415, 0, 'plg_editors-xtd_pagebreak', 'plugin', 'pagebreak', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_pagebreak\",\"type\":\"plugin\",\"creationDate\":\"August 2004\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_EDITORSXTD_PAGEBREAK_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"pagebreak\"}', '', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -906,7 +741,7 @@ INSERT INTO `kuv9p_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{\"name\":\"plg_authentication_cookie\",\"type\":\"plugin\",\"creationDate\":\"July 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2013 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_COOKIE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"cookie\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{\"name\":\"plg_twofactorauth_yubikey\",\"type\":\"plugin\",\"creationDate\":\"September 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2013 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.0\",\"description\":\"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"yubikey\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{\"name\":\"plg_search_tags\",\"type\":\"plugin\",\"creationDate\":\"March 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2014 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_SEARCH_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tags\"}', '{\"search_limit\":\"50\",\"show_tagged_items\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2015 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1697391696}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2015 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1695310595}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_module\",\"type\":\"plugin\",\"creationDate\":\"October 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2015 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_MODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"module\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2013 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}', '{\"mode\":3,\"lastrun\":1695051259,\"unique_id\":\"ca107c327d8b1ec704be7c2ba670f8d64eed577d\",\"interval\":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '{\"name\":\"plg_installer_packageinstaller\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2016 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"packageinstaller\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
@@ -932,7 +767,7 @@ INSERT INTO `kuv9p_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (475, 0, 'plg_fields_user', 'plugin', 'user', 'fields', 0, 1, 1, 0, '{\"name\":\"plg_fields_user\",\"type\":\"plugin\",\"creationDate\":\"March 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2016 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"PLG_FIELDS_USER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"user\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (476, 0, 'plg_fields_usergrouplist', 'plugin', 'usergrouplist', 'fields', 0, 1, 1, 0, '{\"name\":\"plg_fields_usergrouplist\",\"type\":\"plugin\",\"creationDate\":\"March 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2016 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"PLG_FIELDS_USERGROUPLIST_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"usergrouplist\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (477, 0, 'plg_content_fields', 'plugin', 'fields', 'content', 0, 1, 1, 0, '{\"name\":\"plg_content_fields\",\"type\":\"plugin\",\"creationDate\":\"February 2017\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2017 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"PLG_CONTENT_FIELDS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"fields\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(478, 0, 'plg_editors-xtd_fields', 'plugin', 'fields', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_fields\",\"type\":\"plugin\",\"creationDate\":\"February 2017\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2017 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"PLG_EDITORS-XTD_FIELDS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"fields\"}', '', '', '', 288, '2023-09-30 00:01:53', 0, 0),
+(478, 0, 'plg_editors-xtd_fields', 'plugin', 'fields', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_fields\",\"type\":\"plugin\",\"creationDate\":\"February 2017\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2017 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"PLG_EDITORS-XTD_FIELDS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"fields\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (479, 0, 'plg_sampledata_blog', 'plugin', 'blog', 'sampledata', 0, 1, 1, 0, '{\"name\":\"plg_sampledata_blog\",\"type\":\"plugin\",\"creationDate\":\"July 2017\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2017 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.8.0\",\"description\":\"PLG_SAMPLEDATA_BLOG_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"blog\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (480, 0, 'plg_system_sessiongc', 'plugin', 'sessiongc', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_sessiongc\",\"type\":\"plugin\",\"creationDate\":\"February 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2018 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.8.6\",\"description\":\"PLG_SYSTEM_SESSIONGC_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"sessiongc\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (481, 0, 'plg_fields_repeatable', 'plugin', 'repeatable', 'fields', 0, 1, 1, 0, '{\"name\":\"plg_fields_repeatable\",\"type\":\"plugin\",\"creationDate\":\"April 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2018 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_FIELDS_REPEATABLE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"repeatable\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -966,14 +801,14 @@ INSERT INTO `kuv9p_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (10006, 0, 'Hikashop Date Picker Plugin', 'plugin', 'datepickerfield', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10007, 0, 'Hikashop Email History Plugin', 'plugin', 'email_history', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10008, 0, 'HikaShop order history plugin', 'plugin', 'history', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10009, 0, 'HikaShop KashFlow plugin', 'plugin', 'kashflow', 'hikashop', 0, 0, 1, 0, '', '', '', '', 288, '2023-09-30 00:02:24', 0, 0),
+(10009, 0, 'HikaShop KashFlow plugin', 'plugin', 'kashflow', 'hikashop', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10010, 0, 'Hikashop Massaction Address Plugin', 'plugin', 'massaction_address', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10011, 0, 'Hikashop Massaction Category Plugin', 'plugin', 'massaction_category', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10012, 0, 'Hikashop Massaction Order Plugin', 'plugin', 'massaction_order', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10013, 0, 'Hikashop Massaction Product Plugin', 'plugin', 'massaction_product', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10014, 0, 'Hikashop Massaction User Plugin', 'plugin', 'massaction_user', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10015, 0, 'HikaShop Shipping manual - Prices per product plugin', 'plugin', 'shippingmanual_prices', 'hikashop', 0, 1, 1, 0, '', '', '', '', 288, '2023-09-29 23:34:59', 0, 0),
-(10016, 0, 'Hikashop TaxCloud Plugin', 'plugin', 'taxcloud', 'hikashop', 0, 0, 1, 0, '', '{\"api_id\":\"123\",\"api_key\":\"\",\"usps_id\":\"\",\"origin_address1\":\"\",\"origin_address2\":\"\",\"origin_city\":\"\",\"origin_state\":\"\",\"origin_zip4\":\"\",\"origin_zip5\":\"\",\"use_origin_address_when_override\":\"1\",\"default_tic\":\"\",\"shipping_tic\":\"\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10015, 0, 'HikaShop Shipping manual - Prices per product plugin', 'plugin', 'shippingmanual_prices', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10016, 0, 'Hikashop TaxCloud Plugin', 'plugin', 'taxcloud', 'hikashop', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10017, 0, 'HikaShop joomla user account link plugin', 'plugin', 'user_account', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10018, 0, 'HikaShop Free orders validation Plugin', 'plugin', 'validate_free_order', 'hikashop', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10019, 0, 'HikaShop Payza payment plugin', 'plugin', 'alertpay', 'hikashoppayment', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -1015,11 +850,11 @@ INSERT INTO `kuv9p_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (10067, 0, 'HikaShop WorldNetTPS payment plugin', 'plugin', 'worldnettps', 'hikashoppayment', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10070, 0, 'HikaShop Fedex shipping plugin', 'plugin', 'fedex', 'hikashopshipping', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10071, 0, 'HikaShop manual shipping plugin', 'plugin', 'manual', 'hikashopshipping', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10072, 0, 'HikaShop UPS shipping plugin', 'plugin', 'ups', 'hikashopshipping', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10072, 0, 'HikaShop UPS shipping plugin', 'plugin', 'ups', 'hikashopshipping', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10073, 0, 'HikaShop USPS shipping plugin', 'plugin', 'usps', 'hikashopshipping', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10074, 0, 'HikaShop Quickicon plugin', 'plugin', 'hikashop', 'quickicon', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10076, 0, 'HikaShop products search plugin', 'plugin', 'hikashop_products', 'search', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10077, 0, 'HikaShop massaction plugin', 'plugin', 'hikashopmassaction', 'system', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10077, 0, 'HikaShop massaction plugin', 'plugin', 'hikashopmassaction', 'system', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10078, 0, 'HikaShop Payment Notification plugin', 'plugin', 'hikashoppayment', 'system', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10079, 0, 'HikaShop product tag translation plugin', 'plugin', 'hikashopproductinsert', 'system', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10080, 0, 'HikaShop Microdata on Product Page plugin', 'plugin', 'hikashopproducttag', 'system', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -1052,8 +887,7 @@ INSERT INTO `kuv9p_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (10109, 0, 'HikaShop CANPAR shipping plugin', 'plugin', 'canpar', 'hikashopshipping', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10110, 0, 'HikaShop categories search plugin', 'plugin', 'hikashop_categories', 'search', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10111, 0, 'HikaShop Content Module', 'module', 'mod_hikashop', '', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10112, 0, 'HikaShop Cart Module', 'module', 'mod_hikashop_cart', '', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10115, 0, 'Hikashop canadapost Plugin', 'plugin', 'canadapost', 'hikashop', 0, 1, 1, 0, '', '{\"company_number\":\"123\",\"company_name\":\"Testing\",\"contract_number\":\"123321\",\"contract_email\":\"\",\"api_username\":\"yanib33168@vip4e.com\",\"api_password\":\"admin\",\"printer_type\":\"8.5x11\",\"address_name\":\"Dilawar Javaid\",\"address_line_1\":\"Unit # 905\",\"address_line_2\":\"79 Thorncliffe Park Drive\",\"address_city\":\"Toronto\",\"address_country\":\"Canada\",\"address_province\":\"Ontario\",\"address_postal_code\":\"M4H 1L5\",\"address_contact_phone\":\"16475705502\",\"address_email\":\"\",\"non_delivery_of_goods\":\"RTS\",\"reason_for_export\":\"REP\",\"country_of_origin\":\"US\",\"shipment_value\":\"122\"}', '', '', 288, '2023-10-09 08:48:04', 0, 0);
+(10112, 0, 'HikaShop Cart Module', 'module', 'mod_hikashop_cart', '', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1641,9 +1475,8 @@ CREATE TABLE `kuv9p_hikashop_address` (
 
 INSERT INTO `kuv9p_hikashop_address` (`address_id`, `address_user_id`, `address_type`, `address_title`, `address_firstname`, `address_middle_name`, `address_lastname`, `address_company`, `address_street`, `address_street2`, `address_post_code`, `address_city`, `address_telephone`, `address_telephone2`, `address_fax`, `address_state`, `address_country`, `address_published`, `address_vat`, `address_default`) VALUES
 (1, 0, '', 'Mr', 'abu bakar', NULL, 'pervaiz', NULL, 'test addresss', '', '38000', 'faisalabad', '0304', NULL, NULL, 'state____________2806', 'country_Pakistan_162', 1, NULL, 0),
-(2, 0, 'billing', 'Mr', 'Dilawar', NULL, 'Javaid', NULL, 'Unit # 905 79 Thorncliffe Park Drive', '', 'K1K4T3', 'Toronto', '+1 (647) 570-5502', NULL, NULL, 'Ontario ', 'Canada', 0, NULL, 0),
-(3, 0, '', 'Mr', 'Dilawar', NULL, 'Javaid', NULL, 'Unit # 905 79 Thorncliffe Park Drive', '', 'K1K4T3', 'Toronto', '+1 (647) 570-5502', NULL, NULL, 'Ontario ', 'Canada', 1, NULL, 0),
-(4, 0, 'shipping', 'Mr', 'Dilawar', NULL, 'Javaid', NULL, 'Unit # 905 79 Thorncliffe Park Drive', '', 'K1K4T3', 'Toronto', '+1 (647) 570-5502', NULL, NULL, 'Ontario ', 'Canada', 0, NULL, 0);
+(2, 0, 'billing', 'Mr', 'abu bakar', NULL, 'pervaiz', NULL, 'test addresss', '', '38000', 'faisalabad', '03040235224', NULL, NULL, 'state____________2806', 'country_Pakistan_162', 0, NULL, 0),
+(3, 0, '', 'Mr', 'Abu Bakar', NULL, 'Pervaiz', NULL, 'test address', '', '38000', 'Faisalabad', '03040235224', NULL, NULL, 'state____________2806', 'country_Pakistan_162', 1, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -1839,23 +1672,19 @@ CREATE TABLE `kuv9p_hikashop_config` (
 INSERT INTO `kuv9p_hikashop_config` (`config_namekey`, `config_value`, `config_default`) VALUES
 ('level', 'Starter', 'Starter'),
 ('version', '5.0.0', '5.0.0'),
-('bounce_email', '', NULL),
-('add_names', '1', NULL),
-('encoding_format', 'base64', NULL),
-('charset', 'UTF-8', NULL),
-('word_wrapping', '150', NULL),
-('embed_images', '0', NULL),
-('embed_files', '1', NULL),
-('multiple_part', '1', NULL),
-('allowedfiles', 'zip,doc,docx,pdf,xls,txt,gz,gzip,rar,jpg,jpeg,gif,tar.gz,xlsx,pps,csv,bmp,epg,ico,odg,odp,ods,odt,png,svg,webp,ppt,xcf,wmv,avi,mkv,mp3,ogg,flac,wma,fla,flv,mp4,wav,aac,mov,epub', NULL),
-('csv_separator', ';', NULL),
-('csv_decimal_separator', '.', NULL),
-('image_force_size', '1', NULL),
-('image_scale_mode', 'inside', NULL),
-('allowedimages', 'gif,jpg,jpeg,png,svg,webp', NULL),
-('uploadfolder', 'images/com_hikashop/upload/', NULL),
-('uploadsecurefolder', 'media/com_hikashop/upload/safe/', NULL),
-('editor', '0', NULL),
+('bounce_email', '', ''),
+('add_names', '1', '1'),
+('encoding_format', 'base64', 'base64'),
+('charset', 'UTF-8', 'UTF-8'),
+('word_wrapping', '150', '150'),
+('embed_images', '0', '0'),
+('embed_files', '1', '1'),
+('multiple_part', '1', '1'),
+('allowedfiles', 'zip,doc,docx,pdf,xls,txt,gz,gzip,rar,jpg,jpeg,gif,tar.gz,xlsx,pps,csv,bmp,epg,ico,odg,odp,ods,odt,png,svg,webp,ppt,xcf,wmv,avi,mkv,mp3,ogg,flac,wma,fla,flv,mp4,wav,aac,mov,epub', 'zip,doc,docx,pdf,xls,txt,gz,gzip,rar,jpg,jpeg,gif,tar.gz,xlsx,pps,csv,bmp,epg,ico,odg,odp,ods,odt,png,svg,webp,ppt,xcf,wmv,avi,mkv,mp3,ogg,flac,wma,fla,flv,mp4,wav,aac,mov,epub'),
+('allowedimages', 'gif,jpg,jpeg,png,svg,webp', 'gif,jpg,jpeg,png,svg,webp'),
+('uploadfolder', 'images/com_hikashop/upload/', 'images/com_hikashop/upload/'),
+('uploadsecurefolder', 'media/com_hikashop/upload/safe/', 'media/com_hikashop/upload/safe/'),
+('editor', '0', '0'),
 ('cron_next', '1251990901', '1251990901'),
 ('cron_last', '0', '0'),
 ('cron_fromip', '', ''),
@@ -1865,23 +1694,22 @@ INSERT INTO `kuv9p_hikashop_config` (`config_namekey`, `config_value`, `config_d
 ('cron_fullreport', '1', '1'),
 ('cron_savereport', '2', '2'),
 ('cron_savepath', 'media/com_hikashop/upload/safe/logs/report_438204703.log', 'media/com_hikashop/upload/safe/logs/report_438204703.log'),
-('payment_log_file', 'media/com_hikashop/upload/safe/logs/report_153675615.log', NULL),
-('display_downloads_on_product_page', '0', NULL),
+('payment_log_file', 'media/com_hikashop/upload/safe/logs/report_153675615.log', 'media/com_hikashop/upload/safe/logs/report_153675615.log'),
 ('notification_created', '', ''),
 ('notification_accept', '', ''),
 ('notification_refuse', '', ''),
-('bootstrap_design', '0', NULL),
-('characteristics_values_sorting', 'ordering', NULL),
+('bootstrap_design', '0', '0'),
+('characteristics_values_sorting', 'ordering', 'ordering'),
 ('popup_mode', 'vex', 'vex'),
-('force_canonical_urls', '0', NULL),
+('force_canonical_urls', '0', '0'),
 ('opacity', '100', '100'),
 ('order_number_format', '{automatic_code}', '{automatic_code}'),
 ('checkout_cart_delete', '1', '1'),
-('variant_default_publish', '1', NULL),
-('force_ssl', '0', NULL),
-('simplified_registration', '', NULL),
-('tax_zone_type', 'billing', NULL),
-('discount_before_tax', '0', NULL),
+('variant_default_publish', '1', '1'),
+('force_ssl', '0', '0'),
+('simplified_registration', '0', '0'),
+('tax_zone_type', 'billing', 'billing'),
+('discount_before_tax', '0', '0'),
 ('default_type', 'individual', 'individual'),
 ('main_tax_zone', '', NULL),
 ('main_currency', '1', NULL),
@@ -1893,7 +1721,7 @@ INSERT INTO `kuv9p_hikashop_config` (`config_namekey`, `config_value`, `config_d
 ('cancelled_order_status', 'cancelled,refunded', 'cancelled,refunded'),
 ('cancellable_order_status', '', ''),
 ('order_unpaid_statuses', 'created', 'created'),
-('download_time_limit', '2592000', NULL),
+('download_time_limit', '2592000', '2592000'),
 ('click_validity_period', '2592000', '2592000'),
 ('click_min_delay', '86400', '86400'),
 ('partner_currency', '1', '1'),
@@ -1904,55 +1732,55 @@ INSERT INTO `kuv9p_hikashop_config` (`config_namekey`, `config_value`, `config_d
 ('partner_percent_fee', '0', '0'),
 ('partner_flat_fee', '0', '0'),
 ('affiliate_terms', '', ''),
-('download_number_limit', '50', NULL),
+('download_number_limit', '50', '50'),
 ('button_style', 'normal', 'normal'),
-('readmore', '0', NULL),
+('readmore', '0', '0'),
 ('menu_style', 'content_top', 'content_top'),
 ('show_cart_image', '1', '1'),
-('thumbnail', '1', NULL),
-('thumbnail_x', '100', NULL),
-('thumbnail_y', '100', NULL),
-('product_image_x', '100', NULL),
-('product_image_y', '100', NULL),
-('image_x', '', NULL),
-('image_y', '', NULL),
-('add_webp_images', '0', NULL),
+('thumbnail', '1', '1'),
+('thumbnail_x', '100', '100'),
+('thumbnail_y', '100', '100'),
+('product_image_x', '100', '100'),
+('product_image_y', '100', '100'),
+('image_x', '', ''),
+('image_y', '', ''),
+('add_webp_images', '0', '0'),
 ('max_x_popup', '760', '760'),
 ('max_y_popup', '480', '480'),
-('vat_check', '0', NULL),
+('vat_check', '0', '0'),
 ('default_translation_publish', '1', '1'),
 ('multilang_display', 'popups', 'popups'),
-('volume_symbols', 'm,dm,cm,mm,in,ft,yd', NULL),
-('weight_symbols', 'kg,g,mg,lb,oz,ozt', NULL),
+('volume_symbols', 'm,dm,cm,mm,in,ft,yd', 'm,dm,cm,mm,in,ft,yd'),
+('weight_symbols', 'kg,g,mg,lb,oz,ozt', 'kg,g,mg,lb,oz,ozt'),
 ('store_address', 'Your address\r\n\r\nCalifornia\r\nUnited States of America', NULL),
 ('checkout', 'login_address_shipping_payment_confirm_coupon_cart_status_fields,end', 'login_address_shipping_payment_confirm_coupon_cart_status_fields,end'),
-('display_checkout_bar', '0', NULL),
+('display_checkout_bar', '0', '0'),
 ('show_vote_product', '1', '1'),
 ('affiliate_advanced_stats', '1', '1'),
-('cart_retaining_period', '2592000', NULL),
-('default_params', 'YTozNjp7czoxMjoiY29udGVudF90eXBlIjtzOjc6InByb2R1Y3QiO3M6MTE6ImxheW91dF90eXBlIjtzOjM6ImRpdiI7czo3OiJjb2x1bW5zIjtzOjE6IjEiO3M6NToibGltaXQiO3M6MjoiMjEiO3M6NjoicmFuZG9tIjtzOjE6IjAiO3M6OToib3JkZXJfZGlyIjtzOjM6IkFTQyI7czoxMToiZmlsdGVyX3R5cGUiO3M6MToiMCI7czoxOToic2VsZWN0cGFyZW50bGlzdGluZyI7czoxOiIyIjtzOjE5OiJjb250ZW50X3N5bmNocm9uaXplIjtzOjE6IjEiO3M6MTU6InVzZV9tb2R1bGVfbmFtZSI7czoxOiIwIjtzOjEzOiJwcm9kdWN0X29yZGVyIjtzOjg6Im9yZGVyaW5nIjtzOjExOiJhZGRfdG9fY2FydCI7czoxOiIxIjtzOjE5OiJzaG93X3F1YW50aXR5X2ZpZWxkIjtzOjE6IjEiO3M6MjA6ImxpbmtfdG9fcHJvZHVjdF9wYWdlIjtzOjE6IjEiO3M6MTQ6ImRldGFpbHNfYnV0dG9uIjtzOjE6IjAiO3M6MTk6InByb2R1Y3Rfc3luY2hyb25pemUiO3M6MToiMSI7czoxODoicHJvZHVjdF9wb3B1cF9tb2RlIjtzOjE6IjAiO3M6MTM6Inpvb21fb25faG92ZXIiO3M6MToiMCI7czoxMDoic2hvd19wcmljZSI7czoxOiIxIjtzOjE5OiJzaG93X29yaWdpbmFsX3ByaWNlIjtzOjE6IjEiO3M6MTM6InNob3dfZGlzY291bnQiO3M6MToiMSI7czoxODoicHJpY2VfZGlzcGxheV90eXBlIjtzOjg6ImNoZWFwZXN0IjtzOjE0OiJkaXNwbGF5X2JhZGdlcyI7czoxOiIxIjtzOjE0OiJjYXRlZ29yeV9vcmRlciI7czoxNzoiY2F0ZWdvcnlfb3JkZXJpbmciO3M6MTg6ImNoaWxkX2Rpc3BsYXlfdHlwZSI7czo3OiJub2NoaWxkIjtzOjExOiJjaGlsZF9saW1pdCI7czowOiIiO3M6MTg6Im51bWJlcl9vZl9wcm9kdWN0cyI7czoxOiIwIjtzOjI0OiJsaW5rc19vbl9tYWluX2NhdGVnb3JpZXMiO3M6MToiMCI7czoxNjoib25seV9pZl9wcm9kdWN0cyI7czoxOiIwIjtzOjIwOiJkaXZfaXRlbV9sYXlvdXRfdHlwZSI7czo5OiJpbWdfdGl0bGUiO3M6MTY6ImJhY2tncm91bmRfY29sb3IiO3M6NzoiI2ZmZmZmZiI7czo2OiJtYXJnaW4iO3M6MjoiMTAiO3M6MTQ6ImJvcmRlcl92aXNpYmxlIjtzOjE6IjIiO3M6MTU6InJvdW5kZWRfY29ybmVycyI7czoxOiIxIjtzOjExOiJ0ZXh0X2NlbnRlciI7czoxOiIxIjtzOjE1OiJlbmFibGVfc3dpdGNoZXIiO3M6MToiMCI7fQ==', NULL),
+('cart_retaining_period', '2592000', '2592000'),
+('default_params', 'YTozNDp7czoxNDoiYm9yZGVyX3Zpc2libGUiO3M6MToiMiI7czoxMToiYWRkX3RvX2NhcnQiO3M6MToiMSI7czoxMjoiY29udGVudF90eXBlIjtzOjc6InByb2R1Y3QiO3M6MTE6ImxheW91dF90eXBlIjtzOjM6ImRpdiI7czo3OiJjb2x1bW5zIjtzOjE6IjEiO3M6NToibGltaXQiO3M6MjoiMjEiO3M6OToib3JkZXJfZGlyIjtzOjM6IkFTQyI7czoxMToiZmlsdGVyX3R5cGUiO3M6MToiMCI7czoxOToic2VsZWN0cGFyZW50bGlzdGluZyI7czoxOiIyIjtzOjE1OiJtb2R1bGVjbGFzc19zZngiO3M6MDoiIjtzOjc6Im1vZHVsZXMiO3M6MDoiIjtzOjE5OiJjb250ZW50X3N5bmNocm9uaXplIjtzOjE6IjEiO3M6MTU6InVzZV9tb2R1bGVfbmFtZSI7czoxOiIwIjtzOjEzOiJwcm9kdWN0X29yZGVyIjtzOjg6Im9yZGVyaW5nIjtzOjY6InJhbmRvbSI7czoxOiIwIjtzOjE5OiJwcm9kdWN0X3N5bmNocm9uaXplIjtzOjE6IjEiO3M6MTA6InNob3dfcHJpY2UiO3M6MToiMSI7czoxNDoicHJpY2Vfd2l0aF90YXgiO3M6MToiMSI7czoxOToic2hvd19vcmlnaW5hbF9wcmljZSI7czoxOiIxIjtzOjEzOiJzaG93X2Rpc2NvdW50IjtzOjE6IjEiO3M6MTg6InByaWNlX2Rpc3BsYXlfdHlwZSI7czo4OiJjaGVhcGVzdCI7czoxNDoiY2F0ZWdvcnlfb3JkZXIiO3M6MTc6ImNhdGVnb3J5X29yZGVyaW5nIjtzOjE4OiJjaGlsZF9kaXNwbGF5X3R5cGUiO3M6Nzoibm9jaGlsZCI7czoxMToiY2hpbGRfbGltaXQiO3M6MDoiIjtzOjIwOiJkaXZfaXRlbV9sYXlvdXRfdHlwZSI7czo5OiJpbWdfdGl0bGUiO3M6MTc6ImRpdl9jdXN0b21fZmllbGRzIjtzOjA6IiI7czo2OiJoZWlnaHQiO3M6MzoiMTUwIjtzOjE2OiJiYWNrZ3JvdW5kX2NvbG9yIjtzOjc6IiNGRkZGRkYiO3M6NjoibWFyZ2luIjtzOjI6IjEwIjtzOjE1OiJyb3VuZGVkX2Nvcm5lcnMiO3M6MToiMSI7czoxMToidGV4dF9jZW50ZXIiO3M6MToiMSI7czoyNDoibGlua3Nfb25fbWFpbl9jYXRlZ29yaWVzIjtzOjE6IjAiO3M6MjA6ImxpbmtfdG9fcHJvZHVjdF9wYWdlIjtzOjE6IjEiO3M6MTQ6ImRpc3BsYXlfYmFkZ2VzIjtzOjE6IjEiO30=', NULL),
 ('force_shipping', '0', NULL),
 ('default_product_type', '0', NULL),
 ('form_custom', '1', NULL),
 ('product_areas_order', 'general,images,price,description,meta,restrictions,specifications,display', NULL),
 ('product_areas_fields', '[{\"name\":\"general\",\"title\":\"Main options\",\"hide\":0,\"fields\":[\"name\",\"code\",\"quantity\",\"category\",\"manufacturer\",\"tags\",\"published\"]},{\"name\":\"images\",\"title\":\"Images and files\",\"hide\":0,\"fields\":[]},{\"name\":\"price\",\"title\":\"\\n\\t\\t\\tPrices and taxes\\t\\t\",\"hide\":0,\"fields\":[\"tax\",\"msrp\"]},{\"name\":\"description\",\"title\":\"Description\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\n\\t\\t\",\"hide\":0,\"fields\":[]},{\"name\":\"meta\",\"title\":\"SEO\",\"hide\":0,\"fields\":[\"pagetitle\",\"url\",\"metadescription\",\"keywords\",\"alias\",\"canonical\",\"condition\"]},{\"name\":\"restrictions\",\"title\":\"Restrictions and dimensions\",\"hide\":0,\"fields\":[\"qtyperorder\",\"salestart\",\"warehouse\",\"weight\",\"volume\"]},{\"name\":\"specifications\",\"title\":\"Specifications\",\"hide\":0,\"fields\":[\"characteristics\",\"related\",\"options\",\"bundle\"]},{\"name\":\"display\",\"title\":\"Display\",\"hide\":0,\"fields\":[\"productlayout\",\"quantitylayout\"]}]', NULL),
-('default_image', 'barcode.png', NULL),
-('characteristic_display', 'dropdown', NULL),
-('characteristic_display_text', '1', NULL),
-('show_quantity_field', '1', NULL),
+('default_image', 'barcode.png', 'barcode.png'),
+('characteristic_display', 'dropdown', 'dropdown'),
+('characteristic_display_text', '1', '1'),
+('show_quantity_field', '1', '1'),
 ('show_cart_price', '1', '1'),
 ('show_cart_quantity', '1', '1'),
 ('show_cart_delete', '1', '1'),
-('catalogue', '0', NULL),
+('catalogue', '0', '0'),
 ('redirect_url_after_add_cart', 'checkout', 'checkout'),
-('redirect_url_when_cart_is_empty', '', NULL),
-('cart_retaining_period_checked', '1697393914', NULL),
+('redirect_url_when_cart_is_empty', '', ''),
+('cart_retaining_period_checked', '1695311992', NULL),
 ('auto_submit_methods', '1', '1'),
 ('clean_cart_when_order_created', 'order_confirmed', 'order_confirmed'),
-('display_add_to_cart_for_free_products', '1', NULL),
+('display_add_to_cart_for_free_products', '1', '1'),
 ('category_image', '1', '1'),
 ('category_explorer', '1', '1'),
-('detailed_tax_display', '1', NULL),
+('detailed_tax_display', '1', '1'),
 ('order_status_notification.subject', 'ORDER_STATUS_NOTIFICATION_SUBJECT', 'ORDER_STATUS_NOTIFICATION_SUBJECT'),
 ('order_creation_notification.subject', 'ORDER_CREATION_NOTIFICATION_SUBJECT', 'ORDER_CREATION_NOTIFICATION_SUBJECT'),
 ('order_notification.subject', 'ORDER_NOTIFICATION_SUBJECT', 'ORDER_NOTIFICATION_SUBJECT'),
@@ -2015,127 +1843,33 @@ INSERT INTO `kuv9p_hikashop_config` (`config_namekey`, `config_value`, `config_d
 ('variant_increase_perf', '1', '1'),
 ('checkout_legacy', '0', '0'),
 ('add_to_cart_legacy', '0', '0'),
-('legacy_widgets', '0', NULL),
-('carousel_legacy', '0', NULL),
-('show_footer', '1', NULL),
+('legacy_widgets', '0', '0'),
+('carousel_legacy', '0', '0'),
+('show_footer', '1', '1'),
 ('no_css_header', '0', '0'),
 ('pathway_sef_name', 'category_pathway', 'category_pathway'),
 ('related_sef_name', 'related_product', 'related_product'),
 ('css_module', 'default', 'default'),
-('css_frontend', 'default', NULL),
-('css_backend', 'default', NULL),
+('css_frontend', 'default', 'default'),
+('css_backend', 'default', 'default'),
 ('installcomplete', '1', NULL),
 ('Starter', '0', '0'),
 ('Essential', '1', '1'),
 ('Business', '2', '2'),
 ('Enterprise', '3', '3'),
 ('Unlimited', '9', '9'),
-('from_name', 'demo', NULL),
-('from_email', 'yanib33168@vip4e.com', NULL),
-('reply_name', 'demo', NULL),
-('reply_email', 'yanib33168@vip4e.com', NULL),
+('from_name', 'demo', 'demo'),
+('from_email', 'yanib33168@vip4e.com', 'yanib33168@vip4e.com'),
+('reply_name', 'demo', 'demo'),
+('reply_email', 'yanib33168@vip4e.com', 'yanib33168@vip4e.com'),
 ('cron_sendto', 'yanib33168@vip4e.com', 'yanib33168@vip4e.com'),
-('order_creation_notification_email', 'yanib33168@vip4e.com', NULL),
-('payment_notification_email', 'yanib33168@vip4e.com', NULL),
+('order_creation_notification_email', 'yanib33168@vip4e.com', 'yanib33168@vip4e.com'),
+('payment_notification_email', 'yanib33168@vip4e.com', 'yanib33168@vip4e.com'),
 ('description_starter', 'Joomla!® Online Shop System', 'Joomla!® Online Shop System'),
 ('description_essential', 'Joomla!® Online Shop System', 'Joomla!® Online Shop System'),
 ('description_business', 'Joomla!® Online Store Component', 'Joomla!® Online Store Component'),
-('product_show_modules', '', NULL),
-('website', 'http://localhost/joomla/', NULL),
-('checkout_itemid', '0', NULL),
-('store_offline', '0', NULL),
-('image_address_path', '', NULL),
-('img_style_css', '', NULL),
-('price_with_tax', '1', NULL),
-('round_calculations', '0', NULL),
-('floating_tax_prices', '0', NULL),
-('coupon_before_tax', '0', NULL),
-('update_stock_after_confirm', '0', NULL),
-('show_out_of_stock', '1', NULL),
-('product_association_in_both_ways', '1', NULL),
-('group_options', '0', NULL),
-('shipping_group_product_options', '0', NULL),
-('clean_cart', 'order_created', NULL),
-('synchronized_add_to_cart', '0', NULL),
-('print_cart', '0', NULL),
-('cart_ip', '1', NULL),
-('order_ip', '1', NULL),
-('history_ip', '1', NULL),
-('images_stripes_background', '', NULL),
-('keep_category_product_images', '0', NULL),
-('variant_images_behavior', 'replace_main_product_images', NULL),
-('contact_request_email', '', NULL),
-('email_favicon', '', NULL),
-('checkout_workflow', '{\"steps\":[{\"content\":[{\"task\":\"login\"},{\"task\":\"address\"},{\"task\":\"shipping\"},{\"task\":\"payment\"},{\"task\":\"confirm\"},{\"task\":\"coupon\"},{\"task\":\"cart\"},{\"task\":\"status\"},{\"task\":\"fields\"}]},{\"content\":[{\"task\":\"end\"}]}]}', NULL),
-('force_ssl_url', '', NULL),
-('continue_shopping', '', NULL),
-('display_checkout_mode', 'bar', NULL),
-('mini_address_format', '{address_lastname} {address_firstname} - {address_street}, {address_state} ({address_country})', NULL),
-('display_login', '1', NULL),
-('show_email_confirmation_field', '0', NULL),
-('address_on_registration', '1', NULL),
-('user_group_registration', '', NULL),
-('user_ip', '1', NULL),
-('image_popup_mode', 'shadowbox', NULL),
-('bootstrap_forcechosen', '0', NULL),
-('pagination', 'bottom', NULL),
-('css_style', '', NULL),
-('css_button', 'hikabtn', NULL),
-('action_button_type', 'input', NULL),
-('css_button_cart', 'hikacart', NULL),
-('css_button_wishlist', 'hikawishlist', NULL),
-('product_display', 'show_default', NULL),
-('image_slide', '0', NULL),
-('product_quantity_display', 'show_default_div', NULL),
-('characteristics_dynamic_display', '1', NULL),
-('show_code', '0', NULL),
-('dimensions_display', '0', NULL),
-('weight_display', '0', NULL),
-('manufacturer_display', '0', NULL),
-('show_price_weight', '0', NULL),
-('show_other_product_shortcut', '0', NULL),
-('enable_multicart', '1', NULL),
-('enable_status_vote', 'nothing', NULL),
-('access_vote', 'public', NULL),
-('vote_star_number', '5', NULL),
-('email_comment', '0', NULL),
-('published_comment', '1', NULL),
-('email_each_comment', '', NULL),
-('comment_by_person_by_product', '5', NULL),
-('number_comment_product', '30', NULL),
-('vote_comment_sort', 'date', NULL),
-('vote_comment_sort_frontend', '0', NULL),
-('show_listing_comment', '0', NULL),
-('show_comment_date', '0', NULL),
-('useful_rating', '1', NULL),
-('register_note_comment', '0', NULL),
-('vote_useful_style', 'helpful', NULL),
-('vote_ip', '1', NULL),
-('simplified_breadcrumbs', '1', NULL),
-('sef_remove_id', '0', NULL),
-('category_sef_name', 'category', NULL),
-('product_sef_name', 'product', NULL),
-('checkout_sef_name', 'checkout', NULL),
-('alias_auto_fill', '1', NULL),
-('auto_keywords_and_metadescription_filling', '0', NULL),
-('keywords_number', '0', NULL),
-('max_size_of_metadescription', '254', NULL),
-('keywords_exclusion_list', 'what,when,why,with,this,then,the,these,those,thus,they', NULL),
-('hikarss_format', 'both', NULL),
-('hikarss_name', '', NULL),
-('hikarss_description', '', NULL),
-('hikarss_element', '10', NULL),
-('hikarss_order', 'product_id', NULL),
-('hikarss_child', '1', NULL),
-('display_view_files', '0', NULL),
-('cart_retaining_period_check_frequency', '1200', NULL),
-('use_trash', '0', NULL),
-('default_description_type', 'html', NULL),
-('deactivate_buffering_and_compression', '0', NULL),
-('redirect_post', '0', NULL),
-('partner_id', '', NULL),
-('multi_language_edit', '0', NULL),
-('translated_aliases', '0', NULL);
+('product_show_modules', '103', NULL),
+('website', 'http://localhost/joomla/', NULL);
 
 -- --------------------------------------------------------
 
@@ -2162,7 +1896,7 @@ CREATE TABLE `kuv9p_hikashop_currency` (
 --
 
 INSERT INTO `kuv9p_hikashop_currency` (`currency_id`, `currency_symbol`, `currency_code`, `currency_format`, `currency_name`, `currency_published`, `currency_rate`, `currency_locale`, `currency_displayed`, `currency_percent_fee`, `currency_modified`) VALUES
-(1, '€', 'EUR', '%n', 'Euro', 1, '1.000000', 'a:13:{s:17:\"mon_decimal_point\";s:1:\",\";s:17:\"mon_thousands_sep\";s:1:\".\";s:12:\"mon_grouping\";s:1:\"3\";s:13:\"positive_sign\";s:0:\"\";s:13:\"negative_sign\";s:1:\"-\";s:15:\"int_frac_digits\";i:2;s:11:\"frac_digits\";i:2;s:13:\"p_cs_precedes\";i:0;s:14:\"p_sep_by_space\";i:1;s:13:\"n_cs_precedes\";i:0;s:14:\"n_sep_by_space\";i:1;s:11:\"p_sign_posn\";i:1;s:11:\"n_sign_posn\";i:1;}', 1, '0.00', 1695855440),
+(1, '€', 'EUR', '%n', 'Euro', 1, '1.000000', 'a:13:{s:17:\"mon_decimal_point\";s:1:\",\";s:17:\"mon_thousands_sep\";s:1:\".\";s:12:\"mon_grouping\";s:1:\"3\";s:13:\"positive_sign\";s:0:\"\";s:13:\"negative_sign\";s:1:\"-\";s:15:\"int_frac_digits\";i:2;s:11:\"frac_digits\";i:2;s:13:\"p_cs_precedes\";i:0;s:14:\"p_sep_by_space\";i:1;s:13:\"n_cs_precedes\";i:0;s:14:\"n_sep_by_space\";i:1;s:11:\"p_sign_posn\";i:1;s:11:\"n_sign_posn\";i:1;}', 1, '0.00', 0),
 (2, '$', 'USD', '%n', 'United States dollar', 1, '1.000000', 'a:13:{s:17:\"mon_decimal_point\";s:1:\".\";s:17:\"mon_thousands_sep\";s:1:\",\";s:12:\"mon_grouping\";s:1:\"3\";s:13:\"positive_sign\";s:0:\"\";s:13:\"negative_sign\";s:1:\"-\";s:15:\"int_frac_digits\";i:2;s:11:\"frac_digits\";i:2;s:13:\"p_cs_precedes\";i:1;s:14:\"p_sep_by_space\";i:0;s:13:\"n_cs_precedes\";i:1;s:14:\"n_sep_by_space\";i:0;s:11:\"p_sign_posn\";i:4;s:11:\"n_sign_posn\";i:4;}', 1, '0.00', 0),
 (3, '¥', 'JPY', '%n', 'Japanese yen', 0, '1.000000', 'a:13:{s:17:\"mon_decimal_point\";s:1:\",\";s:17:\"mon_thousands_sep\";s:1:\" \";s:12:\"mon_grouping\";s:1:\"3\";s:13:\"positive_sign\";s:0:\"\";s:13:\"negative_sign\";s:1:\"-\";s:15:\"int_frac_digits\";i:0;s:11:\"frac_digits\";i:0;s:13:\"p_cs_precedes\";i:0;s:14:\"p_sep_by_space\";i:1;s:13:\"n_cs_precedes\";i:0;s:14:\"n_sep_by_space\";i:1;s:11:\"p_sign_posn\";i:1;s:11:\"n_sign_posn\";i:1;}', 0, '0.00', 0),
 (4, '£', 'GBP', '%n', 'British pound', 0, '1.000000', 'a:13:{s:17:\"mon_decimal_point\";s:1:\".\";s:17:\"mon_thousands_sep\";s:1:\",\";s:12:\"mon_grouping\";s:1:\"3\";s:13:\"positive_sign\";s:0:\"\";s:13:\"negative_sign\";s:1:\"-\";s:15:\"int_frac_digits\";i:2;s:11:\"frac_digits\";i:2;s:13:\"p_cs_precedes\";i:1;s:14:\"p_sep_by_space\";i:1;s:13:\"n_cs_precedes\";i:1;s:14:\"n_sep_by_space\";i:1;s:11:\"p_sign_posn\";i:1;s:11:\"n_sign_posn\";i:1;}', 0, '0.00', 0),
@@ -2588,9 +2322,7 @@ INSERT INTO `kuv9p_hikashop_history` (`history_id`, `history_order_id`, `history
 (4, 1, 1695310857, '', 'created', '', 0, '', 0, '', '', '', '', 1),
 (5, 1, 1695310956, '', 'created', '', 0, '', 0, '', '', '', '', 1),
 (6, 1, 1695310959, '', 'created', '', 0, '', 0, '', '', '', '', 1),
-(7, 1, 1695310959, '', 'created', '', 0, '', 0, '', '', '', '', 1),
-(8, 1, 1696283062, '', 'created', '', 0, '', 0, '', '', '', '', 1),
-(9, 1, 1696283062, '', 'created', '', 0, '', 0, '', '', '', '', 1);
+(7, 1, 1695310959, '', 'created', '', 0, '', 0, '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -2693,7 +2425,7 @@ CREATE TABLE `kuv9p_hikashop_order` (
 --
 
 INSERT INTO `kuv9p_hikashop_order` (`order_id`, `order_billing_address_id`, `order_shipping_address_id`, `order_user_id`, `order_parent_id`, `order_status`, `order_type`, `order_number`, `order_created`, `order_modified`, `order_invoice_id`, `order_invoice_number`, `order_invoice_created`, `order_currency_id`, `order_currency_info`, `order_full_price`, `order_tax_info`, `order_discount_code`, `order_discount_price`, `order_discount_tax`, `order_payment_id`, `order_payment_method`, `order_payment_price`, `order_payment_tax`, `order_payment_params`, `order_shipping_id`, `order_shipping_method`, `order_shipping_price`, `order_shipping_tax`, `order_shipping_params`, `order_partner_id`, `order_partner_price`, `order_partner_paid`, `order_partner_currency_id`, `order_ip`, `order_site_id`, `order_lang`, `order_token`, `order_weight`, `order_weight_unit`, `order_volume`, `order_dimension_unit`) VALUES
-(1, 2, 4, 1, 0, 'created', 'sale', 'B1', 1695310673, 1696283062, 0, '', 0, 1, NULL, '10.00000', 'a:1:{i:-1;O:8:\"stdClass\":3:{s:11:\"tax_namekey\";i:-1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:10;}}', '', '0.00000', '0.00000', '', '', '0.00000', '0.00000', 'O:8:\"stdClass\":0:{}', '', '', '0.00000', '0.00000', 'O:8:\"stdClass\":0:{}', 0, '0.00000', 0, 0, '', '', 'en-GB', 'hnbWSTx9', '1.000', 'kg', '1.000', 'm');
+(1, 2, 3, 1, 0, 'created', 'sale', 'B1', 1695310673, 1695310959, 0, '', 0, 1, NULL, '10.00000', 'a:1:{i:-1;O:8:\"stdClass\":3:{s:11:\"tax_namekey\";i:-1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:10;}}', '', '0.00000', '0.00000', '', '', '0.00000', '0.00000', 'O:8:\"stdClass\":0:{}', '', '', '0.00000', '0.00000', 'O:8:\"stdClass\":0:{}', 0, '0.00000', 0, 0, '', '', 'en-GB', 'hnbWSTx9', '1.000', 'kg', '1.000', 'm');
 
 -- --------------------------------------------------------
 
@@ -2893,7 +2625,7 @@ CREATE TABLE `kuv9p_hikashop_product` (
 --
 
 INSERT INTO `kuv9p_hikashop_product` (`product_id`, `product_parent_id`, `product_name`, `product_description`, `product_quantity`, `product_code`, `product_published`, `product_hit`, `product_created`, `product_sale_start`, `product_sale_end`, `product_delay_id`, `product_tax_id`, `product_type`, `product_vendor_id`, `product_manufacturer_id`, `product_url`, `product_weight`, `product_keywords`, `product_weight_unit`, `product_modified`, `product_meta_description`, `product_dimension_unit`, `product_width`, `product_length`, `product_height`, `product_max_per_order`, `product_access`, `product_group_after_purchase`, `product_min_per_order`, `product_contact`, `product_display_quantity_field`, `product_last_seen_date`, `product_sales`, `product_waitlist`, `product_layout`, `product_average_score`, `product_total_vote`, `product_page_title`, `product_alias`, `product_price_percentage`, `product_msrp`, `product_canonical`, `product_warehouse_id`, `product_quantity_layout`, `product_sort_price`, `product_description_raw`, `product_description_type`, `product_option_method`, `product_condition`) VALUES
-(1, 0, 'first product', '', 99, '001', 1, 1, 1695052169, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1695052169, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 1695933656, 1, 0, '', 0, 0, '', 'first-product', '0.0000000', '0.0000000', '', 0, '', '0.00000', NULL, NULL, '', 'NewCondition');
+(1, 0, 'first product', '', 99, '001', 1, 0, 1695052169, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1695052169, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 0, 1, 0, '', 0, 0, '', 'first-product', '0.0000000', '0.0000000', '', 0, '', '0.00000', NULL, NULL, '', 'NewCondition');
 
 -- --------------------------------------------------------
 
@@ -2951,13 +2683,6 @@ CREATE TABLE `kuv9p_hikashop_shipping` (
   `shipping_images` varchar(255) NOT NULL DEFAULT '',
   `shipping_access` varchar(255) NOT NULL DEFAULT 'all'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `kuv9p_hikashop_shipping`
---
-
-INSERT INTO `kuv9p_hikashop_shipping` (`shipping_id`, `shipping_type`, `shipping_zone_namekey`, `shipping_tax_id`, `shipping_price`, `shipping_currency_id`, `shipping_name`, `shipping_description`, `shipping_published`, `shipping_ordering`, `shipping_currency`, `shipping_params`, `shipping_images`, `shipping_access`) VALUES
-(1, 'canadapost', '', 0, '100.00000', 2, '', '', 0, 1, '', 'O:8:\"stdClass\":26:{s:19:\"shipping_percentage\";s:1:\"0\";s:16:\"shipping_formula\";s:0:\"\";s:12:\"shipping_tax\";s:1:\"1\";s:20:\"shipping_per_product\";s:1:\"0\";s:26:\"shipping_price_per_product\";s:0:\"\";s:25:\"shipping_virtual_included\";s:1:\"0\";s:25:\"shipping_override_address\";s:1:\"0\";s:30:\"shipping_override_address_text\";s:0:\"\";s:17:\"override_tax_zone\";s:0:\"\";s:25:\"shipping_warehouse_filter\";s:0:\"\";s:18:\"shipping_min_price\";s:1:\"0\";s:18:\"shipping_max_price\";s:1:\"0\";s:22:\"shipping_price_use_tax\";s:1:\"1\";s:21:\"shipping_min_quantity\";s:0:\"\";s:21:\"shipping_max_quantity\";s:0:\"\";s:19:\"shipping_min_weight\";s:1:\"0\";s:20:\"shipping_weight_unit\";s:2:\"kg\";s:19:\"shipping_max_weight\";s:1:\"0\";s:19:\"shipping_min_volume\";s:1:\"0\";s:18:\"shipping_size_unit\";s:1:\"m\";s:19:\"shipping_max_volume\";s:1:\"0\";s:18:\"shipping_zip_regex\";s:0:\"\";s:19:\"shipping_zip_prefix\";s:0:\"\";s:16:\"shipping_min_zip\";s:0:\"\";s:16:\"shipping_max_zip\";s:0:\"\";s:19:\"shipping_zip_suffix\";s:0:\"\";}', '', 'all');
 
 -- --------------------------------------------------------
 
@@ -11985,31 +11710,6 @@ INSERT INTO `kuv9p_postinstall_messages` (`postinstall_message_id`, `extension_i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kuv9p_preset_boxes`
---
-
-CREATE TABLE `kuv9p_preset_boxes` (
-  `id` int(255) NOT NULL,
-  `box_name` varchar(255) DEFAULT NULL,
-  `box_unit_type` varchar(255) DEFAULT NULL,
-  `box_length` varchar(255) DEFAULT NULL,
-  `box_width` varchar(255) DEFAULT NULL,
-  `box_height` varchar(255) DEFAULT NULL,
-  `box_weight` varchar(255) DEFAULT NULL,
-  `box_insurance` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `kuv9p_preset_boxes`
---
-
-INSERT INTO `kuv9p_preset_boxes` (`id`, `box_name`, `box_unit_type`, `box_length`, `box_width`, `box_height`, `box_weight`, `box_insurance`) VALUES
-(8, 'Box 1', 'Metric', '22', '21', '23', '21', '100'),
-(9, 'Box 2', 'Metric', '33', '1', '3', '10', '100');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `kuv9p_privacy_consents`
 --
 
@@ -12098,9 +11798,9 @@ CREATE TABLE `kuv9p_session` (
 --
 
 INSERT INTO `kuv9p_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-(0x716b397335667275363833696d6c6e3572336d626168646d6472, 0, 0, 1697393970, 'joomla|s:1008:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTY5NzM5Mzk2NTtzOjQ6Imxhc3QiO2k6MTY5NzM5Mzk3MDtzOjM6Im5vdyI7aToxNjk3MzkzOTcwO31zOjU6InRva2VuIjtzOjMyOiIzRGdvSXVlVXN0bmtWVVc3SDZhbkVsejk0d0NyNGhGTSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoyOntzOjU6InVzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxvZ2luIjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImZvcm0iO086ODoic3RkQ2xhc3MiOjI6e3M6NjoicmV0dXJuIjtzOjQ1OiJodHRwOi8vbG9jYWxob3N0L0hpa2FzaG9wLXRlc3Qvam9vbWxhL2pvb21sYS8iO3M6NDoiZGF0YSI7YTowOnt9fX19czoxMzoicmVtZW1iZXJMb2dpbiI7YjoxO31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjI4OCI7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 288, 'yanib33168@vip4e.com'),
-(0x717233307073616132673235676c703334686f75396c68677338, 1, 1, 1697393548, 'joomla|s:736:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTY5NzM5MzU0NztzOjQ6Imxhc3QiO2k6MTY5NzM5MzU0NztzOjM6Im5vdyI7aToxNjk3MzkzNTQ3O31zOjU6InRva2VuIjtzOjMyOiJKbkVtdkhITk81YXJweGZuemhLdk9UeXpmNGFwc0E3USI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 0, ''),
-(0x7576716e33646571736667653130306268666870656732716770, 1, 0, 1697394009, 'joomla|s:1424:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyMTtzOjU6InRva2VuIjtzOjMyOiJsaEF5bFUwYkNQaU9xRmFKRVp3c2VjUnVZcXpxUWZXVSI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNjk3MzkzNTQ3O3M6NDoibGFzdCI7aToxNjk3MzkzOTk3O3M6Mzoibm93IjtpOjE2OTczOTQwMDg7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9czoxMToiY29tX3BsdWdpbnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NzoicGx1Z2lucyI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo2OiJmaWx0ZXIiO2E6NTp7czo2OiJzZWFyY2giO3M6MTA6ImNhbmFkYXBvc3QiO3M6NzoiZW5hYmxlZCI7czowOiIiO3M6NjoiZm9sZGVyIjtzOjA6IiI7czo3OiJlbGVtZW50IjtzOjA6IiI7czo2OiJhY2Nlc3MiO3M6MDoiIjt9czo0OiJsaXN0IjthOjQ6e3M6MTI6ImZ1bGxvcmRlcmluZyI7czoxMDoiZm9sZGVyIEFTQyI7czo1OiJsaW1pdCI7czoyOiIyMCI7czo5OiJzb3J0VGFibGUiO3M6NjoiZm9sZGVyIjtzOjE0OiJkaXJlY3Rpb25UYWJsZSI7czozOiJBU0MiO31zOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czozOiIyODgiO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 288, 'yanib33168@vip4e.com');
+(0x3368756a3831746267666338646f32726c68376c716776683662, 1, 0, 1695312005, 'joomla|s:1304:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozNDtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE2OTUzMTA1OTI7czo0OiJsYXN0IjtpOjE2OTUzMTE5OTk7czozOiJub3ciO2k6MTY5NTMxMjAwNTt9czo1OiJ0b2tlbiI7czozMjoiWlFuUVBJdGZzMUthTTF0d3FyRkVRTUJ1QkJ3VXA0bU0iO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9czoxMjoiY29tX2hpa2FzaG9wIjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InpvbmVfaWQiO3M6MDoiIjtzOjU6Im9yZGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjE0OiJmaWx0ZXJfcGFydG5lciI7aTowO31zOjc6InVzZXJfaWQiO2k6MTtzOjk6Im5hbWVib3hlcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo3OiJkaXNwbGF5IjthOjE6e3M6NzoicHJvZHVjdCI7YToxOntzOjE1OiJwcjY1MGM2M2YzYzQzYmYiO3M6Mjk6Ilt7cHJvZHVjdF9pZH1dIHtwcm9kdWN0X25hbWV9Ijt9fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiMjg4Ijt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";hikashop_order_listing_query|s:275:\" FROM #__hikashop_order AS b  LEFT JOIN #__hikashop_address AS d ON b.order_billing_address_id = d.address_id  LEFT JOIN #__hikashop_user AS a ON b.order_user_id=a.user_id  LEFT JOIN #__users AS c ON a.user_cms_id = c.id   WHERE (b.order_type=\'sale\') ORDER BY b.order_id desc\";hikashop_billing_address_data|O:8:\"stdClass\":14:{s:17:\"address_firstname\";s:9:\"abu bakar\";s:16:\"address_lastname\";s:7:\"pervaiz\";s:14:\"address_street\";s:13:\"test addresss\";s:17:\"address_post_code\";s:5:\"38000\";s:12:\"address_city\";s:10:\"faisalabad\";s:17:\"address_telephone\";s:11:\"03040235224\";s:13:\"address_title\";s:2:\"Mr\";s:15:\"address_country\";s:20:\"country_Pakistan_162\";s:13:\"address_state\";s:21:\"state____________2806\";s:15:\"address_user_id\";s:1:\"0\";s:15:\"address_default\";i:0;s:12:\"address_type\";s:7:\"billing\";s:17:\"address_published\";i:0;s:10:\"address_id\";i:2;}hikashop_shipping_address_data|O:8:\"stdClass\":11:{s:17:\"address_firstname\";s:9:\"Abu Bakar\";s:16:\"address_lastname\";s:7:\"Pervaiz\";s:14:\"address_street\";s:12:\"test address\";s:17:\"address_post_code\";s:5:\"38000\";s:12:\"address_city\";s:10:\"Faisalabad\";s:17:\"address_telephone\";s:11:\"03040235224\";s:13:\"address_title\";s:2:\"Mr\";s:15:\"address_country\";s:20:\"country_Pakistan_162\";s:13:\"address_state\";s:21:\"state____________2806\";s:10:\"address_id\";i:3;s:15:\"address_user_id\";N;}', 288, 'yanib33168@vip4e.com'),
+(0x6a3233683669626e71646b6b6834356f356c3972343370716a33, 1, 0, 1695127921, 'joomla|s:2380:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozMTtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE2OTUxMTgzNDk7czo0OiJsYXN0IjtpOjE2OTUxMjcwODE7czozOiJub3ciO2k6MTY5NTEyNzkyMTt9czo1OiJ0b2tlbiI7czozMjoiQzY0c1M0aTBxMXhsMTFWN2NhTUZmUnZDQjVBUGxMaVQiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6NDp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjtzOjY6Im1hbmFnZSI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo2OiJmaWx0ZXIiO2E6NTp7czo2OiJzZWFyY2giO3M6MDoiIjtzOjY6InN0YXR1cyI7czowOiIiO3M6OToiY2xpZW50X2lkIjtzOjA6IiI7czo0OiJ0eXBlIjtzOjA6IiI7czo2OiJmb2xkZXIiO3M6MDoiIjt9czo0OiJsaXN0IjthOjI6e3M6MTI6ImZ1bGxvcmRlcmluZyI7czo4OiJuYW1lIEFTQyI7czo1OiJsaW1pdCI7czoyOiIyMCI7fXM6MTA6ImxpbWl0c3RhcnQiO2k6ODA7fX1zOjE0OiJjb21fY2F0ZWdvcmllcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoiY2F0ZWdvcmllcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo3OiJjb250ZW50IjtPOjg6InN0ZENsYXNzIjoyOntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czo5OiJleHRlbnNpb24iO3M6MTE6ImNvbV9jb250ZW50Ijt9czo0OiJsaXN0IjthOjQ6e3M6OToiZGlyZWN0aW9uIjtzOjM6ImFzYyI7czo1OiJsaW1pdCI7czoyOiIyMCI7czo4OiJvcmRlcmluZyI7czo1OiJhLmxmdCI7czo1OiJzdGFydCI7ZDowO319fX1zOjExOiJjb21fY29udGVudCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo4OiJhcnRpY2xlcyI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo2OiJmaWx0ZXIiO2E6Mzp7czoxMToiY2F0ZWdvcnlfaWQiO3M6MToiMiI7czo5OiJwdWJsaXNoZWQiO3M6MToiMSI7czo1OiJsZXZlbCI7czoxOiIxIjt9czoxMDoibGltaXRzdGFydCI7aTowO3M6NDoibGlzdCI7YTo0OntzOjk6ImRpcmVjdGlvbiI7czo0OiJkZXNjIjtzOjU6ImxpbWl0IjtzOjI6IjIwIjtzOjg6Im9yZGVyaW5nIjtzOjQ6ImEuaWQiO3M6NToic3RhcnQiO2Q6MDt9fX1zOjk6ImNvbV9tZW51cyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJpdGVtcyI7Tzo4OiJzdGRDbGFzcyI6NDp7czo4OiJtZW51dHlwZSI7czoxNjoiaGlrYXNob3BfZGVmYXVsdCI7czo5OiJjbGllbnRfaWQiO2k6MDtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7czo0OiJsaXN0IjthOjQ6e3M6OToiZGlyZWN0aW9uIjtzOjM6ImFzYyI7czo1OiJsaW1pdCI7czoyOiIyMCI7czo4OiJvcmRlcmluZyI7czo1OiJhLmxmdCI7czo1OiJzdGFydCI7ZDowO319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjI4OCI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 288, 'yanib33168@vip4e.com'),
+(0x7634336f7275746f33706b6634616c7576393439687672613036, 1, 0, 1695052169, 'joomla|s:1544:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozNjtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE2OTUwNTEyNDg7czo0OiJsYXN0IjtpOjE2OTUwNTIxNTk7czozOiJub3ciO2k6MTY5NTA1MjE2OTt9czo1OiJ0b2tlbiI7czozMjoidjhMeTdRWjNlVzlFbzczckIzVW5zeTB4d09HQjBiMnAiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6NDp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjtzOjEyOiJyZWRpcmVjdF91cmwiO047czo2OiJtYW5hZ2UiO086ODoic3RkQ2xhc3MiOjM6e3M6NjoiZmlsdGVyIjthOjU6e3M6Njoic2VhcmNoIjtzOjg6Imhpa2FzaG9wIjtzOjY6InN0YXR1cyI7czowOiIiO3M6OToiY2xpZW50X2lkIjtzOjA6IiI7czo0OiJ0eXBlIjtzOjA6IiI7czo2OiJmb2xkZXIiO3M6MDoiIjt9czo0OiJsaXN0IjthOjI6e3M6MTI6ImZ1bGxvcmRlcmluZyI7czo4OiJuYW1lIEFTQyI7czo1OiJsaW1pdCI7czoyOiIyMCI7fXM6MTA6ImxpbWl0c3RhcnQiO2k6MDt9fXM6MTI6ImNvbV9oaWthc2hvcCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo5OiJuYW1lYm94ZXMiO086ODoic3RkQ2xhc3MiOjE6e3M6NzoiZGlzcGxheSI7YToxOntzOjc6InByb2R1Y3QiO2E6MTp7czoxNToicHI2NTA4NzAzMWQxNzQwIjtzOjI5OiJbe3Byb2R1Y3RfaWR9XSB7cHJvZHVjdF9uYW1lfSI7fX19fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjI4OCI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";hikashop_product_data|O:8:\"stdClass\":42:{s:12:\"product_name\";s:13:\"first product\";s:12:\"product_code\";s:3:\"001\";s:16:\"product_quantity\";s:3:\"100\";s:10:\"categories\";a:1:{i:0;i:2;}s:23:\"product_manufacturer_id\";i:0;s:17:\"product_published\";s:1:\"1\";s:14:\"product_tax_id\";s:2:\"11\";s:12:\"product_msrp\";d:0;s:18:\"product_page_title\";s:0:\"\";s:11:\"product_url\";s:0:\"\";s:24:\"product_meta_description\";s:0:\"\";s:16:\"product_keywords\";s:0:\"\";s:13:\"product_alias\";s:13:\"first-product\";s:17:\"product_canonical\";s:0:\"\";s:17:\"product_condition\";s:12:\"NewCondition\";s:21:\"product_min_per_order\";i:0;s:21:\"product_max_per_order\";i:0;s:18:\"product_sale_start\";i:0;s:16:\"product_sale_end\";i:0;s:20:\"product_warehouse_id\";i:0;s:14:\"product_weight\";s:0:\"\";s:19:\"product_weight_unit\";s:2:\"kg\";s:14:\"product_length\";s:0:\"\";s:13:\"product_width\";s:0:\"\";s:14:\"product_height\";s:0:\"\";s:22:\"product_dimension_unit\";s:1:\"m\";s:14:\"product_layout\";s:0:\"\";s:23:\"product_quantity_layout\";s:0:\"\";s:10:\"product_id\";i:1;s:19:\"product_description\";s:0:\"\";s:23:\"product_description_raw\";N;s:7:\"related\";a:0:{}s:7:\"options\";a:0:{}s:6:\"prices\";a:0:{}s:18:\"product_sort_price\";i:0;s:6:\"images\";a:0:{}s:11:\"imagesorder\";a:0:{}s:5:\"files\";a:0:{}s:10:\"filesorder\";a:0:{}s:16:\"product_modified\";i:1695052169;s:15:\"product_created\";i:1695052169;s:12:\"product_type\";s:4:\"main\";}', 288, 'yanib33168@vip4e.com');
 
 -- --------------------------------------------------------
 
@@ -12299,84 +11999,84 @@ CREATE TABLE `kuv9p_updates` (
 --
 
 INSERT INTO `kuv9p_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
-(494, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.10.12', '', 'https://update.joomla.org/core/extension.xml', '', ''),
-(495, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
-(496, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
-(497, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
-(498, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
-(499, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
-(500, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
-(501, 2, 0, 'Bengali, Bangladesh', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
-(502, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
-(503, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
-(504, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
-(505, 2, 0, 'Chinese, Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.10.6.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
-(506, 2, 0, 'Chinese, Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
-(507, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
-(508, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
-(509, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.10.10.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
-(510, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
-(511, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
-(512, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
-(513, 2, 0, 'English, Australia', '', 'pkg_en-AU', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
-(514, 2, 0, 'English, Canada', '', 'pkg_en-CA', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
-(515, 2, 0, 'English, New Zealand', '', 'pkg_en-NZ', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
-(516, 2, 0, 'English, USA', '', 'pkg_en-US', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
-(517, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
-(518, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
-(519, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
-(520, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
-(521, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/fr-FR_details.xml', '', ''),
-(522, 2, 0, 'French, Canada', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
-(523, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
-(524, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
-(525, 2, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
-(526, 2, 0, 'German, Austria', '', 'pkg_de-AT', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
-(527, 2, 0, 'German, Liechtenstein', '', 'pkg_de-LI', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
-(528, 2, 0, 'German, Luxembourg', '', 'pkg_de-LU', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
-(529, 2, 0, 'German, Switzerland', '', 'pkg_de-CH', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
-(530, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
-(531, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
-(532, 2, 0, 'Hindi, India', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
-(533, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
-(534, 2, 0, 'Indonesian, Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
-(535, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
-(536, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
-(537, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
-(538, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', ''),
-(539, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
-(540, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
-(541, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.9.25.2', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
-(542, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
-(543, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
-(544, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
-(545, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
-(546, 2, 0, 'Norwegian Bokmål', '', 'pkg_nb-NO', 'package', '', 0, '3.10.12.2', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
-(547, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
-(548, 2, 0, 'Persian Farsi', '', 'pkg_fa-IR', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
-(549, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.10.10.1', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
-(550, 2, 0, 'Portuguese, Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
-(551, 2, 0, 'Portuguese, Portugal', '', 'pkg_pt-PT', 'package', '', 0, '3.9.29.2', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
-(552, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
-(553, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.10.9.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
-(554, 2, 0, 'Serbian, Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.10.2.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
-(555, 2, 0, 'Serbian, Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.10.2.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
-(556, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
-(557, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.10.5.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
-(558, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
-(559, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.10.10.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
-(560, 2, 0, 'Spanish, Colombia', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
-(561, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
-(562, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
-(563, 2, 0, 'Syriac, East', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
-(564, 2, 0, 'Tamil, India', '', 'pkg_ta-IN', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
-(565, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
-(566, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
-(567, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
-(568, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.10.2.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
-(569, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
-(570, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
-(571, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', '');
+(80, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
+(81, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
+(82, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
+(83, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
+(84, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
+(85, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
+(86, 2, 0, 'Bengali, Bangladesh', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
+(87, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
+(88, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
+(89, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
+(90, 2, 0, 'Chinese, Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.10.6.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
+(91, 2, 0, 'Chinese, Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
+(92, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
+(93, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
+(94, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.10.10.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
+(95, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
+(96, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
+(97, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
+(98, 2, 0, 'English, Australia', '', 'pkg_en-AU', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
+(99, 2, 0, 'English, Canada', '', 'pkg_en-CA', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
+(100, 2, 0, 'English, New Zealand', '', 'pkg_en-NZ', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
+(101, 2, 0, 'English, USA', '', 'pkg_en-US', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
+(102, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
+(103, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
+(104, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
+(105, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
+(106, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/fr-FR_details.xml', '', ''),
+(107, 2, 0, 'French, Canada', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
+(108, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
+(109, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
+(110, 2, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
+(111, 2, 0, 'German, Austria', '', 'pkg_de-AT', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
+(112, 2, 0, 'German, Liechtenstein', '', 'pkg_de-LI', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
+(113, 2, 0, 'German, Luxembourg', '', 'pkg_de-LU', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
+(114, 2, 0, 'German, Switzerland', '', 'pkg_de-CH', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
+(115, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
+(116, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
+(117, 2, 0, 'Hindi, India', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
+(118, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
+(119, 2, 0, 'Indonesian, Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
+(120, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
+(121, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
+(122, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
+(123, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', ''),
+(124, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
+(125, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
+(126, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.9.25.2', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
+(127, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
+(128, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
+(129, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
+(130, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
+(131, 2, 0, 'Norwegian Bokmål', '', 'pkg_nb-NO', 'package', '', 0, '3.10.12.2', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
+(132, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
+(133, 2, 0, 'Persian Farsi', '', 'pkg_fa-IR', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
+(134, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.10.10.1', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
+(135, 2, 0, 'Portuguese, Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
+(136, 2, 0, 'Portuguese, Portugal', '', 'pkg_pt-PT', 'package', '', 0, '3.9.29.2', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
+(137, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
+(138, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.10.9.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
+(139, 2, 0, 'Serbian, Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.10.2.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
+(140, 2, 0, 'Serbian, Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.10.2.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
+(141, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
+(142, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.10.5.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
+(143, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
+(144, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.10.10.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
+(145, 2, 0, 'Spanish, Colombia', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
+(146, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
+(147, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
+(148, 2, 0, 'Syriac, East', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
+(149, 2, 0, 'Tamil, India', '', 'pkg_ta-IN', 'package', '', 0, '3.10.11.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
+(150, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
+(151, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.28.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
+(152, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
+(153, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.10.2.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
+(154, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
+(155, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
+(156, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.10.12.1', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
+(157, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.10.12', '', 'https://update.joomla.org/core/extension.xml', '', '');
 
 -- --------------------------------------------------------
 
@@ -12399,11 +12099,11 @@ CREATE TABLE `kuv9p_update_sites` (
 --
 
 INSERT INTO `kuv9p_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1697391699, ''),
-(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1697393898, ''),
-(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1697393899, ''),
-(4, 'WebInstaller Update Site', 'extension', 'https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 1697393901, ''),
-(6, 'Hikashop', 'extension', 'http://www.hikashop.com/component/updateme/updatexml/component-hikashop/level-Starter/file-extension.xml', 1, 1697393903, '');
+(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1695310596, ''),
+(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1695118469, ''),
+(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1695118470, ''),
+(4, 'WebInstaller Update Site', 'extension', 'https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 1695118470, ''),
+(6, 'Hikashop', 'extension', 'http://www.hikashop.com/component/updateme/updatexml/component-hikashop/level-Starter/file-extension.xml', 1, 1695118471, '');
 
 -- --------------------------------------------------------
 
@@ -12487,7 +12187,7 @@ CREATE TABLE `kuv9p_users` (
 --
 
 INSERT INTO `kuv9p_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`, `authProvider`) VALUES
-(288, 'Super User', 'yanib33168@vip4e.com', 'yanib33168@vip4e.com', '$2y$10$qcznAmhizFN2ree/VeAFfuW0yA6xUAS3bZA/zzm0ae1QFdS10njSe', 0, 1, '2023-09-18 15:34:02', '2023-10-15 18:19:30', '0', '', '0000-00-00 00:00:00', 0, '', '', 0, '');
+(288, 'Super User', 'yanib33168@vip4e.com', 'yanib33168@vip4e.com', '$2y$10$RdwVjrscescx0aL6nQgdK.dFQL.5AFuGH9rRNByLsWDbaW9IGFV02', 0, 1, '2023-09-18 15:34:02', '2023-09-21 15:37:14', '0', '', '0000-00-00 00:00:00', 0, '', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -12504,13 +12204,6 @@ CREATE TABLE `kuv9p_user_keys` (
   `time` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `uastring` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `kuv9p_user_keys`
---
-
-INSERT INTO `kuv9p_user_keys` (`id`, `user_id`, `token`, `series`, `invalid`, `time`, `uastring`) VALUES
-(2, 'yanib33168@vip4e.com', '$2y$10$hrtvmSm7fy4v1uamz/b/NuB2BO0IRsqrw9abgD4QFvPeHe.F5/7hm', 'dfo5CDW2hmgQ7g848cCN', 0, '1702577970', 'joomla_remember_me_2b449c13adf9ef0d223d0b52c160e79e');
 
 -- --------------------------------------------------------
 
@@ -13376,12 +13069,6 @@ ALTER TABLE `kuv9p_postinstall_messages`
   ADD PRIMARY KEY (`postinstall_message_id`);
 
 --
--- Indexes for table `kuv9p_preset_boxes`
---
-ALTER TABLE `kuv9p_preset_boxes`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `kuv9p_privacy_consents`
 --
 ALTER TABLE `kuv9p_privacy_consents`
@@ -13555,7 +13242,7 @@ ALTER TABLE `kuv9p_viewlevels`
 -- AUTO_INCREMENT for table `kuv9p_action_logs`
 --
 ALTER TABLE `kuv9p_action_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=192;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `kuv9p_action_logs_extensions`
@@ -13615,7 +13302,7 @@ ALTER TABLE `kuv9p_content_types`
 -- AUTO_INCREMENT for table `kuv9p_extensions`
 --
 ALTER TABLE `kuv9p_extensions`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10116;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10113;
 
 --
 -- AUTO_INCREMENT for table `kuv9p_fields`
@@ -13663,7 +13350,7 @@ ALTER TABLE `kuv9p_finder_types`
 -- AUTO_INCREMENT for table `kuv9p_hikashop_address`
 --
 ALTER TABLE `kuv9p_hikashop_address`
-  MODIFY `address_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `address_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kuv9p_hikashop_badge`
@@ -13759,7 +13446,7 @@ ALTER TABLE `kuv9p_hikashop_geolocation`
 -- AUTO_INCREMENT for table `kuv9p_hikashop_history`
 --
 ALTER TABLE `kuv9p_hikashop_history`
-  MODIFY `history_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `history_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `kuv9p_hikashop_limit`
@@ -13825,7 +13512,7 @@ ALTER TABLE `kuv9p_hikashop_product_category`
 -- AUTO_INCREMENT for table `kuv9p_hikashop_shipping`
 --
 ALTER TABLE `kuv9p_hikashop_shipping`
-  MODIFY `shipping_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `shipping_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kuv9p_hikashop_shipping_price`
@@ -13924,12 +13611,6 @@ ALTER TABLE `kuv9p_postinstall_messages`
   MODIFY `postinstall_message_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `kuv9p_preset_boxes`
---
-ALTER TABLE `kuv9p_preset_boxes`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
 -- AUTO_INCREMENT for table `kuv9p_privacy_consents`
 --
 ALTER TABLE `kuv9p_privacy_consents`
@@ -13975,7 +13656,7 @@ ALTER TABLE `kuv9p_ucm_history`
 -- AUTO_INCREMENT for table `kuv9p_updates`
 --
 ALTER TABLE `kuv9p_updates`
-  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=572;
+  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 
 --
 -- AUTO_INCREMENT for table `kuv9p_update_sites`
@@ -13999,7 +13680,7 @@ ALTER TABLE `kuv9p_users`
 -- AUTO_INCREMENT for table `kuv9p_user_keys`
 --
 ALTER TABLE `kuv9p_user_keys`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kuv9p_user_notes`

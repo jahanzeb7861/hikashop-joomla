@@ -1279,74 +1279,74 @@ $mysqli->close();
                 // Calculate girth in inches
                 let girth = convertedlength + (convertedheight * 2) + (convertedwidth * 2);
 
-                if (country === "CA") {
-                    // Check if weight is less than 0.2 lb and dimensions are within the specified range
-                    if (convertedweight < 0.2 || convertedlength < 9.1 || convertedwidth < 7.9 || convertedheight < 1.0) {
-                        alert("Dimensions are wrong for this parcel. Minimum requirements: Weight: 0.2 lb, Length: 9.1 in, Width: 7.9 in, Height: 1.0 in");
-                        return;
-                    } else {
-                        // Parcel meets the minimum requirements
+                // if (country === "CA") {
+                //     // Check if weight is less than 0.2 lb and dimensions are within the specified range
+                //     if (convertedweight < 0.2 || convertedlength < 9.1 || convertedwidth < 7.9 || convertedheight < 1.0) {
+                //         alert("Dimensions are wrong for this parcel. Minimum requirements: Weight: 0.2 lb, Length: 9.1 in, Width: 7.9 in, Height: 1.0 in");
+                //         return;
+                //     } else {
+                //         // Parcel meets the minimum requirements
 
-                        // Now check if weight is less than 66 lb and the sum of length and girth is less than 118 inches
-                        if (convertedweight > 66 || (convertedlength + girth) > 118) {
-                            alert("Parcel exceeds maximum values. Maximum requirements: Weight: 66 lb, Length + Girth: 118 in");
-                            return;
-                        } else {
-                            // Parcel meets the maximum requirements
-                            // You can continue with your code here
-                        }
-                    }
-                } else if (country === "US") {
-                        if (parcelType === "USA.EP") {
-                            // Check if weight is less than 0.2 lb and dimensions are within the specified minimum values
-                            if (weight > 0.2 || length < 8.3 || width < 5.5 || height < 0.2) {
-                            alert("Parcel does not meet minimum requirements for Expedited ParcelTM – USA. Minimum requirements:\nWeight: 0.2 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.2 in");
-                            return;    
-                            } else if (weight > 66 || length + width + height > 107.9) {
-                            alert("Parcel exceeds maximum values for Expedited ParcelTM – USA. Maximum requirements:\nWeight: 66 lb\nLength + Girth: 107.9 in");
-                            return;    
-                            } else {
-                            // Parcel meets the requirements for USA.EP
-                            // You can continue with your code here
-                            }
-                        } else if (parcelType === "USA.XP") {
-                            // Check if weight is less than 0.1 lb and dimensions are within the specified minimum values
-                            if (weight > 0.1 || length < 8.3 || width < 5.5 || height < 0.039) {
-                            alert("Parcel does not meet minimum requirements for XpresspostTM – USA. Minimum requirements:\nWeight: 0.1 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.039 in");
-                            return;   
-                            } else if (weight > 66 || length + width + height > 107.9) {
-                            alert("Parcel exceeds maximum values for XpresspostTM – USA. Maximum requirements:\nWeight: 66 lb\nLength + Girth: 107.9 in");
-                            return;    
-                            } else {
-                            // Parcel meets the requirements for USA.XP
-                            // You can continue with your code here
-                            }
-                        } else {
-                            // Unsupported parcel type for the US
-                            // alert("Unsupported parcel type for the US");
-                            // return;
-                        }
-                 } else {
-                        // Parcel is not going to Canada, so no need to check dimensions
-                        // You can continue with your code here
-                        if (parcelType === "INT.XP") {
-                                    // Check if weight is less than 0.2 lb and dimensions are within the specified minimum values
-                                    if (weight > 0.2 || length < 8.3 || width < 5.5 || height < 0.039) {
-                                    alert("Parcel does not meet minimum requirements for XpresspostTM – International . Minimum requirements:\nWeight: 0.2 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.039 in");
-                                    return;    
-                                    } else if (weight > 66 || length + width + height > 118) {
-                                    alert("Parcel exceeds maximum values for XpresspostTM – International . Maximum requirements:\nWeight: 66 lb\nLength + Girth: 118 in");
-                                    return;    
-                                    } else {
-                                    // Parcel meets the requirements for USA.EP
-                                    // You can continue with your code here
-                                    }
-                        } else {
-                            // Unsupported parcel type for the US
-                            // alert("Unsupported parcel type for the US");
-                            // return;
-                        }
-                }
+                //         // Now check if weight is less than 66 lb and the sum of length and girth is less than 118 inches
+                //         if (convertedweight > 66 || (convertedlength + girth) > 118) {
+                //             alert("Parcel exceeds maximum values. Maximum requirements: Weight: 66 lb, Length + Girth: 118 in");
+                //             return;
+                //         } else {
+                //             // Parcel meets the maximum requirements
+                //             // You can continue with your code here
+                //         }
+                //     }
+                // } else if (country === "US") {
+                //         if (parcelType === "USA.EP") {
+                //             // Check if weight is less than 0.2 lb and dimensions are within the specified minimum values
+                //             if (weight > 0.2 || length < 8.3 || width < 5.5 || height < 0.2) {
+                //             alert("Parcel does not meet minimum requirements for Expedited ParcelTM – USA. Minimum requirements:\nWeight: 0.2 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.2 in");
+                //             return;    
+                //             } else if (weight > 66 || length + width + height > 107.9) {
+                //             alert("Parcel exceeds maximum values for Expedited ParcelTM – USA. Maximum requirements:\nWeight: 66 lb\nLength + Girth: 107.9 in");
+                //             return;    
+                //             } else {
+                //             // Parcel meets the requirements for USA.EP
+                //             // You can continue with your code here
+                //             }
+                //         } else if (parcelType === "USA.XP") {
+                //             // Check if weight is less than 0.1 lb and dimensions are within the specified minimum values
+                //             if (weight > 0.1 || length < 8.3 || width < 5.5 || height < 0.039) {
+                //             alert("Parcel does not meet minimum requirements for XpresspostTM – USA. Minimum requirements:\nWeight: 0.1 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.039 in");
+                //             return;   
+                //             } else if (weight > 66 || length + width + height > 107.9) {
+                //             alert("Parcel exceeds maximum values for XpresspostTM – USA. Maximum requirements:\nWeight: 66 lb\nLength + Girth: 107.9 in");
+                //             return;    
+                //             } else {
+                //             // Parcel meets the requirements for USA.XP
+                //             // You can continue with your code here
+                //             }
+                //         } else {
+                //             // Unsupported parcel type for the US
+                //             // alert("Unsupported parcel type for the US");
+                //             // return;
+                //         }
+                //  } else {
+                //         // Parcel is not going to Canada, so no need to check dimensions
+                //         // You can continue with your code here
+                //         if (parcelType === "INT.XP") {
+                //                     // Check if weight is less than 0.2 lb and dimensions are within the specified minimum values
+                //                     if (weight > 0.2 || length < 8.3 || width < 5.5 || height < 0.039) {
+                //                     alert("Parcel does not meet minimum requirements for XpresspostTM – International . Minimum requirements:\nWeight: 0.2 lb\nLength: 8.3 in\nWidth: 5.5 in\nHeight: 0.039 in");
+                //                     return;    
+                //                     } else if (weight > 66 || length + width + height > 118) {
+                //                     alert("Parcel exceeds maximum values for XpresspostTM – International . Maximum requirements:\nWeight: 66 lb\nLength + Girth: 118 in");
+                //                     return;    
+                //                     } else {
+                //                     // Parcel meets the requirements for USA.EP
+                //                     // You can continue with your code here
+                //                     }
+                //         } else {
+                //             // Unsupported parcel type for the US
+                //             // alert("Unsupported parcel type for the US");
+                //             // return;
+                //         }
+                // }
 
                 $(".main-loader").fadeIn(300);
                     $.ajax({

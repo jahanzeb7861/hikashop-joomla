@@ -48,15 +48,6 @@ $holdForPackup = $_GET['holdForPackup'];
 $nonDeliveryGoods = $_GET['nonDeliveryGoods'];
 $contactPhoneNumber = $_GET['contactPhoneNumber'];
 
-// if ($signature) {
-// 	$signature = 'SO';
-// }
-
-// if ($holdForPackup) {
-// 	$holdForPackup = 'HFP';
-// }
-
-
 
 $xmlRequest = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -81,6 +72,8 @@ $xmlRequest = <<<XML
             <destination>
                 <name>{$fullName}</name>
                 <company>CGI</company>
+                <!-- <contact-phone>1 (450) 823-8432</contact-phone> -->
+                <client-voice-number>1 (450) 823-8432</client-voice-number>
                 <address-details>
                     <address-line-1>{$address1}</address-line-1>
                     <city>{$city}</city>
@@ -130,63 +123,6 @@ $xmlRequest = <<<XML
     </delivery-spec>
     </shipment>
 XML;
-
-// // Conditionally add the <option> tags for $signature and $holdForPackup
-// if (isset($signature) && $signature) {
-//     $xmlRequest .= <<<XML
-//             <option>
-//                 <option-code>{$signature}</option-code>
-//             </option>
-// XML;
-// }
-
-// if (isset($holdForPackup) && $holdForPackup) {
-//     $xmlRequest .= <<<XML
-//             <option>
-//                 <option-code>{$holdForPackup}</option-code>
-//             </option>
-// XML;
-// }
-
-// Complete the XML request
-// $xmlRequest .= <<<XML
-//         </options>
-//         <parcel-characteristics>
-//             <weight>{$weight}</weight>
-//             <dimensions>
-//                 <length>{$length}</length>
-//                 <width>{$width}</width>
-//                 <height>{$height}</height>
-//             </dimensions>
-//             <unpackaged>false</unpackaged>
-//             <mailing-tube>false</mailing-tube>
-//         </parcel-characteristics>
-//         <notification>
-//             <email>ryuko.saito@kubere.com</email>
-//             <on-shipment>true</on-shipment>
-//             <on-exception>false</on-exception>
-//             <on-delivery>true</on-delivery>
-//         </notification>
-//         <print-preferences>
-//             <output-format>{$printerType}</output-format>
-//         </print-preferences>
-//         <preferences>
-//             <show-packing-instructions>true</show-packing-instructions>
-//             <show-postage-rate>false</show-postage-rate>
-//             <show-insured-value>true</show-insured-value>
-//         </preferences>
-//         <references>
-//             <cost-centre>ccent</cost-centre>
-//             <customer-ref-1>ML5</customer-ref-1>
-//             <customer-ref-2>custref2</customer-ref-2>
-//         </references>
-//         <settlement-info>
-//             <contract-id>{$contractId}</contract-id>
-//             <intended-method-of-payment>Account</intended-method-of-payment>
-//         </settlement-info>
-//     </delivery-spec>
-// </shipment>
-// XML;
 
 $curl = curl_init($service_url); // Create REST Request
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
