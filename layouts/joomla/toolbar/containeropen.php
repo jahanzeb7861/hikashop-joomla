@@ -320,7 +320,8 @@ $mysqli->close();
                                                                             $options = [
                                                                                 "Canada" => "Canada",
                                                                                 "United States" => "United States",
-                                                                                "Switzerland" => "Switzerland"
+                                                                                "Switzerland" => "Switzerland",
+                                                                                "Pakistan" => "Pakistan",
                                                                             ];
 
                                                                             foreach ($options as $value => $content) {
@@ -408,7 +409,8 @@ $mysqli->close();
                                                                              $options = [
                                                                                 "Canada" => "Canada",
                                                                                 "United States" => "United States",
-                                                                                "Switzerland" => "Switzerland"
+                                                                                "Switzerland" => "Switzerland",
+                                                                                "Pakistan" => "Pakistan",
                                                                             ];
 
                                                                             foreach ($options as $value => $content) {
@@ -849,9 +851,22 @@ $mysqli->close();
 
                 } else if (country == 'Switzerland') {
                     country = "CH";
+                } else if (country == 'Pakistan') {
+                    country = "PK";
                 }
 
+
+                console.log('CHANGEDD COUNTRY');
                 console.log(country);
+
+                if (country!="CA") {
+                    console.log('HERE');
+                    $("#custom_form").show()
+                }
+                else{
+                    console.log('HERE 2');
+                    $("#custom_form").hide()
+                }
 
                 $.getJSON('statesNew.json',function(data){
                     let states = data.filter((state,i)=>{
@@ -887,6 +902,17 @@ $mysqli->close();
 
                 } else if (country == 'Switzerland') {
                     country = "CH";
+                } else if (country == 'Pakistan') {
+                    country = "PK";
+                }
+
+                if (country!="CA") {
+                    console.log('HERE');
+                    $("#custom_form").show()
+                }
+                else{
+                    console.log('HERE 2');
+                    $("#custom_form").hide()
                 }
 
                 $.getJSON('statesNew.json',function(data){
@@ -923,6 +949,7 @@ $mysqli->close();
               
                 let country = $(this).val();
 
+                console.log('CHANGED COUNTRY');
                 console.log(country);
                 $.getJSON('states.json',function(data){
                     let states = data.filter((state,i)=>{
@@ -1087,6 +1114,12 @@ $mysqli->close();
                 } else {
                     var zipCode = $("#zip-code-billing").val();
                 }
+
+                // alert('here');
+                // alert(useShippingAddress);
+                // alert(useBillingAddress);
+                // alert(zipCode);
+
                 let country = $(".country-dropdown").val();
                 if (!weight || !length || !width || !height || !zipCode || !country) {
                     alert("Please Fill All the Required Fields");
@@ -1099,6 +1132,8 @@ $mysqli->close();
 
                 } else if (country == 'Switzerland') {
                     country = "CH";
+                } else if (country == 'Pakistan') {
+                    country = "PK";
                 }
 
                 $(".main-loader").fadeIn(300)
@@ -1201,10 +1236,13 @@ $mysqli->close();
                     console.log('USING BILLING');
                     var weight = $("#box-weight").val(),length = $("#box-length").val(),width = $("#box-width").val(),height = $("#box-height").val(),zipCode = $("#zip-code-billing").val(),country = $(".country-dropdown").val();
                     var fname = $("#fname-billing").val(),lname = $("#lname-billing").val(),address1 = $("#address1-billing").val(),address2 = $("#address2-billing").val(),city = $("#city-billing").val();
+                    var state = $("#state-billing").val();
+                
                 } else {
                     console.log('USING SHIPPING');
                     var weight = $("#box-weight").val(),length = $("#box-length").val(),width = $("#box-width").val(),height = $("#box-height").val(),zipCode = $("#zip-code-shipping").val(),country = $(".country-dropdown").val();
                     var fname = $("#fname-shipping").val(),lname = $("#lname-shipping").val(),address1 = $("#address1-shipping").val(),address2 = $("#address2-shipping").val(),city = $("#city-shipping").val();
+                    var state = $("#state-shipping").val();
                 }
 
                 let parcelType = $(".parcel-type:checked").val();
@@ -1219,11 +1257,12 @@ $mysqli->close();
                     holdForPackup = 'HFP';
                 }
 
-                var state = $("#state-shipping").val();
+                // var state = $("#state-shipping").val();
                 
                 if (state == "Ontario ") {
                     state = "ON";
                 }
+
              
                 if (!weight || !length || !width || !height || !zipCode || !fname || !lname  || !address1 || !state || !city || !parcelType) {
                     alert("Please Fill All the Required Fields");
@@ -1236,6 +1275,8 @@ $mysqli->close();
                     country = "US";
                 }  else if (country == 'Switzerland') {
                     country = "CH";
+                } else if (country == 'Pakistan') {
+                    country = "PK";
                 }
                 
                 // alert(zipCode)
@@ -1648,7 +1689,9 @@ $mysqli->close();
                                                 // Handle other response cases here
                                                 // You can add additional checks or actions if needed
                                                 // Example: alert("Shipment voided."); if the response is something else
+                                                localStorage.removeItem('shipmentId');
                                                 alert("Shipment voided.");
+
 
                                             }
 
@@ -1684,7 +1727,7 @@ $mysqli->close();
                                         }
                                     }
 
-
+                                localStorage.removeItem('shipmentId');
                                 alert("Shipment Refunded! Service Ticket ID: " + serviceTicketId + " Service Ticket Date: " + serviceTicketDate);
 
                                 // // Check if the HTTP response status is 200
@@ -1713,6 +1756,12 @@ $mysqli->close();
                 $("#endOfDayButton").prop("disabled", true);
 
                 var shipmentId = localStorage.getItem('shipmentId');
+
+                if (!shipmentId) {
+                    alert("There was nothing to transmit. Please Create Shipment First.");
+                    $("#endOfDayButton").prop("disabled", false);
+                    return;
+                }
                
                // TransmitShipments.php
                $.ajax({
@@ -1763,15 +1812,29 @@ $mysqli->close();
                                 console.log(res);
                                 console.log('Words:');
                                 console.log(words);
-                                const manifestIndex = words.indexOf('manifest:');
+                                const manifestIndex = words.indexOf('200 manifest:');
                                 console.log('manifestURL:');
                                 console.log(words[words.length - 1]);
+                                console.log('manifestURL 2:');
+                                console.log(words[words.length - 2]);
 
                                 // Find the word "manifest:" in the array
 
                                 // If "manifest:" is found, get the URL part after it
                                 if (words.length > 0) {
-                                    const manifestURL = words[words.length - 1];
+                                    
+                                    if (words.length == 5) {
+                                        var manifestURL = words[words.length - 1];
+                                    } else {
+                                        var manifestURL = words[words.length - 2];
+                                        var manifestURL = manifestURL.replace(/\nmanifest:$/, '');
+                                    }
+
+                                    // check if the manifestURL contains manifest: at the end then remove it.
+                                    console.log('FINAL MANIFEST URL');
+                                    console.log(manifestURL);
+
+
                                     // Extract the last part of the URL
                                     const parts = manifestURL.split('/');
                                     const lastPart = parts[parts.length - 1].trim();
