@@ -54,7 +54,7 @@
                 <field name="company_number" type="number" default="" label="Company Number" description="Enter your Company Number."/>
                 <field name="company_name" type="text" default="" label="Company Name" description="Enter your Company Name."/>
                 <field name="contract_number" type="number" default="" label="Contract Number" description="Enter your Contract Number."/>
-                <field name="contract_email" type="email" default="" label="Email" description="Enter your Email."/>
+                <field name="contract_email" type="email" default="" label="Company Email" description="Enter your Email."/>
                 <field name="api_username" type="text" default="" label="API Username" description="Enter your Canada Post API Username."/>
                 <field name="api_password" type="text" default="" label="API Password" description="Enter your Canada Post API Password."/>
                  <field name="printer_type" type="list" default="" label="Printer Type" description="Select Printer Type.">

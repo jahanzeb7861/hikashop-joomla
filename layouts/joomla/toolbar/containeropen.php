@@ -802,10 +802,15 @@ $mysqli->close();
         var currentURL = window.location.href;
 
         console.log(currentURL);
-        console.log(currentURL.indexOf('ctrl=order'));
+        console.log("URL IS");
+        console.log(currentURL.indexOf('ctrl=order') !== -1);
+        console.log(currentURL.indexOf('task=edit') !== -1);
+        console.log(currentURL.indexOf('cid[]=1') !== -1);
+
+        
 
         // Check if the URL contains "ctrl=order"
-        if (currentURL.indexOf('ctrl=order') !== -1) {
+        if (currentURL.indexOf('ctrl=order') !== -1 && currentURL.indexOf('task=edit') !== -1) {
             // Show the buttons if "ctrl=order" is present
             document.getElementById('openModal').style.display = 'inline';
             document.getElementById('refundButton').style.display = 'inline';
@@ -817,6 +822,8 @@ $mysqli->close();
             document.getElementById('endOfDayButton').style.display = 'none';
         }
 
+        var SelectedOrderId = /cid\[\]=(\d+)/.exec(currentURL)[1];
+        console.log(SelectedOrderId);
 
         // JavaScript to open and close the modal
         document.addEventListener("DOMContentLoaded", function () {
@@ -1437,6 +1444,7 @@ $mysqli->close();
                             // console.log("Tracking PIN:", res['tracking-pin']);
 
                             localStorage.setItem('shipmentId', res['shipment-id']);
+                            localStorage.setItem('trackingId', res['tracking-pin']);
 
 
 
@@ -1463,6 +1471,23 @@ $mysqli->close();
                             $("#trackingPin").val(res['tracking-pin']);
                             $("#print-pdf").show()
 
+                        }
+                    });
+
+                        var trackingId = localStorage.getItem('trackingId');
+                       console.log('SELECTED ORDER ID IS '); 
+                       console.log(SelectedOrderId); 
+                       var id = SelectedOrderId;
+
+
+                    $.ajax({
+                        type: "get",
+                        url: "saveTrackingId.php",
+                        data: {
+                            trackingId, id
+                        },
+                        success: function (res) {
+                            location.reload();
                         }
                     });
                 

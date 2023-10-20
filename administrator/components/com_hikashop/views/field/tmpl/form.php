@@ -35,8 +35,12 @@ else {
 			<input type="text" name="data[field][field_realname]" id="field_name" class="inputbox" value="<?php echo $this->escape(@$this->field->field_realname); ?>" />
 		</dd>
 
-		<dt><label><?php
-			echo JText::_('FIELD_TABLE');
+		<dt><label>
+		<?php
+			// $this->field->field_table = 'order';
+		?>
+			<?php
+			echo JText::_('FIELD_TABLE'); 
 		?></label></dt>
 		<dd><?php
 	if (hikashop_level(1) && empty($this->field->field_id)) {

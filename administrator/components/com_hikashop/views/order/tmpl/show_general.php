@@ -32,6 +32,10 @@ if(!isset($this->edit) || $this->edit !== true ) {
 			<td class="key"><label><?php echo JText::_('INVOICE_NUMBER'); ?></label></td>
 			<td><span><?php echo @$this->order->order_invoice_number; ?></span></td>
 		</tr>
+		<tr class="hikashop_order_invoicenumber">
+			<td class="key"><label><?php echo 'Tracking Number'; ?></label></td>
+			<td><span><?php echo @$this->order->tracking_numbers; ?></span></td>
+		</tr>
 		<tr class="hikashop_order_status">
 			<td class="key"><label for="data[order][order_status]"><?php echo JText::_('ORDER_STATUS'); ?></label></td>
 			<td class="hikashop_order_status"><?php
