@@ -60,6 +60,9 @@ if ($result->num_rows > 0) {
 if ($result2->num_rows > 0) {
     
     $row2 = $result2->fetch_assoc();
+    echo $row2['address_telephone'];
+
+    $Telephone = $row2['address_telephone'];
 
     // Fill in the HTML form fields with the retrieved data
     echo '<script>';
@@ -81,6 +84,7 @@ if ($result3->num_rows > 0) {
     $NonDeliveryGoods = $decodedObject->non_delivery_of_goods;
     $ReasonForExport = $decodedObject->reason_for_export;
     $CountryOfOrigin = $decodedObject->country_of_origin;
+    $CurrencyValue = $decodedObject->currency_value;
     $ShipmentValue = $decodedObject->shipment_value;
 
     // Output the value of printer_type
@@ -449,8 +453,47 @@ $mysqli->close();
                                                 </div>
                                             </div>
 
+                                            
+                                            <div class="custom-form-check">
+                                                    <input class="form-check-input" type="radio" name="address_type" id="address_type2">
+                                                    <label class="form-check-label" for="address_type2">
+                                                        Billing Address
+                                                    </label>
 
-                                            <div class="form-check" style="
+                                                    <input class="form-check-input" type="radio" name="address_type" id="address_type1">
+                                                    <label class="form-check-label" for="address_type1">
+                                                        Shipping Address
+                                                    </label>
+                                                </div>
+
+    <style>
+        .custom-form-check {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+        }
+
+        .custom-form-check input {
+            display: none; /* Hide the radio input */
+        }
+
+        .custom-form-check label {
+            border: 2px solid #000; /* Border width and color */
+            padding: 10px 130px; /* Padding inside the box */
+            border-radius: 5px; /* Rounded corners */
+            margin-right: 90px;
+            cursor: pointer;
+        }
+
+        .custom-form-check input:checked + label {
+            background-color: #000; /* Change the background when checked */
+            color: #fff; /* Change the text color when checked */
+        }
+    </style>
+
+
+                                            <!-- <div class="form-check" style="
     display: flex;
     align-items: center;
 ">
@@ -462,9 +505,9 @@ $mysqli->close();
 ">
                                                                 My Shipping information is the same as my billing information
                                                             </label>
-                                                        </div>
+                                                        </div> -->
 
-                                            <div class="col-md-6 my-3">
+                                            <!-- <div class="col-md-6 my-3">
                                                     <h5>Which Address Do You Want to Use as Shipping Label?</h5>
                                                     <div class="d-flex gap-3" style="
                                                                                     display: flex;
@@ -496,35 +539,9 @@ $mysqli->close();
                                                             </label>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <hr class="border-bottom border-primary border-2">
 
-                                                <div class="form-check" style="
-    display: flex;
-    align-items: center;
-">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                name="signature" id="signature">
-                                                            <label class="form-check-label" for="signature" style="
-    margin-left: 5px;
-    justify-content: center;
-    margin-bottom: 0px;
-">
-                                                                Signature
-                                                            </label>
-
-                                                            <input class="form-check-input" type="checkbox"
-                                                                name="hold_for_pickup" id="hold_for_pickup" style="
-    margin-left: 15px;
-">
-                                                            <label class="form-check-label" for="hold_for_pickup" style="
-    margin-left: 5px;
-    justify-content: center;
-    margin-bottom: 0px;
-">
-                                                               Hold for Pickup
-                                                            </label>
-                                                        </div>
 
                                                         <hr class="border-bottom border-primary border-2">
 
@@ -625,11 +642,32 @@ $mysqli->close();
                                                                         class="form-control">
                                                                 </div>
 
-                                                                <!-- Contact Phone number -->
                                                                 <div>
                                                                     <label for="">Contact Phone number</label>
-                                                                    <input type="number" placeholder="Contact Phone number" id="contact_phone_number"
+                                                                    <input type="text" placeholder="Contact Phone number" value="<?php echo $Telephone; ?>" id="contact_phone_number"
                                                                         class="form-control">
+                                                                </div>
+                                                                <div>
+                                                                    <!-- <label for="">Currency</label>
+                                                                    <input type="number" placeholder="Currency" id="currency"
+                                                                        class="form-control"> -->
+                                                                        <label for="">Currency</label>
+                                                                        <select name="currency_value" id="currency_value" class="form-select border-0 currency">
+                                                                            <option value="">Select</option>
+                                                                            <?php
+                                                                            $CurrencyValue = $CurrencyValue; // Replace this with the actual value of $CurrencyValue
+                                                                            $options = [
+                                                                                "USD" => "USD",
+                                                                                "GBP" => "GBP",
+                                                                                "EUR" => "EUR"
+                                                                            ];
+
+                                                                            foreach ($options as $value => $content) {
+                                                                                $selected = ($CurrencyValue === $value) ? 'selected' : '';
+                                                                                echo '<option value="' . $value . '" ' . $selected . '>' . $content . '</option>';
+                                                                            }
+                                                                            ?>
+                                                                        </select>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1300,10 +1338,10 @@ $mysqli->close();
                         alert('Non Delivery Goods is Required Field.');
                         return;
                     }
-                    if (!contactPhoneNumber) {
-                        alert('Contact Phone Number is Required.');
-                        return;
-                    }
+                    // if (!contactPhoneNumber) {
+                    //     alert('Contact Phone Number is Required.');
+                    //     return;
+                    // }
                 }
 
                 // Check if the weight and dimensions are in CM and KG

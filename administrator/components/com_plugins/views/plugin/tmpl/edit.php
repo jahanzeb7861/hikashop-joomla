@@ -807,6 +807,152 @@ JFactory::getDocument()->addScriptDeclaration("
 						?>
 
 
+						// <?php
+
+						// 		// Assuming you have a database connection established
+						// 		$servername = "localhost";
+						// 		$username = "root";
+						// 		$password = "";
+						// 		$dbname = "test_joomla";
+
+						// 		// Create a connection
+						// 		$conn = new mysqli($servername, $username, $password, $dbname);
+
+						// 		// Check the connection
+						// 		if ($conn->connect_error) {
+						// 			die("Connection failed: " . $conn->connect_error);
+						// 		}
+
+						// 		// SQL query to select all rows from the kuv9p_hikashop_field table
+						// 		$sql = "SELECT * FROM kuv9p_hikashop_field";
+						// 		$result = $conn->query($sql);
+
+						// 		if ($result->num_rows > 0) {
+						// 			// Loop through the rows and display data
+						// 			while ($row = $result->fetch_assoc()) {
+
+
+						// 				?>
+
+						// 					// Create a new div element
+						// 					var newDiv = document.createElement("div");
+						// 					newDiv.className = "control-group";
+
+						// 					// Create the control-label section
+						// 					var controlLabelDiv = document.createElement("div");
+						// 					controlLabelDiv.className = "control-label";
+
+						// 					var label = document.createElement("label");
+						// 					label.id = "jform_params_choose_tracking_field-lbl";
+						// 					label.htmlFor = "jform_params_choose_tracking_field";
+						// 					label.className = "hasPopover";
+						// 					label.setAttribute("title", "");
+						// 					label.setAttribute("data-content", "Choose the non-delivery status for goods.");
+						// 					label.setAttribute("data-original-title", "Please choose tracking field");
+						// 					label.textContent = "Please choose tracking field";
+
+						// 					controlLabelDiv.appendChild(label);
+
+						// 					// Create the controls section
+						// 					var controlsDiv = document.createElement("div");
+						// 					controlsDiv.className = "controls";
+
+						// 					var select = document.createElement("select");
+						// 					select.id = "jform_params_choose_tracking_field";
+						// 					select.name = "jform[params][choose_tracking_field]";
+						// 					select.style.display = "none";
+
+						// 				<?php 
+
+						// 				// You can access the data for each row using the $row array
+						// 				// For example, if you have a column named 'column_name', you can access it like this:
+						// 				$columnValue = $row['field_namekey'];
+
+						// 				?>
+
+											
+
+						// 					// Create select options
+						// 					var options = ["tracking_numbers", "track_456", "track_789"];
+
+						// 					options.forEach(function (optionText) {
+						// 						var option = document.createElement("option");
+						// 						option.value = optionText;
+						// 						option.textContent = optionText;
+						// 						select.appendChild(option);
+						// 					});
+
+											
+
+						// 				<?php
+						// 			}
+
+						// 			?>
+
+						// 					var chznContainer = document.createElement("div");
+						// 					chznContainer.className = "chzn-container chzn-container-single chzn-container-single-nosearch";
+						// 					chznContainer.style.width = "220px";
+						// 					chznContainer.setAttribute("title", "");
+						// 					chznContainer.id = "jform_params_choose_tracking_field_chzn";
+
+						// 					var chznSingle = document.createElement("a");
+						// 					chznSingle.className = "chzn-single";
+
+						// 					var span = document.createElement("span");
+						// 					span.id = "field_keyname";
+						// 					span.textContent = "tracking_numbers";
+
+						// 					var chznDrop = document.createElement("div");
+						// 					chznDrop.className = "chzn-drop";
+
+						// 					var chznSearch = document.createElement("div");
+						// 					chznSearch.className = "chzn-search";
+
+						// 					var input = document.createElement("input");
+						// 					input.type = "text";
+						// 					input.setAttribute("autocomplete", "off");
+						// 					input.setAttribute("readonly", "");
+						// 					input.setAttribute("data-listener-added_7cea8fab", "true");
+
+						// 					chznSearch.appendChild(input);
+
+						// 					var chznResults = document.createElement("ul");
+						// 					chznResults.className = "chzn-results";
+
+						// 					// Create three list items
+						// 					for (var i = 0; i < 3; i++) {
+						// 						var listItem = document.createElement("li");
+						// 						listItem.className = "active-result";
+						// 						listItem.setAttribute("data-option-array-index", i);
+						// 						listItem.style = "";
+						// 						listItem.textContent = "";
+						// 						chznResults.appendChild(listItem);
+						// 					}
+
+						// 					chznDrop.appendChild(chznSearch);
+						// 					chznDrop.appendChild(chznResults);
+
+						// 					chznSingle.appendChild(span);
+						// 					chznSingle.appendChild(document.createElement("div")); // Empty div with b
+						// 					chznContainer.appendChild(chznSingle);
+						// 					chznContainer.appendChild(chznDrop);
+
+						// 					controlsDiv.appendChild(select);
+						// 					controlsDiv.appendChild(chznContainer);
+
+						// 					newDiv.appendChild(controlLabelDiv);
+						// 					newDiv.appendChild(controlsDiv);
+
+						// 					// Add the new div to the document
+						// 					document.body.appendChild(newDiv);
+
+						// 					<?php 
+						// 		} else {
+						// 			echo "// No rows found in the kuv9p_hikashop_field table.";
+						// 		}
+						// ?>
+
+
 					// // 	// Create a label element
 					// var newLabel = document.createElement("label");
 					// newLabel.id = "jform_params_default_shipping_settings_1-lbl";

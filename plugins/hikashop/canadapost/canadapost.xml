@@ -83,8 +83,12 @@
 
                 <field name="address_postal_code" type="text" default="" label="Postal Code" description="Enter your Postal Code."/>
                 <field name="address_contact_phone" type="number" default="" label="Contact Phone" description="Enter your Contact Phone."/>
-                <field name="address_email" type="email" default="" label="Contact Email" description="Enter your Contact Email."/>
-
+                <!-- <field name="address_email" type="email" default="" label="Contact Email" description="Enter your Contact Email."/> -->
+                <!-- <field name="choose_tracking_field" type="list" default="" label="Please chose tracking field" description="Choose the non-delivery status for goods.">
+                    <option value="tracking_numbers">tracking_numbers</option>
+                    <option value="track_456">track_456</option>
+                    <option value="track_789">track_789</option>
+                </field> -->
             </fieldset>
 
             <!-- Additional Parameters -->
@@ -119,6 +123,12 @@
                     <!-- Add more options as needed -->
                 </field>
                 <field name="shipment_value" type="number" default="" label="Shipment Value" description="Enter the shipment value."/>
+                <!-- <field name="currency_value" type="number" default="" label="Currency" description="Choose Currency"/> -->
+                <field name="currency_value" type="list" default="" label="Country of Origin" description="Choose the country of origin for the shipment.">
+                    <option value="USD">USD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="EUR">EUR</option>
+                </field>
             </fieldset>
         </fields>
     </config>
