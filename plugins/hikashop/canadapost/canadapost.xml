@@ -124,7 +124,7 @@
                 </field>
                 <field name="shipment_value" type="number" default="" label="Shipment Value" description="Enter the shipment value."/>
                 <!-- <field name="currency_value" type="number" default="" label="Currency" description="Choose Currency"/> -->
-                <field name="currency_value" type="list" default="" label="Country of Origin" description="Choose the country of origin for the shipment.">
+                <field name="currency_value" type="list" default="" label="Currency" description="Choose the country of origin for the shipment.">
                     <option value="USD">USD</option>
                     <option value="GBP">GBP</option>
                     <option value="EUR">EUR</option>

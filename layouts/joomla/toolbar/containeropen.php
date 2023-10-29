@@ -29,6 +29,7 @@ $sql = "SELECT * FROM kuv9p_hikashop_address WHERE address_id = 3"; // Replace '
 $sql2 = "SELECT * FROM kuv9p_hikashop_address WHERE address_id = 2"; // Replace '1' with the actual ID you want to retrieve.
 $sql3 = "SELECT * FROM kuv9p_extensions WHERE element = 'canadapost'"; // Replace '1' with the actual ID you want to retrieve.
 $sql4 = "SELECT * FROM kuv9p_preset_boxes"; // Replace '1' with the actual ID you want to retrieve.
+$sql5 = "SELECT * FROM kuv9p_package_contents"; 
 
 
 // echo $sql;
@@ -43,6 +44,7 @@ $result2 = $mysqli->query($sql2);
 
 $result3 = $mysqli->query($sql3);
 $result4 = mysqli_query($connection, $sql4);
+$result5 = mysqli_query($connection, $sql5);
 
 
 
@@ -60,7 +62,6 @@ if ($result->num_rows > 0) {
 if ($result2->num_rows > 0) {
     
     $row2 = $result2->fetch_assoc();
-    echo $row2['address_telephone'];
 
     $Telephone = $row2['address_telephone'];
 
@@ -103,6 +104,11 @@ if ($result3->num_rows > 0) {
 $presets = array();
 while ($row4 = mysqli_fetch_assoc($result4)) {
     $presets[] = $row4; 
+}
+
+$PackageContents = array();
+while ($row5 = mysqli_fetch_assoc($result5)) {
+    $PackageContents[] = $row5; 
 }
 
 
@@ -542,9 +548,6 @@ $mysqli->close();
                                                 </div> -->
                                                 <hr class="border-bottom border-primary border-2">
 
-
-                                                        <hr class="border-bottom border-primary border-2">
-
                                                 <div id="custom_form" style="display: none;">
                                                         <h3>Custom Form:</h3>
                                                         <div class="form-group col-md-12 box-details text-start mt-3">
@@ -673,6 +676,34 @@ $mysqli->close();
                                                         </div>
                                                 </div>
 
+                                                
+                                                
+                                                <h3>Package Content</h3>
+                                                <div style="
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+">
+                                                    
+                                                    <br>
+                                                    <?php foreach ($PackageContents as $packageContent): ?>
+                                                    <div class="form-check form-check" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+">
+                                                        <input class="form-check-input " name="package_contents" type="radio" value="<?php echo $packageContent['sku_number'] . '-' . $packageContent['tariff_code'] . '-' . $packageContent['description'] ?>">
+                                                         
+                                                        <label class="form-check-label" style="margin-left: 5px; margin-bottom: 0px;" for="package_contents<?php echo $packageContent['id']; ?>">
+                                                            <strong><?php echo $packageContent['sku_number']; ?>:</strong> <br>      
+                                                            <?php
+                                                                    echo $packageContent['sku_number'] . '-' . $packageContent['tariff_code'] . '-' . $packageContent['description'];
+                                                                ?>
+                                                        </label>
+                                                    </div>
+                                                    <?php endforeach; ?>
+                                                </div>
+                                                
                                                 <hr class="border-bottom border-primary border-2">
 
 

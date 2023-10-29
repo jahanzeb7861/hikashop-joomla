@@ -1109,8 +1109,14 @@ JFactory::getDocument()->addScriptDeclaration("
 				form.appendChild(fieldGroupsWrapper); // Append the wrapper instead of individual field groups
 				form.appendChild(saveBoxButton);
 
+
+				var newTitle = document.createElement("h1");
+				newTitle.textContent = 'Package Contents';
+
+
 				// Append the form to the 'presetBox' element
 				presetBox.appendChild(form);
+				presetBox.appendChild(newTitle);
 
 
 					// Function to create a "Remove" button
@@ -1322,6 +1328,286 @@ JFactory::getDocument()->addScriptDeclaration("
 							location.reload();
 				}
 
+
+				<?php
+
+						// Assuming you have a database connection established
+						$servername = "localhost";
+						$username = "root";
+						$password = "";
+						$dbname = "test_joomla";
+
+						// Create a connection
+						$conn = new mysqli($servername, $username, $password, $dbname);
+
+						// Check the connection
+						if ($conn->connect_error) {
+							die("Connection failed: " . $conn->connect_error);
+						}
+
+						// SQL query to select all rows from the kuv9p_preset_boxes table
+						$sql = "SELECT * FROM kuv9p_package_contents";
+						$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+							while ($row = $result->fetch_assoc()) {
+								$sku_number = $row["sku_number"];
+								$tariff_code = $row["tariff_code"];
+								$description = $row["description"];
+								$unit_weight = $row["unit_weight"];
+								$value_per_unit = $row["value_per_unit"];
+								$country_of_origin = $row["country_of_origin"];
+								$province_of_origin = $row["province_of_origin"];
+								$packageContentId = $row["id"];
+								?>
+
+							// Create a flex container div element
+							var flexContainerTwo = document.createElement("div");
+							flexContainerTwo.style.display = "flex";
+							flexContainerTwo.style.marginBottom = "20px";
+
+							// var newTitle = document.createElement("h1");
+							// newTitle.textContent = 'Package Contents';
+
+							
+							// Create a label element
+							var newLabel = document.createElement("label");
+							newLabel.id = "jform_params_default_shipping_settings_1-lbl";
+							newLabel.htmlFor = "jform_params_default_shipping_settings_1";
+							newLabel.className = "hasPopover control-label";
+
+							// Check the value of $boxUnitType and append the appropriate unit
+							if ("<?php echo $boxUnitType; ?>" === "Imperial") {
+								newLabel.textContent = "<?php echo $sku_number . ' - ' . $tariff_code . ' - ' . $description; ?>";
+								newLabel.setAttribute("data-content", "Enable <?php echo $sku_number . ' - ' . $tariff_code . ' - ' . $description; ?>");
+							} else {
+								newLabel.textContent = "<?php echo $sku_number . ' - ' . $tariff_code . ' - ' . $description; ?>";
+								newLabel.setAttribute("data-content", "Enable <?php echo $sku_number . ' - ' . $tariff_code . ' - ' . $description; ?>");
+							}
+
+							newLabel.title = "";
+							newLabel.setAttribute("data-original-title", newLabel.textContent);
+
+							 // Append the label to the flex container
+							 
+
+							//  // Check if newTitle already exists in the flexContainerTwo
+							// var existingTitle = flexContainerTwo.querySelector('h1');
+
+							// if (!existingTitle) {
+							// 	// If newTitle doesn't exist, then append it to the flexContainerTwo
+							// 	flexContainerTwo.appendChild(newTitle);
+							// }
+							 
+							//  flexContainerTwo.appendChild(newTitle);
+
+
+
+
+							 flexContainerTwo.appendChild(newLabel);
+
+								var removePackageContentButton = document.createElement("button");
+									removePackageContentButton.type = "button";
+									removePackageContentButton.className = "btn btn-sm btn-danger";
+									removePackageContentButton.id = "<?php echo $packageContentId ?>";
+									removePackageContentButton.textContent = "Remove";
+									removePackageContentButton.style.paddingTop = "3px";
+									removePackageContentButton.style.paddingBottom = "3px";
+									removePackageContentButton.addEventListener("click", function () {
+										removePackageContent(this,<?php echo $packageContentId ?>); // Pass the button element as an argument to identify the box to remove
+									});
+										// Append the label to the flex container 
+								// flexContainer.appendChild(selectButton);
+								// Append the label to the flex container
+								flexContainerTwo.appendChild(removePackageContentButton);
+
+								var presetBox = document.getElementById("attrib-preset_box");
+								presetBox.appendChild(flexContainerTwo);
+								
+								<?php
+							}
+
+						
+						} else {
+							echo "// No rows found in the kuv9p_preset_boxes table.";
+						}
+						?>
+
+
+
+				// Create a form element with Bootstrap form class
+				var form = document.createElement("form");
+				form.className = "form-horizontal";
+
+				// Create a div to wrap all field groups with display: flex
+				var fieldGroupsWrapper = document.createElement("div");
+				fieldGroupsWrapper.style.display = "flex";
+				fieldGroupsWrapper.style.flexWrap = "wrap"; // Allow wrapping to new rows if needed
+				fieldGroupsWrapper.style.gap = "40px"; // Allow wrapping to new rows if needed
+				fieldGroupsWrapper.style.marginTop = "10px"; // Allow wrapping to new rows if needed
+
+				// Function to create a field group with a label, input, and class names
+				function createFieldGroup(inputType, labelText, inputPlaceholder, inputId, inputName, inputValue, dataContent) {
+					// Create a field group container (div with class "form-group")
+					var fieldGroup = document.createElement("div");
+					fieldGroup.className = "form-group";
+
+					// Create a label element with Bootstrap class
+					var labelElement = document.createElement("label");
+					labelElement.id = "jform_params_" + inputId + "-lbl";
+					labelElement.htmlFor = "jform_params_" + inputId;
+					labelElement.className = "col-sm-3 control-label"; // Adjust the column width as needed
+					labelElement.textContent = labelText;
+					labelElement.title = "";
+					labelElement.setAttribute("data-content", dataContent);
+					labelElement.setAttribute("data-original-title", labelText);
+
+					// Create a div for the input container with Bootstrap class
+					var inputDiv = document.createElement("div");
+					inputDiv.className = "col-sm-9";
+
+					// Create the input element with Bootstrap class
+					var inputElement = document.createElement("input");
+					inputElement.type = inputType;
+					inputElement.name = inputName;
+					inputElement.id = "jform_params_" + inputId;
+					inputElement.className = "form-control"; // Bootstrap form-control class
+					inputElement.placeholder = inputPlaceholder;
+					inputElement.value = inputValue;
+
+					// Append the label and input to the field group
+					inputDiv.appendChild(inputElement);
+					fieldGroup.appendChild(labelElement);
+					fieldGroup.appendChild(inputDiv);
+
+					// Append the field group to the wrapper
+					fieldGroupsWrapper.appendChild(fieldGroup);
+
+					return fieldGroup;
+				}
+
+				// Create input fields with class names as described in the example
+				var lengthFieldGroup = createFieldGroup("text", "Item/Part #/SKU #", "Enter item/part/sku.", "sku_number", "jform[params][sku_number]", "", "Enter item/part/sku.");
+				var widthFieldGroup = createFieldGroup("text", "HS Tariff Code", "Enter HS Tariff Code", "tariff_code", "jform[params][tariff_code]", "", "Enter HS Tariff Code");
+				var heightFieldGroup = createFieldGroup("text", "Customs Description", "Enter Customs Description.", "description", "jform[params][description]", "", "Enter Customs Description.");
+				var weightFieldGroup = createFieldGroup("text", "Unit Weight (lb)", "Enter Unit Weight (lb)", "unit_weight", "jform[params][unit_weight]", "", "Enter Unit Weight (lb)");
+				var overrideFieldGroup = createFieldGroup("text", "Customs Value Per Unit", "Enter Customs Value Per Unit", "value_per_unit", "jform[params][value_per_unit]", "", "Enter Customs Value Per Unit");
+				var boxNameFieldGroup = createFieldGroup("text", "Country Of Origin", "Enter Country Of Origin", "country_of_origin", "jform[params][country_of_origin]", "", "Enter Country Of Origin");
+				var provinceOfOriginGroup = createFieldGroup("text", "Province of Origin", "Enter Province of Origin", "province_of_origin", "jform[params][province_of_origin]", "", "Enter Province of Origin");
+
+				// Create a 'Add Package Content' button
+				var savePackageContentButton = document.createElement("button");
+				savePackageContentButton.type = "button";
+				savePackageContentButton.id = "savePackageContent";
+				savePackageContentButton.style.marginTop = "15px";
+				savePackageContentButton.style.marginBottom = "15px";
+				savePackageContentButton.className = "btn btn-primary"; // Keep the existing class
+				savePackageContentButton.textContent = "Add Package Content";
+
+
+				// Append the input fields, dropdown, and button to the form
+				// Append the fieldGroupsWrapper to the form
+				form.appendChild(fieldGroupsWrapper); // Append the wrapper instead of individual field groups
+				form.appendChild(savePackageContentButton);
+
+				// var presetBox = document.getElementById("attrib-preset_box");
+
+				// Append the form to the 'presetBox' element
+				presetBox.appendChild(form);
+
+
+				 // Event listener to create a new box when the "SAVE BOX" button is clicked
+				 savePackageContentButton.addEventListener("click", function () {
+					addPackageContent();
+				});
+
+				function addPackageContent() {
+
+					console.log('Buttn cluicjked');
+					// Get the selected unit system (Metric or Imperial)
+					// var unitSystem = document.getElementById("unitSystemDropdown").value;
+
+					// Get the values entered by the user
+					var sku_number = document.getElementById("jform_params_sku_number").value;
+					var tariff_code = document.getElementById("jform_params_tariff_code").value;
+					var description = document.getElementById("jform_params_description").value;
+					var unit_weight = document.getElementById("jform_params_unit_weight").value;
+					var value_per_unit = document.getElementById("jform_params_value_per_unit").value;
+					var country_of_origin = document.getElementById("jform_params_country_of_origin").value;
+					var province_of_origin = document.getElementById("jform_params_province_of_origin").value;
+
+					if (!sku_number || !tariff_code || !description || !unit_weight || !value_per_unit) {
+						alert("Please Fill All the Required Fields");
+						return;
+					}
+
+					// Create a new control-group div
+					var newControlGroup = document.createElement("div");
+					newControlGroup.className = "control-group";
+
+					// Create and append a "Remove" button for the new box
+					var removeButton = createRemoveButton();
+					newControlGroup.appendChild(removeButton);
+
+					// Create an object with the data to be saved in the database
+					var postPackageContentData = {
+						sku_number: sku_number,
+						tariff_code: tariff_code,
+						description: description,
+						unit_weight: unit_weight,
+						value_per_unit: value_per_unit,
+						country_of_origin: country_of_origin,
+						province_of_origin: province_of_origin,
+					};
+
+					console.log(postPackageContentData);
+
+					// Send the data to the server for database insertion via AJAX
+					var xhr = new XMLHttpRequest();
+					xhr.open("POST", "savePackageContent.php", true); // Replace with your server-side script URL
+					xhr.setRequestHeader("Content-Type", "application/json");
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState === 4 && xhr.status === 200) {
+							// Handle the response from the server if needed
+							console.log(xhr.responseText); // Log the server response
+							location.reload();
+						}
+					};
+					xhr.send(JSON.stringify(postPackageContentData));
+				}
+
+
+
+				// Function to remove a shipping box
+				function removePackageContent(buttonElement, id) {
+
+						localStorage.setItem('selectedRemoveId',id);
+						console.log(id);
+
+						// var controlGroup = buttonElement.parentElement; // Get the parent control-group div
+						// var selectDropdown = controlGroup.querySelector("select"); // Find the associated dropdown
+
+						// // Extract the ID or identifier for the selected preset (you may need to adjust this based on your data structure)
+						// var selectedPresetId = selectDropdown.value;
+
+						// Perform an AJAX request to your server-side script to delete the row from the database
+						// Replace 'your_php_script.php' with the actual path to your server-side script
+						var xhr = new XMLHttpRequest();
+						xhr.open("POST", "removePackageContent.php", true);
+						xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+						// Send the selectedPresetId to your server-side script
+						xhr.send("id=" + id);
+
+						xhr.onreadystatechange = function () {
+							if (xhr.readyState === 4 && xhr.status === 200) {
+								// The row has been successfully removed from the database
+								// Now, you can remove the UI element
+								// controlGroup.remove();
+								location.reload();
+							}
+						};
+				
+				}
 
 				// Function to handle the selection action when the "Select" button is clicked
 				// function selectShippingBox(buttonElement,$id) {
